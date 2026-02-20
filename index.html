@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Didáctica: ¿Qué es un Emprendedor? - Colegio Escolaris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app-container">
+        <header id="app-header">
+            <div class="header-logo">Colegio Escolaris</div>
+            <div class="header-info">
+                <span id="lesson-number">Lección 3</span>
+                <span id="lesson-topic">Emprendimiento</span>
+            </div>
+        </header>
+
+        <!-- Navigation Arrows -->
+        <button id="prev-btn" class="nav-btn left" aria-label="Anterior">
+            <svg viewBox="0 0 24 24" width="48" height="48">
+                <path fill="currentColor" d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+            </svg>
+        </button>
+
+        <main id="slide-container">
+            <!-- Slides will be injected here -->
+        </main>
+
+        <button id="next-btn" class="nav-btn right" aria-label="Siguiente">
+            <svg viewBox="0 0 24 24" width="48" height="48">
+                <path fill="currentColor" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+            </svg>
+        </button>
+
+        <!-- Progress Indicator -->
+        <div id="progress-bar-container">
+            <div id="progress-bar"></div>
+        </div>
+    </div>
+
+    <!-- Modals for feedback -->
+    <div id="feedback-overlay" class="hidden">
+        <div id="feedback-card">
+            <div id="feedback-icon"></div>
+            <h2 id="feedback-title"></h2>
+            <p id="feedback-text"></p>
+            <button id="feedback-btn"></button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
