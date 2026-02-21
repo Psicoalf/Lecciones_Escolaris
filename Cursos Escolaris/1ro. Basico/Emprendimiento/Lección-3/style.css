@@ -1,0 +1,480 @@
+:root {
+    --naranja: #db6015;
+    --amarillo: #f7be00;
+    --azul-oscuro: #244b5a;
+    --rojo-ladrillo: #993921;
+    --azul-claro: #f0f8ff;
+    --blanco: #ffffff;
+    --font-sans: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-sans);
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color: var(--azul-claro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+#presentation-container {
+    width: 100%;
+    max-width: 1080px;
+    aspect-ratio: 16 / 9;
+    background-color: var(--blanco);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Slides */
+.slides {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease;
+    padding: 40px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--blanco);
+}
+
+.slide.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Typography */
+h1 {
+    color: var(--azul-oscuro);
+    font-size: 3rem;
+    margin-bottom: 10px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+h2 {
+    color: var(--naranja);
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    border-bottom: 4px solid var(--amarillo);
+    display: inline-block;
+    padding-bottom: 5px;
+    font-weight: bold;
+}
+
+p {
+    color: var(--azul-oscuro);
+    font-size: 1.3rem;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+/* Portada */
+.portada {
+    text-align: center;
+}
+
+.materia {
+    color: var(--naranja);
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.lesson-info {
+    color: var(--rojo-ladrillo);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.header-decor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    background: linear-gradient(90deg, var(--naranja), var(--amarillo), var(--azul-oscuro), var(--rojo-ladrillo));
+    z-index: 10;
+}
+
+/* Navigation */
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--blanco);
+    border: none;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+    transition: all 0.2s;
+}
+
+.nav-arrow:hover {
+    background: var(--amarillo);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.nav-arrow svg {
+    width: 40px;
+    height: 40px;
+    fill: var(--azul-oscuro);
+}
+
+#prev-btn {
+    left: 15px;
+}
+
+#next-btn {
+    right: 15px;
+}
+
+/* Lists */
+.objectives-list {
+    list-style: none;
+}
+
+.objectives-list li {
+    background: #f9f9f9;
+    margin-bottom: 15px;
+    padding: 18px;
+    border-left: 8px solid var(--naranja);
+    border-radius: 10px;
+    font-size: 1.25rem;
+    color: var(--azul-oscuro);
+}
+
+/* Grid/Keywords */
+.keywords-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.keyword {
+    background: var(--blanco);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    border-top: 6px solid var(--amarillo);
+    transition: transform 0.2s;
+}
+
+.keyword:hover {
+    transform: translateY(-5px);
+}
+
+.keyword .icon {
+    font-size: 2.8rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.keyword h3 {
+    color: var(--naranja);
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.keyword p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Interactive Elements */
+.info-card {
+    background: linear-gradient(135deg, var(--amarillo), #fec400);
+    padding: 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0 8px 0 #c49600;
+    transition: all 0.2s;
+    margin-top: 20px;
+}
+
+.info-card:active {
+    transform: translateY(4px);
+    box-shadow: 0 4px 0 #c49600;
+}
+
+.feedback-box {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    font-weight: 600;
+    text-align: center;
+    display: none;
+    animation: slideIn 0.3s ease-out;
+    font-size: 1.1rem;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.feedback-correct {
+    background: #d4edda;
+    color: #155724;
+    border: 2px solid #c3e6cb;
+}
+
+.feedback-wrong {
+    background: #f8d7da;
+    color: #721c24;
+    border: 2px solid #f5c6cb;
+}
+
+.feedback-info {
+    background: #e3f2fd;
+    color: #0d47a1;
+    border: 2px solid #bbdefb;
+}
+
+/* Quiz/Options */
+.options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.options button {
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--azul-oscuro);
+    background: white;
+    border: 3px solid var(--azul-oscuro);
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 5px 0 var(--azul-oscuro);
+    transition: all 0.1s;
+}
+
+.options button:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 var(--azul-oscuro);
+}
+
+.options button:hover {
+    background: var(--azul-oscuro);
+    color: white;
+}
+
+/* Game Styles */
+.game-match {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 15px;
+}
+
+.match-column {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 45%;
+}
+
+.match-btn {
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    background: white;
+    border: 3px solid var(--azul-oscuro);
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 0 var(--azul-oscuro);
+    transition: all 0.2s;
+}
+
+.match-btn.selected {
+    background: var(--amarillo);
+    transform: scale(1.02);
+}
+
+.match-btn.matched {
+    background: #d4edda;
+    border-color: #28a745;
+    color: #155724;
+    box-shadow: none;
+    cursor: default;
+    opacity: 0.8;
+}
+
+/* Explorer Grid */
+.explorer-grid-9 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.folder-mini {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    border: 2px solid #ddd;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: var(--azul-oscuro);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.folder-mini:hover {
+    border-color: var(--naranja);
+    background-color: #fff8f4;
+}
+
+/* Reflection/Final */
+.reflection-box {
+    background: #fdf2e9;
+    padding: 20px;
+    border-radius: 15px;
+    border-left: 8px solid var(--amarillo);
+    margin: 15px 0;
+}
+
+.repaso-scroll {
+    overflow-y: auto;
+    max-height: 350px;
+    padding-right: 10px;
+}
+
+.repaso-item {
+    background: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.btn-group button {
+    flex: 1;
+    padding: 10px;
+    border: 3px solid var(--naranja);
+    background: white;
+    color: var(--naranja);
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.btn-group button:hover {
+    background: var(--naranja);
+    color: white;
+}
+
+.badge {
+    font-size: 6rem;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.school-logo {
+    font-weight: bold;
+    color: var(--azul-oscuro);
+    margin-top: 20px;
+    letter-spacing: 5px;
+}
+
+/* Utils */
+.restart-btn,
+.retry-btn {
+    padding: 12px 30px;
+    background: var(--naranja);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.illustration {
+    margin: 20px 0;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    #presentation-container {
+        aspect-ratio: auto;
+        min-height: 100vh;
+    }
+
+    .slide {
+        padding: 30px 40px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .keywords-container {
+        grid-template-columns: 1fr;
+    }
+
+    .options {
+        grid-template-columns: 1fr;
+    }
+
+    .game-match {
+        flex-direction: column;
+    }
+
+    .match-column {
+        width: 100%;
+    }
+}
