@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 8: Los Registros Lingüísticos - Colegio Escolaris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="presentation-container">
+        <div class="header-decor"></div>
+
+        <!-- Botones de Navegación -->
+        <button id="prev-btn" class="nav-arrow" onclick="prevSlide()">
+            <svg viewBox="0 0 24 24">
+                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+            </svg>
+        </button>
+        <button id="next-btn" class="nav-arrow" onclick="nextSlide()">
+            <svg viewBox="0 0 24 24">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+            </svg>
+        </button>
+
+        <div class="slides">
+            <!-- 1. Portada -->
+            <section class="slide active" id="slide-1">
+                <div class="content portada">
+                    <p class="materia">Comunicación y Lenguaje</p>
+                    <h1>LOS REGISTROS LINGÜÍSTICOS</h1>
+                    <p class="lesson-info">Lección 8 • 1ro. Básico</p>
+                    <div class="illustration">
+                        <svg width="220" height="200" viewBox="0 0 220 200" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <!-- Micrófono -->
+                            <rect x="100" y="40" width="20" height="60" rx="10" fill="#244b5a" />
+                            <rect x="90" y="100" width="40" height="10" rx="2" fill="#db6015" />
+                            <rect x="105" y="110" width="10" height="50" fill="#244b5a" />
+                            <rect x="80" y="160" width="60" height="10" rx="5" fill="#244b5a" />
+                            <!-- Ondas de sonido -->
+                            <path d="M140 60 Q 160 80 140 100" stroke="#f7be00" stroke-width="4"
+                                stroke-linecap="round" />
+                            <path d="M160 40 Q 190 80 160 120" stroke="#f7be00" stroke-width="4" stroke-linecap="round"
+                                opacity="0.6" />
+                        </svg>
+                    </div>
+                    <p class="welcome-msg">¡Hola! Hoy aprenderemos a adaptar nuestra forma de hablar a cada situación y
+                        a evitar errores comunes. 🎤💬</p>
+                </div>
+            </section>
+
+            <!-- 2. Objetivos de Aprendizaje -->
+            <section class="slide" id="slide-2">
+                <div class="content">
+                    <h2>🎯 Objetivos de aprendizaje</h2>
+                    <ul class="objectives-list">
+                        <li>Conocer los diferentes registros lingüísticos y saber cuándo aplicarlos correctamente.</li>
+                        <li>Identificar y evitar los vicios del lenguaje para mejorar la claridad al hablar.</li>
+                        <li>Aplicar técnicas de oratoria para hablar efectivamente en público.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 3. Activación de conocimientos -->
+            <section class="slide" id="slide-3">
+                <div class="content">
+                    <h2>🤔 ¿Hablas igual con todos?</h2>
+                    <p>Imagina que tienes que pedir un permiso. ¿Usarías las mismas palabras con tu mejor amigo que con
+                        el director del colegio?</p>
+                    <div class="options">
+                        <button
+                            onclick="checkAnswer('act', true, '✅ ¡Exacto! Adaptamos nuestro lenguaje según la persona y el lugar. Eso es usar registros lingüísticos.', 'feedback-act')">
+                            No, con el director hablo con más respeto y cuidado.
+                        </button>
+                        <button
+                            onclick="checkAnswer('act', false, '❌ ¡Piénsalo! Usar jerga con el director podría no ser la mejor idea. Intenta de nuevo.', 'feedback-act')">
+                            Sí, yo hablo igual con todas las personas.
+                        </button>
+                    </div>
+                    <div id="feedback-act" class="feedback-box"></div>
+                </div>
+            </section>
+
+            <!-- 4. Palabras clave -->
+            <section class="slide" id="slide-4">
+                <div class="content">
+                    <h2>🔑 Conceptos clave</h2>
+                    <div class="keywords-container">
+                        <div class="keyword">
+                            <span class="icon">👔</span>
+                            <h3>Registro Formal</h3>
+                            <p>Uso cuidadoso y preciso del lenguaje en situaciones serias u oficiales.</p>
+                        </div>
+                        <div class="keyword">
+                            <span class="icon">👕</span>
+                            <h3>Registro Informal</h3>
+                            <p>Uso relajado y cercano del lenguaje con amigos y familiares.</p>
+                        </div>
+                        <div class="keyword">
+                            <span class="icon">🚫</span>
+                            <h3>Vicios del Lenguaje</h3>
+                            <p>Errores que cometemos al hablar o escribir que dificultan la comprensión.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. Contenido Principal: Los Registros -->
+            <section class="slide" id="slide-5">
+                <div class="content">
+                    <h2>👔 Registro Formal vs Informal 👕</h2>
+                    <p>Saber elegir el registro adecuado es clave para una comunicación efectiva.</p>
+                    <div class="reflection-box">
+                        <p><b>Registro Formal:</b> Se usa con autoridades, en exposiciones o documentos. Evita modismos.
+                        </p>
+                        <p><b>Registro Informal/Coloquial:</b> Se usa en la confianza. Es más expresivo y usa frases
+                            cortas.</p>
+                    </div>
+                    <p>¡Un buen hablante sabe saltar de uno a otro según el contexto!</p>
+                </div>
+            </section>
+
+            <!-- 6. Contenido Principal: Vicios del Lenguaje -->
+            <section class="slide" id="slide-6">
+                <div class="content">
+                    <h2>⚠️ Evita los Vicios del Lenguaje</h2>
+                    <p>Estos son los errores más comunes que debemos corregir:</p>
+                    <div class="keywords-container">
+                        <div class="keyword" style="border-top-color: #993921;">
+                            <h3>Pleonasmo</h3>
+                            <p>Repetir palabras innecesarias. <br><i>Ej: "Sube para arriba"</i></p>
+                        </div>
+                        <div class="keyword" style="border-top-color: #244b5a;">
+                            <h3>Barbarismo</h3>
+                            <p>Escribir o pronunciar mal las palabras. <br><i>Ej: "Haya" por "Haiga"</i></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. Exploración Visual: Oratoria -->
+            <section class="slide" id="slide-7">
+                <div class="content">
+                    <h2>🎤 Tips para hablar en público</h2>
+                    <p>Haz clic en cada elemento para mejorar tu oratoria:</p>
+                    <div class="explorer-grid">
+                        <div class="folder-mini"
+                            onclick="showPopup('<b>Postura:</b> Mantén la espalda recta y mira a tu audiencia a los ojos.')">
+                            🚶 Postura</div>
+                        <div class="folder-mini"
+                            onclick="showPopup('<b>Voz:</b> Varía el tono y el volumen para no aburrir. ¡Proyecta tu voz!')">
+                            🔊 Volumen</div>
+                        <div class="folder-mini"
+                            onclick="showPopup('<b>Preparación:</b> Conoce tu tema a fondo para hablar con seguridad.')">
+                            📚 Dominio</div>
+                        <div class="folder-mini"
+                            onclick="showPopup('<b>Gestos:</b> Usa tus manos para enfatizar tus ideas, ¡pero no exageres!')">
+                            🖐️ Ademanes</div>
+                    </div>
+                    <div id="explorer-popup" class="feedback-box"></div>
+                </div>
+            </section>
+
+            <!-- 8. Actividad de Comprensión -->
+            <section class="slide" id="slide-8">
+                <div class="content quiz">
+                    <h2>✏️ Identifica el Registro</h2>
+                    <p>Frase: <i>"Estimado director, le escribo para solicitar una revisión de mi nota."</i></p>
+                    <p>¿Qué nivel de lenguaje se está utilizando?</p>
+                    <div class="options">
+                        <button onclick="checkAnswer(8, true, '✅ ¡Correcto! El uso de términos como \" estimado\" y
+                            \"solicitar\" indica formalidad.')">Registro Formal</button>
+                        <button
+                            onclick="checkAnswer(8, false, '❌ No, no se usan palabras familiares o informales aquí. Prueba de nuevo.')">Registro
+                            Informal</button>
+                    </div>
+                    <div id="feedback-8" class="feedback-box"></div>
+                </div>
+            </section>
+
+            <!-- 9. Juego Educativo -->
+            <section class="slide" id="slide-9">
+                <div class="content">
+                    <h2>🎮 Corrige el Error</h2>
+                    <p>Relaciona la frase incorrecta con el vicio del lenguaje que comete:</p>
+                    <div class="game-match">
+                        <div class="match-column" id="col-icons">
+                            <button class="match-btn" data-type="P" id="btn-a">"Lo vi con mis propios ojos"</button>
+                            <button class="match-btn" data-type="B" id="btn-b">"Ojalá no haiga tráfico hoy"</button>
+                            <button class="match-btn" data-type="A" id="btn-c">"Se vende cuna para niños de
+                                madera"</button>
+                        </div>
+                        <div class="match-column" id="col-desc">
+                            <button class="match-btn" data-target="B" id="desc-a">Barbarismo</button>
+                            <button class="match-btn" data-target="P" id="desc-b">Pleonasmo</button>
+                            <button class="match-btn" data-target="A" id="desc-c">Anfibología (Doble sentido)</button>
+                        </div>
+                    </div>
+                    <div id="feedback-game" class="feedback-box"></div>
+                    <button id="retry-game" class="retry-btn" onclick="resetGame()" style="display:none">Intentar de
+                        nuevo</button>
+                </div>
+            </section>
+
+            <!-- 10. Aplicación Práctica -->
+            <section class="slide" id="slide-10">
+                <div class="content quiz">
+                    <h2>💡 Reto de Oratoria</h2>
+                    <p>Estás dando una charla y notas que el público se está distrayendo. ¿Qué técnica asertiva usarías?
+                    </p>
+                    <div class="options">
+                        <button
+                            onclick="checkAnswer(10, false, '❌ Eso solo hará que se desconecten más. ¡Busca una mejor opción!', 'feedback-10')">Enojarte
+                            y pedirles silencio a gritos.</button>
+                        <button
+                            onclick="checkAnswer(10, true, '✅ ¡Muy bien! Cambiar el tono o hacer una pregunta involucra de nuevo al público.', 'feedback-10')">Hacer
+                            una pausa breve y cambiar el tono de voz para recuperar atención.</button>
+                    </div>
+                    <div id="feedback-10" class="feedback-box"></div>
+                </div>
+            </section>
+
+            <!-- 11. Metacognición -->
+            <section class="slide" id="slide-11">
+                <div class="content reflection">
+                    <h2>🧠 Mi aprendizaje</h2>
+                    <p>Reflexiona sobre lo aprendido hoy:</p>
+                    <div class="repaso-scroll">
+                        <div class="repaso-item">
+                            <p><b>¿Cuál es el vicio del lenguaje que más cometemos por accidente?</b></p>
+                            <div class="btn-group">
+                                <button
+                                    onclick="checkAnswer('r1', true, '✅ ¡Sí! A veces hablamos rápido y repetimos ideas sin darnos cuenta.', 'feedback-r1')">El
+                                    pleonasmo (repetir)</button>
+                                <button
+                                    onclick="checkAnswer('r1', false, '❌ Es común, pero no tanto como las redundancias. ¡Prueba el otro!', 'feedback-r1')">El
+                                    barbarismo</button>
+                            </div>
+                            <div id="feedback-r1" class="feedback-box"></div>
+                        </div>
+                        <div class="reflection-box">
+                            <p><b>¿Cómo mejoraré mi forma de hablar hoy mismo?</b></p>
+                            <p><i>Estaré más atento a las palabras que uso y trataré de hablar con más calma y claridad
+                                    en mis conversaciones.</i></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 12. Cierre -->
+            <section class="slide" id="slide-12">
+                <div class="content reflection" style="text-align: center;">
+                    <div class="badge">🎤🥇</div>
+                    <h2>¡Comunicador Estrella!</h2>
+                    <p>Has terminado la lección sobre Registros Lingüísticos y Oratoria.</p>
+                    <p>¡El mundo está listo para escuchar tus ideas con claridad!</p>
+                    <div class="school-logo">COLEGIO ESCOLARIS</div>
+                    <button class="restart-btn" onclick="goToSlide(0)">Volver a empezar</button>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

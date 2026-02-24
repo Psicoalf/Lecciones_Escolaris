@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 6: Significado Denotativo y Connotativo - Colegio Escolaris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="presentation-container">
+        <div class="header-decor"></div>
+
+        <!-- Botones de Navegación -->
+        <button id="prev-btn" class="nav-arrow" onclick="prevSlide()">
+            <svg viewBox="0 0 24 24">
+                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+            </svg>
+        </button>
+        <button id="next-btn" class="nav-arrow" onclick="nextSlide()">
+            <svg viewBox="0 0 24 24">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+            </svg>
+        </button>
+
+        <div class="slides">
+            <!-- 1. Portada -->
+            <section class="slide active" id="slide-1">
+                <div class="content portada">
+                    <p class="materia">Comunicación y Lenguaje</p>
+                    <h1>DENOTACIÓN Y CONNOTACIÓN</h1>
+                    <p class="lesson-info">Lección 6 • 1ro. Básico</p>
+                    <div class="illustration">
+                        <svg width="220" height="200" viewBox="0 0 220 200" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <!-- Corazón -->
+                            <path
+                                d="M110 160 L100 150 C 60 110, 40 90, 40 60 C 40 40, 55 25, 75 25 C 88 25, 101 32, 110 43 C 119 32, 132 25, 145 25 C 165 25, 180 40, 180 60 C 180 90, 160 110, 120 150 L110 160 Z"
+                                fill="#993921" stroke="#244b5a" stroke-width="2" />
+                            <!-- Etiqueta Diccionario -->
+                            <rect x="30" y="140" width="60" height="30" rx="5" fill="#244b5a" />
+                            <text x="35" y="160" fill="white" font-size="10" font-family="Arial">Literal</text>
+                            <!-- Nube de sentimiento -->
+                            <circle cx="170" cy="50" r="25" fill="#f7be00" opacity="0.6" />
+                            <text x="155" y="55" fill="#244b5a" font-weight="bold" font-size="10">Amor</text>
+                        </svg>
+                    </div>
+                    <p class="welcome-msg">¿Sabías que una palabra puede decir muchas cosas al mismo tiempo? ¡Vamos a
+                        descubrirlo! 🌟</p>
+                </div>
+            </section>
+
+            <!-- 2. Objetivos de Aprendizaje -->
+            <section class="slide" id="slide-2">
+                <div class="content">
+                    <h2>🎯 Objetivos de aprendizaje</h2>
+                    <ul class="objectives-list">
+                        <li>Conocer las diferencias fundamentales entre el significado connotativo y denotativo.</li>
+                        <li>Identificar el uso de ambos tipos de lenguaje en diferentes contextos.</li>
+                        <li>Escribir textos breves utilizando tanto el lenguaje denotativo como el connotativo.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 3. Activación de conocimientos -->
+            <section class="slide" id="slide-3">
+                <div class="content">
+                    <h2>🤔 ¡Piénsalo bien!</h2>
+                    <p>Si alguien te dice: <b>"Eres una estrella"</b>, ¿qué te está queriendo decir realmente?</p>
+                    <div class="options">
+                        <button
+                            onclick="checkAnswer('act', false, '❌ ¡Vaya! Eso sería muy peligroso físicamente. ¡Prueba la otra opción!', 'feedback-act')">
+                            Que soy un cuerpo celeste que brilla por el calor.
+                        </button>
+                        <button
+                            onclick="checkAnswer('act', true, '✅ ¡Exacto! Esa persona usa el lenguaje connotativo para decir que eres brillante o especial.', 'feedback-act')">
+                            Que soy una persona talentosa y que destaca.
+                        </button>
+                    </div>
+                    <div id="feedback-act" class="feedback-box"></div>
+                </div>
+            </section>
+
+            <!-- 4. Palabras clave -->
+            <section class="slide" id="slide-4">
+                <div class="content">
+                    <h2>🔑 Conceptos clave</h2>
+                    <div class="keywords-container">
+                        <div class="keyword">
+                            <span class="icon">📖</span>
+                            <h3>Denotación</h3>
+                            <p>Significado real y objetivo. El que aparece en el diccionario.</p>
+                        </div>
+                        <div class="keyword">
+                            <span class="icon">❤️</span>
+                            <h3>Connotación</h3>
+                            <p>Significado sugerido, subjetivo o emocional según el contexto.</p>
+                        </div>
+                        <div class="keyword">
+                            <span class="icon">🌍</span>
+                            <h3>Contexto</h3>
+                            <p>Situación en la que se dice algo y que ayuda a entender su sentido.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. Contenido Principal: Denotación -->
+            <section class="slide" id="slide-5">
+                <div class="content">
+                    <h2>🔍 El lenguaje denotativo</h2>
+                    <p>Es un lenguaje <b>preciso, directo y formal</b>. No busca causar emociones, sino informar hechos.
+                    </p>
+                    <div class="reflection-box">
+                        <p><b>Ejemplos:</b></p>
+                        <ul style="margin-left: 20px;">
+                            <li>"El corazón es un órgano del sistema circulatorio."</li>
+                            <li>"La ventana está hecha de vidrio."</li>
+                            <li>"Hoy la temperatura es de 25 grados."</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. Contenido Principal: Connotación -->
+            <section class="slide" id="slide-6">
+                <div class="content">
+                    <h2>🎨 El lenguaje connotativo</h2>
+                    <p>Es un lenguaje <b>figurado, poético y emocional</b>. Las palabras adquieren un nuevo sentido.</p>
+                    <div class="reflection-box">
+                        <p><b>Ejemplos:</b></p>
+                        <ul style="margin-left: 20px;">
+                            <li>"Me rompió el corazón." (Tristeza)</li>
+                            <li>"Esa casa es un palacio." (Lujo)</li>
+                            <li>"Tengo un mar de dudas." (Incertidumbre)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. Exploración Visual -->
+            <section class="slide" id="slide-7">
+                <div class="content">
+                    <h2>🔍 Explorando significados</h2>
+                    <p>Haz clic en cada palabra para ver sus dos caras:</p>
+                    <div class="explorer-grid">
+                        <div class="folder-mini"
+                            onclick="showPopup('<b>SOL</b><br>Denotativo: Astro rey del sistema.<br>Connotativo: Persona que nos alegra el día.')">
+                            ☀️ El Sol</div>
+                        <div class="folder-mini"
+                            onclick="showPopup('<b>ORO</b><br>Denotativo: Metal precioso de color amarillo.<br>Connotativo: Algo de mucho valor o calidad.')">
+                            ✨ El Oro</div>
+                        <div class="folder-mini"
+                            onclick="showPopup('<b>PIEDRA</b><br>Denotativo: Materia mineral dura y sólida.<br>Connotativo: Una persona difícil o un obstáculo.')">
+                            🪨 La Piedra</div>
+                        <div class="folder-mini"
+                            onclick="showPopup('<b>ÁNGEL</b><br>Denotativo: Ser espiritual en algunas religiones.<br>Connotativo: Una persona muy buena y servicial.')">
+                            😇 El Ángel</div>
+                    </div>
+                    <div id="explorer-popup" class="feedback-box"></div>
+                </div>
+            </section>
+
+            <!-- 8. Actividad de Comprensión -->
+            <section class="slide" id="slide-8">
+                <div class="content quiz">
+                    <h2>✏️ Identifica el lenguaje</h2>
+                    <p>Analiza la frase: <i>"Ese joven tiene nervios de acero."</i></p>
+                    <p>¿Qué tipo de lenguaje se está utilizando?</p>
+                    <div class="options">
+                        <button
+                            onclick="checkAnswer(8, false, '❌ Incorrecto. No significa que sus nervios sean de metal real. ¡Inténtalo de nuevo!')">Lenguaje
+                            Denotativo</button>
+                        <button
+                            onclick="checkAnswer(8, true, '✅ ¡Correcto! Es connotativo porque usa el acero para simbolizar la resistencia y calma.')">Lenguaje
+                            Connotativo</button>
+                    </div>
+                    <div id="feedback-8" class="feedback-box"></div>
+                </div>
+            </section>
+
+            <!-- 9. Juego Educativo -->
+            <section class="slide" id="slide-9">
+                <div class="content">
+                    <h2>🎮 Relaciona los conceptos</h2>
+                    <p>Empareja cada frase con su categoría correcta:</p>
+                    <div class="game-match">
+                        <div class="match-column" id="col-icons">
+                            <button class="match-btn" data-type="D" id="btn-a">"El agua hierve a 100°C"</button>
+                            <button class="match-btn" data-type="C" id="btn-b">"Él es un lince para los
+                                negocios"</button>
+                            <button class="match-btn" data-type="D" id="btn-c">"La capital de Guatemala es la Ciudad de
+                                Guatemala"</button>
+                            <button class="match-btn" data-type="C" id="btn-d">"Se me hizo un nudo en la
+                                garganta"</button>
+                        </div>
+                        <div class="match-column" id="col-desc">
+                            <button class="match-btn" data-target="D" id="desc-a">Lenguaje Denotativo</button>
+                            <button class="match-btn" data-target="C" id="desc-b">Lenguaje Connotativo</button>
+                        </div>
+                    </div>
+                    <div id="feedback-game" class="feedback-box"></div>
+                    <button id="retry-game" class="retry-btn" onclick="resetGame()" style="display:none">Intentar de
+                        nuevo</button>
+                </div>
+            </section>
+
+            <!-- 10. Aplicación Práctica -->
+            <section class="slide" id="slide-10">
+                <div class="content quiz">
+                    <h2>💡 Reto de Escritura</h2>
+                    <p>Imagina que quieres vender una bicicleta usada. ¿Cuál de estas opciones usa un lenguaje
+                        <b>denotativo</b> para informar al comprador?</p>
+                    <div class="options">
+                        <button
+                            onclick="checkAnswer(10, false, '❌ Eso es connotativo, intentas convencer con emociones. ¡Prueba otra!', 'feedback-10')">"¡Vuela
+                            sobre el asfalto con esta joya sobre ruedas!"</button>
+                        <button
+                            onclick="checkAnswer(10, true, '✅ ¡Muy bien! Es denotativo porque describes las características reales del objeto.', 'feedback-10')">"Bicicleta
+                            de montaña, color rojo, con frenos de disco y 18 velocidades."</button>
+                    </div>
+                    <div id="feedback-10" class="feedback-box"></div>
+                </div>
+            </section>
+
+            <!-- 11. Metacognición -->
+            <section class="slide" id="slide-11">
+                <div class="content reflection">
+                    <h2>🧠 Mi aprendizaje</h2>
+                    <p>Reflexiona sobre tu progreso:</p>
+                    <div class="repaso-scroll">
+                        <div class="repaso-item">
+                            <p><b>¿Dónde encontramos usualmente el lenguaje denotativo?</b></p>
+                            <div class="btn-group">
+                                <button
+                                    onclick="checkAnswer('r1', true, '✅ ¡Exacto! Los científicos y periodistas necesitan ser precisos.', 'feedback-r1')">En
+                                    enciclopedias y noticias</button>
+                                <button
+                                    onclick="checkAnswer('r1', false, '❌ ¡Al revés! La poesía vive de la connotación.', 'feedback-r1')">En
+                                    cuentos y poemas</button>
+                            </div>
+                            <div id="feedback-r1" class="feedback-box"></div>
+                        </div>
+                        <div class="reflection-box">
+                            <p><b>¿Por qué es importante saber la diferencia?</b></p>
+                            <p><i>Para entender cuándo alguien nos habla con la verdad literal y cuándo usa metáforas o
+                                    sentimientos para expresarse.</i></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 12. Cierre -->
+            <section class="slide" id="slide-12">
+                <div class="content reflection" style="text-align: center;">
+                    <div class="badge">📖✨</div>
+                    <h2>¡Excelente Trabajo!</h2>
+                    <p>Has dominado el arte de interpretar los significados denotativos y connotativos.</p>
+                    <p>¡Eres un gran comunicador!</p>
+                    <div class="school-logo">COLEGIO ESCOLARIS</div>
+                    <button class="restart-btn" onclick="goToSlide(0)">Volver a empezar</button>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

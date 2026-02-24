@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 10: Ruidos o barreras en la comunicación - Colegio Escolaris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="presentation-container">
+        <div class="header-decor"></div>
+
+        <!-- Botones de Navegación -->
+        <button id="prev-btn" class="nav-arrow" onclick="prevSlide()">
+            <svg viewBox="0 0 24 24">
+                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+            </svg>
+        </button>
+        <button id="next-btn" class="nav-arrow" onclick="nextSlide()">
+            <svg viewBox="0 0 24 24">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+            </svg>
+        </button>
+
+        <div class="slides">
+            <!-- 1. Portada -->
+            <section class="slide active" id="slide-1">
+                <div class="content portada">
+                    <p class="materia">Comunicación y Lenguaje</p>
+                    <h1>RUIDOS O BARRERAS EN LA COMUNICACIÓN</h1>
+                    <p class="lesson-info">Lección 10 • 1ro. Básico</p>
+                    <div class="illustration">
+                        <svg width="220" height="200" viewBox="0 0 220 200" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <!-- Radio o bocina con interferencia -->
+                            <rect x="60" y="80" width="100" height="60" rx="10" fill="#244b5a" />
+                            <circle cx="90" cy="110" r="15" fill="#ffffff" opacity="0.8" />
+                            <circle cx="130" cy="110" r="15" fill="#ffffff" opacity="0.8" />
+                            <!-- Rayos de interferencia -->
+                            <path d="M40 60 L70 90 M180 60 L150 90 M110 40 V70" stroke="#db6015" stroke-width="5"
+                                stroke-linecap="round" />
+                            <path d="M110 110 L120 100 L100 90 L110 80" stroke="#f7be00" stroke-width="3" fill="none" />
+                        </svg>
+                    </div>
+                    <p class="welcome-msg">¡Hola! Hoy descubriremos qué cosas impiden que nos entendamos bien y cómo
+                        superarlas. 🚫🗣️</p>
+                </div>
+            </section>
+
+            <!-- 2. Objetivos de Aprendizaje -->
+            <section class="slide" id="slide-2">
+                <div class="content">
+                    <h2>🎯 Objetivos de aprendizaje</h2>
+                    <ul class="objectives-list">
+                        <li>Conocer los diferentes tipos de ruidos o barreras que existen en la comunicación.</li>
+                        <li>Identificar cuáles son los ruidos que más se han interpuesto en tu comunicación diaria.</li>
+                        <li>Aplicar estrategias para eliminar o reducir estas barreras.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 3. Activación de conocimientos -->
+            <section class="slide" id="slide-3">
+                <div class="content">
+                    <h2>🤔 ¿Alguna vez te ha pasado?</h2>
+                    <p>Estás tratando de contarle algo importante a alguien, pero hay una construcción a la par haciendo
+                        mucho estrépito.</p>
+                    <div class="reflection-box">
+                        <p>¿Cómo te sientes cuando el mensaje no llega correctamente a la otra persona?</p>
+                    </div>
+                    <div class="options">
+                        <button
+                            onclick="checkAnswer('act', true, '✅ ¡Exacto! Eso es una barrera física. Genera frustración y malentendidos.', 'feedback-act')">
+                            Me siento frustrado porque tengo que repetir todo.
+                        </button>
+                    </div>
+                    <div id="feedback-act" class="feedback-box"></div>
+                </div>
+            </section>
+
+            <!-- 4. Palabras clave -->
+            <section class="slide" id="slide-4">
+                <div class="content">
+                    <h2>🔑 Conceptos clave</h2>
+                    <div class="keywords-container">
+                        <div class="keyword">
+                            <span class="icon">🔊</span>
+                            <h3>Ruido Físico</h3>
+                            <p>Interferencias del ambiente (música, tráfico, gente hablando).</p>
+                        </div>
+                        <div class="keyword">
+                            <span class="icon">🔡</span>
+                            <h3>Barrera Semántica</h3>
+                            <p>Cuando no entendemos el significado de las palabras usadas.</p>
+                        </div>
+                        <div class="keyword">
+                            <span class="icon">🧠</span>
+                            <h3>Barrera Psicológica</h3>
+                            <p>Emociones o prejuicios que nos impiden escuchar bien.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. Contenido Principal: Tipos de Barreras -->
+            <section class="slide" id="slide-5">
+                <div class="content">
+                    <h2>🚫 Las 5 Barreras Principales</h2>
+                    <p>No solo el ruido ambiental es un problema. Existen otras barreras:</p>
+                    <div class="reflection-box">
+                        <ul style="margin-left: 20px;">
+                            <li><b>Fisiológicas:</b> Limitaciones de salud (audición, vista, habla).</li>
+                            <li><b>Administrativas:</b> Falta de planificación o pérdida de info en canales largos.</li>
+                            <li><b>Más las que ya vimos:</b> Físicas, Semánticas y Psicológicas.</li>
+                        </ul>
+                    </div>
+                    <p>¡Identificarlas es el primer paso para corregirlas!</p>
+                </div>
+            </section>
+
+            <!-- 6. Contenido Principal: Cómo superarlas -->
+            <section class="slide" id="slide-6">
+                <div class="content">
+                    <h2>🛠️ ¿Cómo limpiar el canal?</h2>
+                    <p>Para que el mensaje llegue "limpio", necesitamos:</p>
+                    <div class="keywords-container">
+                        <div class="keyword" style="border-top-color: #244b5a;">
+                            <h3>Retroalimentación</h3>
+                            <p>Preguntar: "¿Me expliqué bien?" o "¿Qué entendiste?"</p>
+                        </div>
+                        <div class="keyword" style="border-top-color: #f7be00;">
+                            <h3>Escucha Empática</h3>
+                            <p>Ponerse en el lugar del otro y dejar de lado los prejuicios.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. Exploración Visual -->
+            <section class="slide" id="slide-7">
+                <div class="content">
+                    <h2>🔍 Identifica la Interferencia</h2>
+                    <p>Haz clic en cada situación para saber qué tipo de ruido es:</p>
+                    <div class="explorer-grid">
+                        <div class="folder-mini"
+                            onclick="showPopup('<b>Físico:</b> El sonido de un avión pasando justo cuando hablas.')">✈️
+                            Un Avión</div>
+                        <div class="folder-mini"
+                            onclick="showPopup('<b>Semántico:</b> Usar palabras técnicas que el otro no conoce.')">🧾
+                            Términos Médicos</div>
+                        <div class="folder-mini"
+                            onclick="showPopup('<b>Fisiológico:</b> Tratar de hablar cuando tienes una fuerte ronquera.')">
+                            🤒 Ronquera</div>
+                        <div class="folder-mini"
+                            onclick="showPopup('<b>Psicológico:</b> Estar tan enojado que no quieres oír explicaciones.')">
+                            😡 El Enojo</div>
+                    </div>
+                    <div id="explorer-popup" class="feedback-box"></div>
+                </div>
+            </section>
+
+            <!-- 8. Actividad de Comprensión -->
+            <section class="slide" id="slide-8">
+                <div class="content quiz">
+                    <h2>✏️ Analiza el Problema</h2>
+                    <p>Un profesor le habla a un alumno sobre "sintaxis", pero el alumno no sabe qué significa esa
+                        palabra. ¿Qué barrera hay?</p>
+                    <div class="options">
+                        <button
+                            onclick="checkAnswer(8, false, '❌ Incorrecto. No hay ruido físico, el problema es el lenguaje.', 'feedback-8')">Barrera
+                            Física</button>
+                        <button
+                            onclick="checkAnswer(8, true, '✅ ¡Exacto! Es una barrera semántica porque no comparten el significado de la palabra.', 'feedback-8')">Barrera
+                            Semántica</button>
+                        <button
+                            onclick="checkAnswer(8, false, '❌ No, el alumno no está enfermo. Prueba de nuevo.', 'feedback-8')">Barrera
+                            Fisiológica</button>
+                    </div>
+                    <div id="feedback-8" class="feedback-box"></div>
+                </div>
+            </section>
+
+            <!-- 9. Juego Educativo -->
+            <section class="slide" id="slide-9">
+                <div class="content">
+                    <h2>🎮 Relaciona las Barreras</h2>
+                    <p>Empareja cada ejemplo con su tipo de barrera correspondiente:</p>
+                    <div class="game-match">
+                        <div class="match-column" id="col-icons">
+                            <button class="match-btn" data-type="P" id="btn-a">Estar triste y distraído</button>
+                            <button class="match-btn" data-type="F" id="btn-b">Música muy alta en una fiesta</button>
+                            <button class="match-btn" data-type="S" id="btn-c">No saber un idioma extranjero</button>
+                        </div>
+                        <div class="match-column" id="col-desc">
+                            <button class="match-btn" data-target="F" id="desc-a">Ruido Físico</button>
+                            <button class="match-btn" data-target="P" id="desc-b">Barrera Psicológica</button>
+                            <button class="match-btn" data-target="S" id="desc-c">Barrera Semántica</button>
+                        </div>
+                    </div>
+                    <div id="feedback-game" class="feedback-box"></div>
+                    <button id="retry-game" class="retry-btn" onclick="resetGame()" style="display:none">Intentar de
+                        nuevo</button>
+                </div>
+            </section>
+
+            <!-- 10. Aplicación Práctica -->
+            <section class="slide" id="slide-10">
+                <div class="content quiz">
+                    <h2>💡 Caso Real</h2>
+                    <p>Juan tiene problemas de audición y su amigo le habla muy bajo por la espalda. ¿Cómo pueden
+                        superar esta barrera fisiológica?</p>
+                    <div class="options">
+                        <button
+                            onclick="checkAnswer(10, true, '✅ ¡Muy bien! Adaptar la forma de comunicar ayuda a superar la barrera fisiológica.', 'feedback-10')">Hablarle
+                            de frente, con voz clara y a un volumen adecuado.</button>
+                        <button
+                            onclick="checkAnswer(10, false, '❌ Eso solo causaría más confusión. ¡Intenta la otra!', 'feedback-10')">Gritar
+                            desde lejos para que escuche a la fuerza.</button>
+                    </div>
+                    <div id="feedback-10" class="feedback-box"></div>
+                </div>
+            </section>
+
+            <!-- 11. Metacognición -->
+            <section class="slide" id="slide-11">
+                <div class="content reflection">
+                    <h2>🧠 Mi aprendizaje</h2>
+                    <p>Reflexiona sobre tu comunicación diaria:</p>
+                    <div class="repaso-scroll">
+                        <div class="repaso-item">
+                            <p><b>¿Cuál es el ruido que más te afecta a ti en casa o en clase?</b></p>
+                            <div class="btn-group">
+                                <button
+                                    onclick="checkAnswer('r1', true, '✅ Identificarlo es el primer paso para buscar un lugar más tranquilo.', 'feedback-r1')">Los
+                                    ruidos físicos (ambiente)</button>
+                                <button
+                                    onclick="checkAnswer('r1', true, '✅ ¡Interesante! A veces nuestras emociones bloquean el mensaje.', 'feedback-r1')">Los
+                                    ruidos psicológicos (ánimo)</button>
+                            </div>
+                            <div id="feedback-r1" class="feedback-box"></div>
+                        </div>
+                        <div class="reflection-box">
+                            <p><b>¿Qué haré hoy para comunicarme mejor?</b></p>
+                            <p><i>Trataré de buscar momentos de calma para hablar y preguntaré si mi mensaje ha quedado
+                                    claro.</i></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 12. Cierre -->
+            <section class="slide" id="slide-12">
+                <div class="content reflection" style="text-align: center;">
+                    <div class="badge">🚫🔇✅</div>
+                    <h2>¡Canal Despejado!</h2>
+                    <p>Has completado la lección sobre Barreras en la Comunicación.</p>
+                    <p>¡Ahora sabes cómo hacer que tus mensajes lleguen a su destino!</p>
+                    <div class="school-logo">COLEGIO ESCOLARIS</div>
+                    <button class="restart-btn" onclick="goToSlide(0)">Volver a empezar</button>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

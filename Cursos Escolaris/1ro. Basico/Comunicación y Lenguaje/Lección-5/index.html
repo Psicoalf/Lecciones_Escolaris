@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 5: Reorganización del texto - Colegio Escolaris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="presentation-container">
+        <div class="header-decor"></div>
+
+        <!-- Botones de Navegación -->
+        <button id="prev-btn" class="nav-arrow" onclick="prevSlide()">
+            <svg viewBox="0 0 24 24">
+                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+            </svg>
+        </button>
+        <button id="next-btn" class="nav-arrow" onclick="nextSlide()">
+            <svg viewBox="0 0 24 24">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+            </svg>
+        </button>
+
+        <div class="slides">
+            <!-- 1. Portada -->
+            <section class="slide active" id="slide-1">
+                <div class="content portada">
+                    <p class="materia">Comunicación y Lenguaje</p>
+                    <h1>REORGANIZACIÓN DEL TEXTO</h1>
+                    <p class="lesson-info">Lección 5 • 1ro. Básico</p>
+                    <div class="illustration">
+                        <svg width="220" height="200" viewBox="0 0 220 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Libro abierto -->
+                            <path d="M20 160 C 20 160, 60 140, 110 160 C 160 140, 200 160, 200 160 V 50 C 200 50, 160 30, 110 50 C 60 30, 20 50, 20 50 Z" fill="#ffffff" stroke="#244b5a" stroke-width="4"/>
+                            <path d="M110 50 V 160" stroke="#244b5a" stroke-width="4"/>
+                            <!-- Pluma o Lápiz -->
+                            <rect x="140" y="70" width="10" height="60" rx="2" transform="rotate(30 140 70)" fill="#db6015" />
+                            <circle cx="110" cy="180" r="15" fill="#f7be00" />
+                        </svg>
+                    </div>
+                    <p class="welcome-msg">¡Bienvenido! Hoy aprenderemos a decir lo mismo, pero de una forma más clara y personal. 📚✒️</p>
+                </div>
+            </section>
+
+            <!-- 2. Objetivos de Aprendizaje -->
+            <section class="slide" id="slide-2">
+                <div class="content">
+                    <h2>🎯 Objetivos de aprendizaje</h2>
+                    <ul class="objectives-list">
+                        <li>Conocer qué es el parafraseo y cómo identificar secuencias de información.</li>
+                        <li>Aplicar los pasos correctos para realizar una paráfrasis efectiva.</li>
+                        <li>Identificar datos explícitos dentro de un texto para su reorganización.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 3. Activación de conocimientos -->
+            <section class="slide" id="slide-3">
+                <div class="content">
+                    <h2>🤔 ¿Te ha pasado?</h2>
+                    <p>Imagina que acabas de ver una película increíble y se la cuentas a tu mejor amigo.</p>
+                    <div class="reflection-box">
+                        <p>¿Le repites exactamente palabra por palabra lo que dijeron los personajes, o lo explicas con tus propias palabras?</p>
+                    </div>
+                    <div class="options">
+                        <button onclick="checkAnswer('act', true, '¡Exacto! Al usar tus propias palabras estás practicando el parafraseo. ¡Sigue adelante!', 'feedback-act')">
+                            Lo explico con mis palabras para que me entienda mejor.
+                        </button>
+                    </div>
+                    <div id="feedback-act" class="feedback-box"></div>
+                </div>
+            </section>
+
+            <!-- 4. Palabras clave -->
+            <section class="slide" id="slide-4">
+                <div class="content">
+                    <h2>🔑 Palabras clave</h2>
+                    <div class="keywords-container">
+                        <div class="keyword">
+                            <span class="icon">🔄</span>
+                            <h3>Parafraseo</h3>
+                            <p>Explicar un texto con palabras propias sin cambiar su significado original.</p>
+                        </div>
+                        <div class="keyword">
+                            <span class="icon">🧐</span>
+                            <h3>Info. Explícita</h3>
+                            <p>Datos que aparecen escritos directamente y claramente en el texto.</p>
+                        </div>
+                        <div class="keyword">
+                            <span class="icon">🔢</span>
+                            <h3>Secuencia</h3>
+                            <p>El orden lógico o cronológico en que se presentan las ideas o eventos.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. Contenido Principal: ¿Qué es reorganizar? -->
+            <section class="slide" id="slide-5">
+                <div class="content">
+                    <h2>📝 Reorganizar el texto</h2>
+                    <p>Reorganizar no es inventar información nueva, es <b>ordenar y transformar</b> lo que ya leímos para comprenderlo mejor.</p>
+                    <div class="reflection-box">
+                        <p>Para lograrlo, necesitamos:</p>
+                        <ul style="margin-left: 20px;">
+                            <li>Identificar las ideas principales.</li>
+                            <li>Detectar la secuencia de los hechos.</li>
+                            <li>Diferenciar lo más importante de los detalles.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. Contenido Principal: El Parafraseo -->
+            <section class="slide" id="slide-6">
+                <div class="content">
+                    <h2>🗣️ El arte de parafrasear</h2>
+                    <p>La paráfrasis es una herramienta poderosa para el estudio. Existen dos tipos principales:</p>
+                    <div class="keywords-container">
+                        <div class="keyword" style="border-top-color: #244b5a;">
+                            <h3>Paráfrasis Mecánica</h3>
+                            <p>Sustituye palabras por sinónimos manteniendo la estructura.</p>
+                        </div>
+                        <div class="keyword" style="border-top-color: #db6015;">
+                            <h3>Paráfrasis Constructiva</h3>
+                            <p>Reelabora el texto completo manteniendo el sentido pero con otra estructura.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. Exploración Visual -->
+            <section class="slide" id="slide-7">
+                <div class="content">
+                    <h2>🔍 Pasos para la Paráfrasis</h2>
+                    <p>Haz clic en cada paso para descubrir el secreto de una buena paráfrasis:</p>
+                    <div class="explorer-grid">
+                        <div class="folder-mini" onclick="showPopup('Lectura Atenta: Lee el texto completo varias veces hasta entenderlo.')">1. Lectura</div>
+                        <div class="folder-mini" onclick="showPopup('Subrayado: Localiza las ideas más importantes y palabras clave.')">2. Identificación</div>
+                        <div class="folder-mini" onclick="showPopup('Reemplazo: Busca sinónimos o formas más simples de decir las ideas.')">3. Sustitución</div>
+                        <div class="folder-mini" onclick="showPopup('Redacción: Escribe el nuevo texto y compáralo con el original.')">4. Verificación</div>
+                    </div>
+                    <div id="explorer-popup" class="feedback-box"></div>
+                </div>
+            </section>
+
+            <!-- 8. Actividad de Comprensión -->
+            <section class="slide" id="slide-8">
+                <div class="content quiz">
+                    <h2>✏️ Ponlo en práctica</h2>
+                    <p>Texto original: <i>"El canino doméstico se encontraba descansando plácidamente bajo la sombra del roble."</i></p>
+                    <p>¿Cuál es la mejor paráfrasis para este texto?</p>
+                    <div class="options">
+                        <button onclick="checkAnswer(8, false, '❌ Aquí cambiaste la información, ¡el perro no corría! Intenta de nuevo.')">El perro corría alegremente por el bosque cerca del roble.</button>
+                        <button onclick="checkAnswer(8, true, '✅ ¡Excelente! Utilizaste palabras más sencillas sin cambiar el sentido de la oración.')">El perro de la casa dormía tranquilo a la sombra de un árbol grande.</button>
+                        <button onclick="checkAnswer(8, false, '❌ Esta no es una paráfrasis, es solo una lista de palabras. Prueba otra vez.')">Canino, perro, sombra, árbol, roble, descanso.</button>
+                    </div>
+                    <div id="feedback-8" class="feedback-box"></div>
+                </div>
+            </section>
+
+            <!-- 9. Juego Educativo -->
+            <section class="slide" id="slide-9">
+                <div class="content">
+                    <h2>🎮 Ordena el Proceso</h2>
+                    <p>Haz clic en los pasos en el orden correcto para realizar una paráfrasis (del 1 al 4):</p>
+                    <div class="order-list">
+                        <div class="order-item" data-step="1" onclick="checkStep(1, 4, 'feedback-order')">
+                            <div class="order-number">?</div>
+                            <span>Leer el texto de forma general y comprensiva.</span>
+                        </div>
+                        <div class="order-item" data-step="3" onclick="checkStep(3, 4, 'feedback-order')">
+                            <div class="order-number">?</div>
+                            <span>Reescribir las ideas con vocabulario propio.</span>
+                        </div>
+                        <div class="order-item" data-step="2" onclick="checkStep(2, 4, 'feedback-order')">
+                            <div class="order-number">?</div>
+                            <span>Seleccionar las ideas principales y palabras clave.</span>
+                        </div>
+                        <div class="order-item" data-step="4" onclick="checkStep(4, 4, 'feedback-order')">
+                            <div class="order-number">?</div>
+                            <span>Comparar la paráfrasis con el texto original.</span>
+                        </div>
+                    </div>
+                    <div id="feedback-order" class="feedback-box"></div>
+                    <button class="retry-btn" onclick="resetOrdering(4, 'feedback-order')">Reiniciar pasos</button>
+                </div>
+            </section>
+
+            <!-- 10. Aplicación Práctica -->
+            <section class="slide" id="slide-10">
+                <div class="content quiz">
+                    <h2>💡 Caso Práctico</h2>
+                    <p>En el colegio, el profesor dice: <i>"Mañana deben entregar un ensayo sobre la importancia del agua en nuestro ecosistema."</i></p>
+                    <p>¿Cómo le explicarías esto a un compañero que llegó tarde usando paráfrasis?</p>
+                    <div class="options">
+                        <button onclick="checkAnswer(10, false, '❌ Eso es repetir palabra por palabra, no es parafrasear. ¡Prueba de nuevo!', 'feedback-10')">Dijo: Mañana deben entregar un ensayo sobre el agua.</button>
+                        <button onclick="checkAnswer(10, true, '✅ ¡Muy bien! Resumiste el mensaje y lo dijiste con tus palabras manteniendo la orden.', 'feedback-10')">Para mañana hay que hacer una tarea explicando por qué el agua es vital para el medio ambiente.</button>
+                    </div>
+                    <div id="feedback-10" class="feedback-box"></div>
+                </div>
+            </section>
+
+            <!-- 11. Metacognición -->
+            <section class="slide" id="slide-11">
+                <div class="content reflection">
+                    <h2>🧠 Mi aprendizaje</h2>
+                    <p>Reflexiona sobre lo que hemos visto hoy:</p>
+                    <div class="repaso-scroll">
+                        <div class="repaso-item">
+                            <p><b>¿Qué es lo más importante al parafrasear?</b></p>
+                            <div class="btn-group">
+                                <button onclick="checkAnswer('r1', false, '❌ Si cambias el sentido, ya no es una paráfrasis.', 'feedback-r1')">Cambiar la historia</button>
+                                <button onclick="checkAnswer('r1', true, '✅ ¡Exacto! Mantener el mensaje original es la regla de oro.', 'feedback-r1')">Mantener la idea central</button>
+                            </div>
+                            <div id="feedback-r1" class="feedback-box"></div>
+                        </div>
+                        <div class="reflection-box">
+                            <p><b>¿Cómo me ayuda esto en mis estudios?</b></p>
+                            <p><i>Me ayuda a estudiar mejor porque para explicar algo con mis palabras, primero tengo que haberlo entendido profundamente.</i></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 12. Cierre -->
+            <section class="slide" id="slide-12">
+                <div class="content reflection" style="text-align: center;">
+                    <div class="badge">🏆</div>
+                    <h2>¡Misión Cumplida!</h2>
+                    <p>Ahora eres un experto en reorganización de textos y parafraseo.</p>
+                    <p>¡Sigue practicando con tus lecturas diarias!</p>
+                    <div class="school-logo">COLEGIO ESCOLARIS</div>
+                    <button class="restart-btn" onclick="goToSlide(0)">Volver a empezar</button>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

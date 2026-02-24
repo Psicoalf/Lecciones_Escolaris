@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 9: Comunicación Oral - Colegio Escolaris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="presentation-container">
+        <div class="header-decor"></div>
+
+        <!-- Botones de Navegación -->
+        <button id="prev-btn" class="nav-arrow" onclick="prevSlide()">
+            <svg viewBox="0 0 24 24">
+                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+            </svg>
+        </button>
+        <button id="next-btn" class="nav-arrow" onclick="nextSlide()">
+            <svg viewBox="0 0 24 24">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+            </svg>
+        </button>
+
+        <div class="slides">
+            <!-- 1. Portada -->
+            <section class="slide active" id="slide-1">
+                <div class="content portada">
+                    <p class="materia">Comunicación y Lenguaje</p>
+                    <h1>COMUNICACIÓN ORAL</h1>
+                    <p class="lesson-info">Lección 9 • 1ro. Básico</p>
+                    <div class="illustration">
+                        <svg width="220" height="200" viewBox="0 0 220 200" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <!-- Dos personas hablando -->
+                            <circle cx="70" cy="80" r="35" fill="#244b5a" />
+                            <circle cx="150" cy="80" r="35" fill="#db6015" />
+                            <!-- Ondas de sonido entre ellos -->
+                            <path d="M90 80 H130" stroke="#f7be00" stroke-width="6" stroke-linecap="round"
+                                stroke-dasharray="10 10" />
+                            <path d="M100 60 Q 110 50 120 60" stroke="#f7be00" stroke-width="4" opacity="0.6" />
+                            <path d="M100 100 Q 110 110 120 100" stroke="#f7be00" stroke-width="4" opacity="0.6" />
+                        </svg>
+                    </div>
+                    <p class="welcome-msg">¡Hola! Hoy exploraremos el poder de la palabra hablada y cómo comunicarnos
+                        mejor con los demás. 🗣️🌍</p>
+                </div>
+            </section>
+
+            <!-- 2. Objetivos de Aprendizaje -->
+            <section class="slide" id="slide-2">
+                <div class="content">
+                    <h2>🎯 Objetivos de aprendizaje</h2>
+                    <ul class="objectives-list">
+                        <li>Conocer el significado y la utilidad de la comunicación oral en la vida cotidiana.</li>
+                        <li>Identificar y aplicar diferentes técnicas de comunicación oral efectiva.</li>
+                        <li>Desarrollar habilidades para expresarse con claridad y coherencia.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 3. Activación de conocimientos -->
+            <section class="slide" id="slide-3">
+                <div class="content">
+                    <h2>🤔 ¿Cómo lo dirías?</h2>
+                    <p>Imagina que quieres invitar a un amigo a jugar, pero no puedes enviarle un mensaje de texto.
+                        Tienes que decírselo en persona o por llamada.</p>
+                    <div class="reflection-box">
+                        <p>¿Qué ventajas crees que tiene hablar directamente en lugar de solo escribir?</p>
+                    </div>
+                    <div class="options">
+                        <button
+                            onclick="checkAnswer('act', true, '✅ ¡Exacto! Los gestos y la entonación ayudan a que se entienda mejor nuestro sentimiento.', 'feedback-act')">
+                            Puedo usar mi voz y movimientos para explicarme mejor.
+                        </button>
+                    </div>
+                    <div id="feedback-act" class="feedback-box"></div>
+                </div>
+            </section>
+
+            <!-- 4. Palabras clave -->
+            <section class="slide" id="slide-4">
+                <div class="content">
+                    <h2>🔑 Conceptos clave</h2>
+                    <div class="keywords-container">
+                        <div class="keyword">
+                            <span class="icon">💬</span>
+                            <h3>Comunicación Oral</h3>
+                            <p>Intercambio de mensajes a través del habla entre dos o más personas.</p>
+                        </div>
+                        <div class="keyword">
+                            <span class="icon">👂</span>
+                            <h3>Escucha Activa</h3>
+                            <p>Prestar atención total a lo que el otro dice, sin interrumpir.</p>
+                        </div>
+                        <div class="keyword">
+                            <span class="icon">✋</span>
+                            <h3>Lenguaje No Verbal</h3>
+                            <p>Gestos, posturas y miradas que acompañan a lo que decimos.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. Contenido Principal: Utilidad -->
+            <section class="slide" id="slide-5">
+                <div class="content">
+                    <h2>🚀 ¿Para qué sirve hablar bien?</h2>
+                    <p>La comunicación oral es nuestra herramienta más usada para convivir.</p>
+                    <div class="reflection-box">
+                        <p><b>Nos permite:</b></p>
+                        <ul style="margin-left: 20px;">
+                            <li>Expresar emociones y necesidades de forma inmediata.</li>
+                            <li>Resolver conflictos hablando cara a cara.</li>
+                            <li>Aprender a través de explicaciones y debates.</li>
+                            <li>Socializar y crear lazos de amistad.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. Contenido Principal: Técnicas -->
+            <section class="slide" id="slide-6">
+                <div class="content">
+                    <h2>🛠️ Técnicas de Comunicación Oral</h2>
+                    <p>Para hablar con efectividad, existen diferentes formatos:</p>
+                    <div class="keywords-container">
+                        <div class="keyword" style="border-top-color: #db6015;">
+                            <h3>El Diálogo</h3>
+                            <p>Conversación entre dos personas que intercambian turnos.</p>
+                        </div>
+                        <div class="keyword" style="border-top-color: #244b5a;">
+                            <h3>La Exposición</h3>
+                            <p>Presentación de un tema ante un público de forma ordenada.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. Exploración Visual -->
+            <section class="slide" id="slide-7">
+                <div class="content">
+                    <h2>🔍 Elementos de la Voz</h2>
+                    <p>Haz clic en cada elemento para saber cómo usar tu voz al hablar:</p>
+                    <div class="explorer-grid">
+                        <div class="folder-mini"
+                            onclick="showPopup('<b>Dicción:</b> Pronunciar claramente cada letra y sílaba.')">🗣️
+                            Dicción</div>
+                        <div class="folder-mini"
+                            onclick="showPopup('<b>Entonación:</b> Darle musicalidad a las frases según su intención.')">
+                            🎶 Entonación</div>
+                        <div class="folder-mini"
+                            onclick="showPopup('<b>Fluidez:</b> Hablar sin muchas pausas o trabas innecesarias.')">🌊
+                            Fluidez</div>
+                        <div class="folder-mini"
+                            onclick="showPopup('<b>Volumen:</b> Ajustar la fuerza de la voz al tamaño del lugar.')">📢
+                            Volumen</div>
+                    </div>
+                    <div id="explorer-popup" class="feedback-box"></div>
+                </div>
+            </section>
+
+            <!-- 8. Actividad de Comprensión -->
+            <section class="slide" id="slide-8">
+                <div class="content quiz">
+                    <h2>✏️ Identifica la técnica</h2>
+                    <p>Si un estudiante pasa al frente del salón para explicar un tema usando carteles, ¿qué técnica
+                        está aplicando?</p>
+                    <div class="options">
+                        <button
+                            onclick="checkAnswer(8, false, '❌ Incorrecto. El diálogo es entre dos personas conversando.', 'feedback-8')">El
+                            Diálogo</button>
+                        <button
+                            onclick="checkAnswer(8, true, '✅ ¡Muy bien! Es una exposición porque presenta información a un grupo.', 'feedback-8')">La
+                            Exposición Oral</button>
+                        <button
+                            onclick="checkAnswer(8, false, '❌ No, eso sería una técnica escrita. ¡Intenta de nuevo!', 'feedback-8')">Un
+                            resumen escrito</button>
+                    </div>
+                    <div id="feedback-8" class="feedback-box"></div>
+                </div>
+            </section>
+
+            <!-- 9. Juego Educativo -->
+            <section class="slide" id="slide-9">
+                <div class="content">
+                    <h2>🎮 Relaciona los conceptos</h2>
+                    <p>Empareja cada situación con el concepto correcto:</p>
+                    <div class="game-match">
+                        <div class="match-column" id="col-icons">
+                            <button class="match-btn" data-type="V" id="btn-a">El tono y volumen de voz</button>
+                            <button class="match-btn" data-type="NV" id="btn-b">Mover las manos al hablar</button>
+                            <button class="match-btn" data-type="E" id="btn-c">Mirar a los ojos al otro</button>
+                        </div>
+                        <div class="match-column" id="col-desc">
+                            <button class="match-btn" data-target="NV" id="desc-a">Lenguaje Corporal</button>
+                            <button class="match-btn" data-target="V" id="desc-b">Elementos Vocales</button>
+                            <button class="match-btn" data-target="E" id="desc-c">Contacto Visual</button>
+                        </div>
+                    </div>
+                    <div id="feedback-game" class="feedback-box"></div>
+                    <button id="retry-game" class="retry-btn" onclick="resetGame()" style="display:none">Intentar de
+                        nuevo</button>
+                </div>
+            </section>
+
+            <!-- 10. Aplicación Práctica -->
+            <section class="slide" id="slide-10">
+                <div class="content quiz">
+                    <h2>💡 Caso Práctico</h2>
+                    <p>Estás en un debate y tu compañero dice algo con lo que no estás de acuerdo. ¿Cuál es la forma
+                        correcta de actuar?</p>
+                    <div class="options">
+                        <button
+                            onclick="checkAnswer(10, false, '❌ Eso cortaría la comunicación y sería grosero. ¡Prueba otra!', 'feedback-10')">Interrumpirlo
+                            de inmediato para que se detenga.</button>
+                        <button
+                            onclick="checkAnswer(10, true, '✅ ¡Excelente! Practicas la escucha activa y expresas tu opinión con respeto.', 'feedback-10')">Escucharlo
+                            hasta que termine y luego pedir la palabra respetuosamente.</button>
+                    </div>
+                    <div id="feedback-10" class="feedback-box"></div>
+                </div>
+            </section>
+
+            <!-- 11. Metacognición -->
+            <section class="slide" id="slide-11">
+                <div class="content reflection">
+                    <h2>🧠 Mi aprendizaje</h2>
+                    <p>Reflexiona sobre lo aprendido:</p>
+                    <div class="repaso-scroll">
+                        <div class="repaso-item">
+                            <p><b>¿Qué es lo más difícil para ti al hablar en público?</b></p>
+                            <div class="btn-group">
+                                <button
+                                    onclick="checkAnswer('r1', true, '✅ ¡Es normal! La práctica y la preparación te darán seguridad.', 'feedback-r1')">Los
+                                    nervios</button>
+                                <button
+                                    onclick="checkAnswer('r1', true, '✅ ¡Buena observación! Pronunciar bien ayuda a que todos te entiendan.', 'feedback-r1')">La
+                                    dicción</button>
+                            </div>
+                            <div id="feedback-r1" class="feedback-box"></div>
+                        </div>
+                        <div class="reflection-box">
+                            <p><b>¿Cómo seré un mejor comunicador desde hoy?</b></p>
+                            <p><i>Trataré de escuchar más a los demás y usaré un volumen adecuado según con quién esté
+                                    hablando.</i></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 12. Cierre -->
+            <section class="slide" id="slide-12">
+                <div class="content reflection" style="text-align: center;">
+                    <div class="badge">🗣️🏆</div>
+                    <h2>¡Excelente Comunicador!</h2>
+                    <p>Has completado la lección sobre Comunicación Oral.</p>
+                    <p>¡Tus palabras son tu mejor herramienta para conectar con el mundo!</p>
+                    <div class="school-logo">COLEGIO ESCOLARIS</div>
+                    <button class="restart-btn" onclick="goToSlide(0)">Volver a empezar</button>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

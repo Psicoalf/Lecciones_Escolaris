@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 7: Comunicación Asertiva y Debate - Colegio Escolaris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="presentation-container">
+        <div class="header-decor"></div>
+
+        <!-- Botones de Navegación -->
+        <button id="prev-btn" class="nav-arrow" onclick="prevSlide()">
+            <svg viewBox="0 0 24 24">
+                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+            </svg>
+        </button>
+        <button id="next-btn" class="nav-arrow" onclick="nextSlide()">
+            <svg viewBox="0 0 24 24">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+            </svg>
+        </button>
+
+        <div class="slides">
+            <!-- 1. Portada -->
+            <section class="slide active" id="slide-1">
+                <div class="content portada">
+                    <p class="materia">Comunicación y Lenguaje</p>
+                    <h1>COMUNICACIÓN ASERTIVA Y DEBATE</h1>
+                    <p class="lesson-info">Lección 7 • 1ro. Básico</p>
+                    <div class="illustration">
+                        <svg width="220" height="200" viewBox="0 0 220 200" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <!-- Dos personas hablando (estilizado) -->
+                            <circle cx="70" cy="70" r="30" fill="#244b5a" />
+                            <circle cx="150" cy="70" r="30" fill="#db6015" />
+                            <!-- Burbuja de diálogo asertiva -->
+                            <path d="M110 110 L90 150 H130 L110 110" fill="#f7be00" />
+                            <rect x="70" y="140" width="80" height="40" rx="10" fill="#f7be00" />
+                            <text x="85" y="165" fill="#244b5a" font-weight="bold" font-size="12">¡Te escucho!</text>
+                        </svg>
+                    </div>
+                    <p class="welcome-msg">¡Hola! Hoy aprenderemos a defender nuestras ideas con respeto y a debatir
+                        como profesionales. 🗣️🤝</p>
+                </div>
+            </section>
+
+            <!-- 2. Objetivos de Aprendizaje -->
+            <section class="slide" id="slide-2">
+                <div class="content">
+                    <h2>🎯 Objetivos de aprendizaje</h2>
+                    <ul class="objectives-list">
+                        <li>Aplicar los pasos fundamentales para lograr una comunicación asertiva en el día a día.</li>
+                        <li>Conocer los elementos y la estructura para realizar un debate con el estilo de Karl Popper.
+                        </li>
+                        <li>Desarrollar habilidades de escucha activa y argumentación respetuosa.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 3. Activación de conocimientos -->
+            <section class="slide" id="slide-3">
+                <div class="content">
+                    <h2>🤔 ¿Cómo reaccionas?</h2>
+                    <p>Si alguien toma tu lapicero favorito sin pedir permiso y lo pierde, ¿qué haces?</p>
+                    <div class="options">
+                        <button
+                            onclick="checkAnswer('act', false, '❌ Esa es una respuesta agresiva. Genera más conflicto.', 'feedback-act')">
+                            Le grito y le digo que es un irresponsable delante de todos.
+                        </button>
+                        <button
+                            onclick="checkAnswer('act', true, '✅ ¡Exacto! Expresas tu molestia de forma clara y buscas una solución sin atacar.', 'feedback-act')">
+                            Le explico calmadamente que me molestó y le pido que lo reponga.
+                        </button>
+                    </div>
+                    <div id="feedback-act" class="feedback-box"></div>
+                </div>
+            </section>
+
+            <!-- 4. Palabras clave -->
+            <section class="slide" id="slide-4">
+                <div class="content">
+                    <h2>🔑 Conceptos clave</h2>
+                    <div class="keywords-container">
+                        <div class="keyword">
+                            <span class="icon">⚖️</span>
+                            <h3>Asertividad</h3>
+                            <p>Habilidad de expresar deseos y sentimientos de manera clara, directa y honesta sin herir
+                                a otros.</p>
+                        </div>
+                        <div class="keyword">
+                            <span class="icon">💬</span>
+                            <h3>Debate</h3>
+                            <p>Discusión formal donde se defienden opiniones opuestas sobre un tema con argumentos
+                                válidos.</p>
+                        </div>
+                        <div class="keyword">
+                            <span class="icon">🎓</span>
+                            <h3>Karl Popper</h3>
+                            <p>Filósofo que inspiró un formato de debate basado en la crítica constructiva y la lógica.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. Contenido Principal: Pasos de la Asertividad -->
+            <section class="slide" id="slide-5">
+                <div class="content">
+                    <h2>📝 Pasos para ser Asertivo</h2>
+                    <p>La asertividad no nace, se practica. Sigue esta fórmula:</p>
+                    <div class="reflection-box">
+                        <ol style="margin-left: 20px;">
+                            <li><b>Describe el hecho:</b> (Sin juzgar) "Cuando llegas tarde..."</li>
+                            <li><b>Expresa tu sentimiento:</b> "Me siento preocupado..."</li>
+                            <li><b>Pide un cambio:</b> "Me gustaría que avisaras si te retrasas."</li>
+                            <li><b>Menciona beneficios:</b> "Así yo estaré más tranquilo."</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. Contenido Principal: Debate Karl Popper -->
+            <section class="slide" id="slide-6">
+                <div class="content">
+                    <h2>🏛️ Debate estilo Karl Popper</h2>
+                    <p>Este formato se centra en el trabajo en equipo y el desarrollo de argumentos sólidos. Sus
+                        elementos son:</p>
+                    <div class="keywords-container">
+                        <div class="keyword" style="border-top-color: #244b5a;">
+                            <h3>Afirmativo</h3>
+                            <p>Equipo que defiende la propuesta inicial con pruebas.</p>
+                        </div>
+                        <div class="keyword" style="border-top-color: #db6015;">
+                            <h3>Negativo</h3>
+                            <p>Equipo que cuestiona y refuta los argumentos del otro lado.</p>
+                        </div>
+                    </div>
+                    <p style="text-align:center; margin-top:15px;">¡Lo más importante es la evidencia y el respeto!</p>
+                </div>
+            </section>
+
+            <!-- 7. Exploración Visual -->
+            <section class="slide" id="slide-7">
+                <div class="content">
+                    <h2>🔍 Fases del Debate Popper</h2>
+                    <p>Haz clic en cada fase para conocer el proceso del debate:</p>
+                    <div class="explorer-grid">
+                        <div class="folder-mini"
+                            onclick="showPopup('<b>Discurso Inicial:</b> Cada equipo presenta sus argumentos principales.')">
+                            1. Exposición</div>
+                        <div class="folder-mini"
+                            onclick="showPopup('<b>Interrogatorio:</b> Un miembro del equipo contrario hace preguntas directas.')">
+                            2. Cruce de preguntas</div>
+                        <div class="folder-mini"
+                            onclick="showPopup('<b>Refutación:</b> Se atacan las debilidades de los argumentos contrarios.')">
+                            3. Respuesta crítica</div>
+                        <div class="folder-mini"
+                            onclick="showPopup('<b>Conclusión:</b> Se hace un resumen final resaltando por qué su postura es mejor.')">
+                            4. Cierre</div>
+                    </div>
+                    <div id="explorer-popup" class="feedback-box"></div>
+                </div>
+            </section>
+
+            <!-- 8. Actividad de Comprensión -->
+            <section class="slide" id="slide-8">
+                <div class="content quiz">
+                    <h2>✏️ Identifica el estilo</h2>
+                    <p>Si en un debate dices: <i>"Tu idea es tonta porque no sabes nada del tema"</i>, ¿qué estás
+                        haciendo mal?</p>
+                    <div class="options">
+                        <button
+                            onclick="checkAnswer(8, true, '✅ ¡Correcto! Estás atacando a la persona (ad hominem) en lugar de atacar el argumento con lógica.')">Estás
+                            atacando al oponente y no a su argumento.</button>
+                        <button
+                            onclick="checkAnswer(8, false, '❌ No, eso no es asertivo ni es parte de un debate respetuoso.')">Nada
+                            mal, estoy siendo sincero y directo.</button>
+                    </div>
+                    <div id="feedback-8" class="feedback-box"></div>
+                </div>
+            </section>
+
+            <!-- 9. Juego Educativo -->
+            <section class="slide" id="slide-9">
+                <div class="content">
+                    <h2>🎮 Orden de la Comunicación Asertiva</h2>
+                    <p>Ordena los pasos para hacer una petición asertiva (del 1 al 4):</p>
+                    <div class="order-list">
+                        <div class="order-item" data-step="2" onclick="checkStep(2, 4, 'feedback-order')">
+                            <div class="order-number">?</div>
+                            <span>Expresar cómo te hace sentir la situación.</span>
+                        </div>
+                        <div class="order-item" data-step="4" onclick="checkStep(4, 4, 'feedback-order')">
+                            <div class="order-number">?</div>
+                            <span>Explicar las consecuencias positivas de la solución.</span>
+                        </div>
+                        <div class="order-item" data-step="1" onclick="checkStep(1, 4, 'feedback-order')">
+                            <div class="order-number">?</div>
+                            <span>Describir la situación objetivamente.</span>
+                        </div>
+                        <div class="order-item" data-step="3" onclick="checkStep(3, 4, 'feedback-order')">
+                            <div class="order-number">?</div>
+                            <span>Hacer una propuesta concreta de cambio.</span>
+                        </div>
+                    </div>
+                    <div id="feedback-order" class="feedback-box"></div>
+                    <button class="retry-btn" onclick="resetOrdering(4, 'feedback-order')">Reiniciar proceso</button>
+                </div>
+            </section>
+
+            <!-- 10. Aplicación Práctica -->
+            <section class="slide" id="slide-10">
+                <div class="content quiz">
+                    <h2>💡 Reto de Debate</h2>
+                    <p>En un debate tipo Karl Popper, ¿cuál es el propósito del <b>interrogatorio cruzado</b>?</p>
+                    <div class="options">
+                        <button
+                            onclick="checkAnswer(10, false, '❌ No se busca intimidar, se busca claridad. ¡Intenta otra!', 'feedback-10')">Poner
+                            nervioso al oponente para que se rinda.</button>
+                        <button
+                            onclick="checkAnswer(10, true, '✅ ¡Excelente! Se busca aclarar dudas o exponer debilidades en los argumentos expuestos.', 'feedback-10')">Aclarar
+                            puntos confusos y obtener concesiones del otro equipo.</button>
+                    </div>
+                    <div id="feedback-10" class="feedback-box"></div>
+                </div>
+            </section>
+
+            <!-- 11. Metacognición -->
+            <section class="slide" id="slide-11">
+                <div class="content reflection">
+                    <h2>🧠 Mi aprendizaje</h2>
+                    <p>Evalúa lo aprendido:</p>
+                    <div class="repaso-scroll">
+                        <div class="repaso-item">
+                            <p><b>¿Para qué sirve debatir con respeto?</b></p>
+                            <div class="btn-group">
+                                <button
+                                    onclick="checkAnswer('r1', true, '✅ ¡Exacto! Debatiendo aprendemos más que solo ganando.', 'feedback-r1')">Para
+                                    entender diferentes puntos de vista</button>
+                                <button
+                                    onclick="checkAnswer('r1', false, '❌ El debate no es para pelear, es para razonar.', 'feedback-r1')">Para
+                                    demostrar que siempre tengo la razón</button>
+                            </div>
+                            <div id="feedback-r1" class="feedback-box"></div>
+                        </div>
+                        <div class="reflection-box">
+                            <p><b>¿Cómo aplicaré la asertividad mañana?</b></p>
+                            <p><i>Cuando necesite pedir algo a mis padres o amigos, usaré el "Yo siento..." en lugar de
+                                    señalar culpables.</i></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 12. Cierre -->
+            <section class="slide" id="slide-12">
+                <div class="content reflection" style="text-align: center;">
+                    <div class="badge">🤝🔥</div>
+                    <h2>¡Líder de la Comunicación!</h2>
+                    <p>Has completado la lección sobre Comunicación Asertiva y Debate Karl Popper.</p>
+                    <p>¡Tus palabras tienen poder, úsalas sabiamente!</p>
+                    <div class="school-logo">COLEGIO ESCOLARIS</div>
+                    <button class="restart-btn" onclick="goToSlide(0)">Volver a empezar</button>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
