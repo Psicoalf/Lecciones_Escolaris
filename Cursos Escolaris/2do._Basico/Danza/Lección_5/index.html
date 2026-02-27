@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 5: El Vals - Danza - Colegio Escolaris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="presentation-container">
+        <!-- Navegación -->
+        <button class="nav-arrow prev" onclick="prevSlide()" aria-label="Anterior">
+            <svg viewBox="0 0 24 24">
+                <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z" />
+            </svg>
+        </button>
+        <button class="nav-arrow next" onclick="nextSlide()" aria-label="Siguiente">
+            <svg viewBox="0 0 24 24">
+                <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
+            </svg>
+        </button>
+
+        <!-- Slide 1: Portada -->
+        <div class="slide active" id="slide-1">
+            <div class="slide-icon">🎠🎩</div>
+            <h1>El Vals: El Giro de la Historia</h1>
+            <h2 style="color: var(--primary-blue);">De los Alpes a los Salones de Europa</h2>
+            <div
+                style="background: var(--primary-orange); color: white; padding: 10px 20px; border-radius: 20px; font-weight: bold; margin-bottom: 20px;">
+                Danza | Básicos | Lección 5
+            </div>
+            <p>¡Hola! Hoy conoceremos el baile que revolucionó el siglo XVIII: el Vals. Un baile que comenzó como una
+                danza campesina y terminó conquistando a la realeza. 🌟</p>
+        </div>
+
+        <!-- Slide 2: Objetivos -->
+        <div class="slide" id="slide-2">
+            <div class="slide-icon">🎯</div>
+            <h2>¿Qué aprenderemos?</h2>
+            <div
+                style="text-align: left; max-width: 650px; margin: 0 auto; background: var(--bg-light-blue); padding: 30px; border-radius: 15px; border-left: 8px solid var(--primary-yellow);">
+                <p>✅ <b>Conocer</b> el origen del Vals a partir de danzas populares alemanas.</p>
+                <p>✅ <b>Identificar</b> la innovación de la "posición cerrada" face to face.</p>
+                <p>✅ <b>Comprender</b> por qué fue considerado un escándalo social en su época.</p>
+            </div>
+        </div>
+
+        <!-- Slide 3: Activación -->
+        <div class="slide" id="slide-3">
+            <div class="slide-icon">🔄</div>
+            <h2>¿Te gusta girar?</h2>
+            <p>Imagina que das vueltas y vueltas por todo un salón al ritmo de 1, 2, 3... ¿Crees que bailar abrazado a
+                otra persona era normal hace 250 años?</p>
+            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                <button class="btn btn-yellow" onclick="this.innerText='🤯 ¡Exacto! Fue una gran revolución.'">¡Era muy
+                    raro!</button>
+                <button class="btn btn-orange" onclick="this.innerText='✨ ¡Sí! Cambió la danza para siempre.'">¡Suena
+                    divertido!</button>
+            </div>
+        </div>
+
+        <!-- Slide 4: Palabras clave -->
+        <div class="slide" id="slide-4">
+            <div class="slide-icon">📖</div>
+            <h2>Conceptos Clave</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; width: 100%;">
+                <div class="keyword-card">
+                    <h3 style="color: var(--primary-orange);">Ländler</h3>
+                    <p style="font-size: 0.9rem;">Danza campesina de Austria y Alemania que dio origen al Vals.</p>
+                </div>
+                <div class="keyword-card">
+                    <h3 style="color: var(--primary-red);">Compás Ternario</h3>
+                    <p style="font-size: 0.9rem;">Ritmo constante de 3 tiempos (1-2-3) que define la música del Vals.
+                    </p>
+                </div>
+                <div class="keyword-card" style="grid-column: span 2;">
+                    <h3 style="color: var(--primary-blue);">Posición Cerrada</h3>
+                    <p style="font-size: 0.9rem;">Forma de bailar donde la pareja se sitúa frente a frente, con las
+                        manos en la cintura y hombros.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Contenido Principal 1 -->
+        <div class="slide" id="slide-5">
+            <div class="slide-icon">🌄</div>
+            <h2>Un Origen Humilde</h2>
+            <p>El Vals no nació en palacios. Venía de las montañas, donde los campesinos bailaban el <i>Ländler</i> con
+                botas pesadas y giros rápidos.</p>
+            <div class="highlight-box">
+                <p style="margin-bottom: 0;">✨ <b>Dato Clave:</b> La palabra "Vals" viene de <i>wälzen</i>, que
+                    significa rodar o girar. ¡La clave está en el movimiento circular!</p>
+            </div>
+            <p>Al llegar a las ciudades, el Vals se volvió más suave, elegante y se empezó a bailar con zapatos de seda.
+            </p>
+        </div>
+
+        <!-- Slide 6: Contenido Principal 2 -->
+        <div class="slide" id="slide-6">
+            <div class="slide-icon">📢</div>
+            <h2>¡El Gran Escándalo!</h2>
+            <p>Cuando el Vals llegó a las cortes, causó un gran impacto. Antes, las parejas apenas se tocaban los dedos.
+            </p>
+            <ul style="text-align: left; max-width: 600px; margin: 10px auto; font-size: 1.1rem; line-height: 1.6;">
+                <li>🤐 <b>Demasiado cerca:</b> La gente pensaba que era inapropiado bailar cara a cara tan pegados.</li>
+                <li>🌀 <b>Mareo:</b> Los médicos de la época decían que girar tanto era malo para la salud.</li>
+                <li>🎻 <b>Velocidad:</b> Era mucho más rápido que el Minuet.</li>
+            </ul>
+        </div>
+
+        <!-- Slide 7: Exploración Visual -->
+        <div class="slide" id="slide-7">
+            <div class="slide-icon">🔍</div>
+            <h2>Explora la Posición</h2>
+            <p>Haz clic en los puntos para conocer la famosa "Posición Cerrada" del Vals.</p>
+            <div class="interactive-container">
+                <div style="font-weight: bold; color: var(--primary-blue);">LA PAREJA DE VALS</div>
+                <div class="map-point" id="v-1" style="top: 30%; left: 45%;"
+                    onclick="showPointInfo('v-1', 'info-v', 'MANO AL HOMBRO: El contacto cara a cara permitía una mayor conexión entre los bailarines.')">
+                    ?</div>
+                <div class="map-point" id="v-2" style="top: 55%; left: 55%;"
+                    onclick="showPointInfo('v-2', 'info-v', 'LA CINTURA: Se usaba para guiar el giro continuo por todo el salón.')">
+                    ?</div>
+                <div class="map-point" id="v-3" style="top: 85%; left: 50%;"
+                    onclick="showPointInfo('v-3', 'info-v', 'EL GIRO: Los pies no se cruzaban, se deslizaban en círculos constantes.')">
+                    ?</div>
+            </div>
+            <div id="info-v" class="info-display">Haz clic en un punto para explorar.</div>
+        </div>
+
+        <!-- Slide 8: Actividad de Comprensión -->
+        <div class="slide" id="slide-8">
+            <div class="slide-icon">✅</div>
+            <h2>¿Cuál fue la gran innovación?</h2>
+            <p>¿Qué característica del Vals fue la que más sorprendió a la sociedad del siglo XVIII?</p>
+            <div class="options-container">
+                <button class="option-btn"
+                    onclick="checkSimpleOption(this, true, 'fb-8', '¡Correcto! El baile face-to-face fue la mayor revolución social del Vals.', '')">Bailar
+                    en posición cerrada (frente a frente).</button>
+                <button class="option-btn"
+                    onclick="checkSimpleOption(this, false, 'fb-8', '', 'No, eso era común en otros bailes. ¡Inténtalo de nuevo!')">Bailar
+                    usando máscaras de animales.</button>
+                <button class="option-btn"
+                    onclick="checkSimpleOption(this, false, 'fb-8', '', '¡Al contrario! El Vals destaca por sus giros continuos.')">Bailar
+                    sin moverse del sitio.</button>
+            </div>
+            <div id="fb-8" class="feedback"></div>
+        </div>
+
+        <!-- Slide 9: Juego Educativo -->
+        <div class="slide" id="slide-9">
+            <div class="slide-icon">🎮</div>
+            <h2>¿Verdadero o Falso?</h2>
+            <p>¿Es cierto que los médicos del siglo XVIII recomendaban el Vals como el mejor ejercicio para el corazón?
+            </p>
+            <div class="options-container">
+                <button class="option-btn"
+                    onclick="checkSimpleOption(this, false, 'fb-9', '', '¡Incorrecto! Muchos médicos decían que los giros causaban mareos y eran peligrosos.')">Verdadero</button>
+                <button class="option-btn"
+                    onclick="checkSimpleOption(this, true, 'fb-9', '¡Exacto! Era visto como algo arriesgado para la salud y la moral.', '')">Falso
+                    (Se creía que era perjudicial)</button>
+            </div>
+            <div id="fb-9" class="feedback"></div>
+        </div>
+
+        <!-- Slide 10: Aplicación Práctica -->
+        <div class="slide" id="slide-10">
+            <div class="slide-icon">🌟</div>
+            <h2>El Vals hoy en día</h2>
+            <p>Si hoy vas a una boda o a una fiesta de quince años, ¿qué baile suele ser el protagonista para abrir la
+                pista?</p>
+            <div class="options-container">
+                <button class="option-btn"
+                    onclick="checkSimpleOption(this, true, 'fb-10', '¡Así es! El Vals sigue siendo el baile de gala por excelencia.', '')">El
+                    Vals tradicional.</button>
+                <button class="option-btn"
+                    onclick="checkSimpleOption(this, false, 'fb-10', '', 'Aunque son populares, no son danzas de gala tradicionales para abrir eventos.')">Rock
+                    and Roll o Reggaeton.</button>
+            </div>
+            <div id="fb-10" class="feedback"></div>
+        </div>
+
+        <!-- Slide 11: Metacognición -->
+        <div class="slide" id="slide-11">
+            <div class="slide-icon">🧠</div>
+            <h2>Reflexiona</h2>
+            <div
+                style="background: var(--bg-light-blue); border-left: 5px solid var(--primary-orange); padding: 25px; text-align: left; width: 100%;">
+                <p><b>¿Cómo crees que el Vals ayudó a que las personas se relacionaran de forma más cercana?</b></p>
+                <p style="font-style: italic; color: var(--primary-blue);">"Hoy he aprendido que un baile puede romper
+                    barreras sociales y cambiar la forma en que nos comunicamos con el cuerpo."</p>
+            </div>
+        </div>
+
+        <!-- Slide 12: Cierre -->
+        <div class="slide" id="slide-12">
+            <div class="slide-icon">🏆</div>
+            <h2>¡Graduado en Historia del Vals!</h2>
+            <p>Has completado la lección 5. Ahora conoces el origen, el escándalo y la elegancia de uno de los bailes
+                más famosos del mundo.</p>
+            <div style="color: var(--primary-orange); font-size: 2rem; font-weight: bold; margin-bottom: 20px;">
+                ¡Excelente trabajo!</div>
+            <button class="btn btn-yellow" onclick="restartPresentation()">Volver a empezar</button>
+        </div>
+
+        <!-- Progreso -->
+        <div class="progress-bar-bg">
+            <div class="progress-bar-fill"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

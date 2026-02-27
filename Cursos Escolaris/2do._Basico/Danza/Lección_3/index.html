@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 3: El Minuet - Danza - Colegio Escolaris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="presentation-container">
+        <!-- Navegación -->
+        <button class="nav-arrow prev" onclick="prevSlide()" aria-label="Anterior">
+            <svg viewBox="0 0 24 24">
+                <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z" />
+            </svg>
+        </button>
+        <button class="nav-arrow next" onclick="nextSlide()" aria-label="Siguiente">
+            <svg viewBox="0 0 24 24">
+                <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
+            </svg>
+        </button>
+
+        <!-- Slide 1: Portada -->
+        <div class="slide active" id="slide-1">
+            <div class="slide-icon">👑💃</div>
+            <h1>El Minuet: El Rey de los Bailes</h1>
+            <h2 style="color: var(--primary-blue);">Elegancia y Protocolo en el Siglo XVIII</h2>
+            <div
+                style="background: var(--primary-orange); color: white; padding: 10px 20px; border-radius: 20px; font-weight: bold; margin-bottom: 20px;">
+                Danza | Basicos | Lección 3
+            </div>
+            <p>¡Hola! Hoy viajaremos al tiempo de los palacios y los reyes para conocer el baile más elegante de la
+                historia: el Minuet. 🌟</p>
+        </div>
+
+        <!-- Slide 2: Objetivos -->
+        <div class="slide" id="slide-2">
+            <div class="slide-icon">🎯</div>
+            <h2>¿Qué aprenderemos hoy?</h2>
+            <div
+                style="text-align: left; max-width: 650px; margin: 0 auto; background: var(--bg-light-blue); padding: 30px; border-radius: 15px; border-left: 5px solid var(--primary-orange);">
+                <p>✅ <b>Conocer</b> el origen y la evolución del Minuet en Europa.</p>
+                <p>✅ <b>Identificar</b> su importancia social en las cortes reales.</p>
+                <p>✅ <b>Comprender</b> la relación entre la danza y la etiqueta del siglo XVIII.</p>
+            </div>
+        </div>
+
+        <!-- Slide 3: Activación -->
+        <div class="slide" id="slide-3">
+            <div class="slide-icon">🤔</div>
+            <h2>Imagina que estás en un Palacio...</h2>
+            <p>¿Cómo crees que saludaban los nobles antes de empezar a bailar? ¿Crees que el baile era solo por
+                diversión o tenía otro mensaje?</p>
+            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                <button class="btn btn-yellow" onclick="this.innerText='🤝 ¡Exacto! Era una muestra de respeto.'">¡Era
+                    muy formal!</button>
+                <button class="btn btn-orange" onclick="this.innerText='✨ ¡Sí! Mostraba quién era más importante.'">¡Era
+                    puro espectáculo!</button>
+            </div>
+        </div>
+
+        <!-- Slide 4: Palabras clave -->
+        <div class="slide" id="slide-4">
+            <div class="slide-icon">📖</div>
+            <h2>Conceptos Clave</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; width: 100%;">
+                <div class="keyword-card">
+                    <h3 style="color: var(--primary-orange);">Corte Real</h3>
+                    <p style="font-size: 0.95rem;">El entorno donde vivían los reyes y donde el baile era la actividad
+                        social principal.</p>
+                </div>
+                <div class="keyword-card">
+                    <h3 style="color: var(--primary-red);">Pasos Menudos</h3>
+                    <p style="font-size: 0.95rem;">Del francés <i>"Menuet"</i>, que significa pasos pequeños y
+                        delicados.</p>
+                </div>
+                <div class="keyword-card" style="grid-column: span 2;">
+                    <h3 style="color: var(--primary-blue);">Etiqueta</h3>
+                    <p style="font-size: 0.95rem;">Conjunto de reglas estrictas sobre cómo moverse, saludar y vestir con
+                        elegancia.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Contenido Principal 1 -->
+        <div class="slide" id="slide-5">
+            <div class="slide-icon">🇫🇷</div>
+            <h2>El Favorito del Rey Sol</h2>
+            <p>Aunque nació de bailes populares, fue el rey <b>Luis XIV de Francia</b> quien lo convirtió en el símbolo
+                de la nobleza en Versalles.</p>
+            <div class="highlight-box">
+                <p style="margin-bottom: 0;">✨ <b>Dato Importante:</b> Se bailaba en un compás de <b>3/4</b> (como el
+                    vals posterior) pero con una velocidad moderada y muy ceremoniosa.</p>
+            </div>
+            <p>Dominar el Minuet era obligatorio para cualquier persona que quisiera pertenecer a la alta sociedad.</p>
+        </div>
+
+        <!-- Slide 6: Contenido Principal 2 -->
+        <div class="slide" id="slide-6">
+            <div class="slide-icon">🏯</div>
+            <h2>Un Baile de Jerarquía</h2>
+            <p>En el Minuet, el orden importaba: los reyes o los invitados más importantes bailaban primero mientras
+                todos los demás observaban.</p>
+            <ul style="text-align: left; max-width: 600px; margin: 10px auto; font-size: 1.1rem; line-height: 1.8;">
+                <li>📍 <b>La Figura en Z:</b> Los bailarines recorrían el salón trazando una letra Z.</li>
+                <li>👫 <b>Sin contacto:</b> Se bailaba en pareja pero rara vez se tocaban, solo las puntas de los dedos.
+                </li>
+            </ul>
+        </div>
+
+        <!-- Slide 7: Exploración Visual -->
+        <div class="slide" id="slide-7">
+            <div class="slide-icon">🔍</div>
+            <h2>Explora el Salón de Baile</h2>
+            <p>Haz clic en los puntos para descubrir los detalles del siglo XVIII.</p>
+            <div class="interactive-container">
+                <div style="font-weight: bold; color: var(--primary-blue);">ESCENA DE CORTE</div>
+                <div class="map-point" id="exp-1" style="top: 20%; left: 30%;"
+                    onclick="showExploreInfo('exp-1', 'LAS PELUCAS: Eran símbolo de estatus. Cuanto más elaborada, más importante era la persona.')">
+                    1</div>
+                <div class="map-point" id="exp-2" style="top: 60%; left: 50%;"
+                    onclick="showExploreInfo('exp-2', 'EL VESTUARIO: Los vestidos eran muy anchos, lo que obligaba a dar pasos cortos y mantener mucha distancia.')">
+                    2</div>
+                <div class="map-point" id="exp-3" style="top: 40%; left: 75%;"
+                    onclick="showExploreInfo('exp-3', 'POSTURA: La espalda debía estar perfectamente recta, mostrando orgullo y distinción.')">
+                    3</div>
+            </div>
+            <div id="explore-info-box" class="info-box">Haz clic en un número para explorar.</div>
+        </div>
+
+        <!-- Slide 8: Actividad de Comprensión -->
+        <div class="slide" id="slide-8">
+            <div class="slide-icon">✅</div>
+            <h2>¿Quién lo hizo famoso?</h2>
+            <p>¿Qué personaje histórico impulsó el Minuet como el baile oficial de las cortes europeas?</p>
+            <div class="options-container">
+                <button class="option-btn"
+                    onclick="checkOption(this, true, 'fb-8', '¡Correcto! Luis XIV, el Rey Sol, fue su mayor promotor.', 'No es correcto, Luis XIV fue quien lo llevó a la cima.')">Luis
+                    XIV de Francia</button>
+                <button class="option-btn"
+                    onclick="checkOption(this, false, 'fb-8', '', 'Incorrecto. Él vivió mucho después. ¡Prueba otra vez!')">Napoleón
+                    Bonaparte</button>
+                <button class="option-btn"
+                    onclick="checkOption(this, false, 'fb-8', '', 'Vaya, el Minuet era para la nobleza de la corte. ¡Inténtalo de nuevo!')">Un
+                    grupo de campesinos</button>
+            </div>
+            <div id="fb-8" class="feedback"></div>
+        </div>
+
+        <!-- Slide 9: Juego Educativo -->
+        <div class="slide" id="slide-9">
+            <div class="slide-icon">🎮</div>
+            <h2>Protocolo del Minuet</h2>
+            <p>Ordena los pasos haciendo clic en ellos para que el baile sea correcto:</p>
+            <div class="game-grid" id="game-container">
+                <button class="step-btn" onclick="addToOrder(this, 2, [1, 2, 3], 'fb-9')">Recorrido en Z</button>
+                <button class="step-btn" onclick="addToOrder(this, 1, [1, 2, 3], 'fb-9')">Reverencia Inicial</button>
+                <button class="step-btn" onclick="addToOrder(this, 3, [1, 2, 3], 'fb-9')">Saludo Final</button>
+            </div>
+            <button class="btn btn-blue" style="margin-top: 15px; padding: 8px 15px; font-size: 0.9rem;"
+                onclick="resetOrder('game-container', 'fb-9')">Reiniciar Juego</button>
+            <div id="fb-9" class="feedback"></div>
+        </div>
+
+        <!-- Slide 10: Aplicación Práctica -->
+        <div class="slide" id="slide-10">
+            <div class="slide-icon">🎭</div>
+            <h2>¿Qué pasaría si...?</h2>
+            <p>Estás en Versalles y olvidas hacer la reverencia antes de bailar. ¿Qué consecuencia crees que tendría?
+            </p>
+            <div class="options-container">
+                <button class="option-btn"
+                    onclick="checkOption(this, true, 'fb-10', '¡Así es! En esa época, el respeto y la jerarquía eran fundamentales.', 'En el siglo XVIII, la etiqueta era ley.')">Sería
+                    visto como una grave falta de respeto y mala educación.</button>
+                <button class="option-btn"
+                    onclick="checkOption(this, false, 'fb-10', '', '¡Al contrario! Sería un escándalo social. ¡Inténtalo de nuevo!')">Nadie
+                    le daría importancia, todos se reirían.</button>
+            </div>
+            <div id="fb-10" class="feedback"></div>
+        </div>
+
+        <!-- Slide 11: Repaso Final -->
+        <div class="slide" id="slide-11">
+            <div class="slide-icon">📝</div>
+            <h2>Repaso Rápido</h2>
+            <p>¿Qué significa literalmente la palabra "Menuet"?</p>
+            <div class="options-container">
+                <button class="option-btn"
+                    onclick="checkOption(this, false, 'fb-11', '', 'No, esa palabra es española. ¡Prueba otra vez!')">Baile
+                    de amigos</button>
+                <button class="option-btn"
+                    onclick="checkOption(this, true, 'fb-11', '¡Perfecto! Viene de los pasos pequeños y delicados.', '')">Pasos
+                    menudos o pequeños</button>
+                <button class="option-btn"
+                    onclick="checkOption(this, false, 'fb-11', '', '¡Cerca! Pero se refiere al tamaño del paso. ¡Inténtalo!')">Salto
+                    de alegría</button>
+            </div>
+            <div id="fb-11" class="feedback"></div>
+        </div>
+
+        <!-- Slide 12: Metacognición -->
+        <div class="slide" id="slide-12">
+            <div class="slide-icon">🧠</div>
+            <h2>Reflexiona sobre tu aprendizaje</h2>
+            <div
+                style="background: var(--bg-light-blue); border-left: 5px solid var(--primary-yellow); padding: 25px; text-align: left; width: 100%;">
+                <p><b>¿Qué fue lo que más te sorprendió de la elegancia del siglo XVIII?</b></p>
+                <p style="font-style: italic; color: var(--primary-blue);">"Hoy aprendí que el baile no solo eran pasos,
+                    sino una forma de mostrar respeto, educación y lugar en la sociedad."</p>
+            </div>
+        </div>
+
+        <!-- Slide 13: Cierre -->
+        <div class="slide" id="slide-13">
+            <div class="slide-icon">🏆</div>
+            <h2>¡Logro Desbloqueado!</h2>
+            <p>Has completado la lección sobre el Minuet. Ahora entiendes por qué era el baile preferido de los reyes.
+            </p>
+            <div style="color: var(--primary-orange); font-size: 2rem; font-weight: bold; margin-bottom: 20px;">
+                ¡Excelente trabajo!</div>
+            <button class="btn btn-yellow" onclick="restartGuide()">Volver a Empezar</button>
+        </div>
+
+        <!-- Progreso -->
+        <div class="progress-container">
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

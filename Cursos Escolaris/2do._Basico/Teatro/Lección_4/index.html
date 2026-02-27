@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 4: Teatro del Siglo XVIII en España - Colegio Escolaris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="presentation-container">
+        <!-- Navegación -->
+        <button class="nav-arrow prev" onclick="prevSlide()" aria-label="Anterior">
+            <svg viewBox="0 0 24 24">
+                <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z" />
+            </svg>
+        </button>
+        <button class="nav-arrow next" onclick="nextSlide()" aria-label="Siguiente">
+            <svg viewBox="0 0 24 24">
+                <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
+            </svg>
+        </button>
+
+        <!-- Slide 1: Portada -->
+        <div class="slide active" id="slide-1">
+            <div class="slide-icon">🎭🇪🇸</div>
+            <h1>Teatro del Siglo XVIII en España</h1>
+            <h2>La Ilustración en las Tablas Españolas</h2>
+            <div
+                style="background: var(--primary-orange); color: white; padding: 10px 25px; border-radius: 25px; font-weight: bold; margin-bottom: 20px;">
+                Teatro | Básicos | Lección 4
+            </div>
+            <p>¡Hola! Hoy conoceremos cómo España adoptó las reglas del Neoclasicismo para reformar su teatro. 🌟</p>
+            <div class="img-container"
+                style="background: radial-gradient(circle, #993921 0%, #db6015 100%); display: flex; align-items: center; justify-content: center; color: white; border: 4px solid var(--primary-yellow); box-shadow: 0 10px 20px rgba(0,0,0,0.2);">
+                <span style="font-size: 5rem;">📜🎻</span>
+            </div>
+        </div>
+
+        <!-- Slide 2: Objetivos -->
+        <div class="slide" id="slide-2">
+            <div class="slide-icon">🎯</div>
+            <h2>Objetivos de Aprendizaje</h2>
+            <div
+                style="text-align: left; max-width: 650px; margin: 0 auto; background: var(--bg-light-blue); padding: 35px; border-radius: 20px; border-left: 8px solid var(--primary-yellow);">
+                <p>✅ <b>Identificar</b> las características del teatro neoclásico en España.</p>
+                <p>✅ <b>Comprender</b> la regla de las tres unidades (acción, tiempo y lugar).</p>
+                <p>✅ <b>Reconocer</b> la importancia de Leandro Fernández de Moratín y su obra.</p>
+            </div>
+        </div>
+
+        <!-- Slide 3: Activación -->
+        <div class="slide" id="slide-3">
+            <div class="slide-icon">🧐</div>
+            <h2>¿Reglas para divertirse?</h2>
+            <p>¿Crees que una historia es mejor si ocurre en un solo día y en un solo lugar, o prefieres que los
+                personajes viajen por todo el mundo durante años?</p>
+            <div style="display: flex; gap: 20px; justify-content: center; margin-top: 20px;">
+                <button class="btn btn-blue" onclick="this.innerText='📏 ¡Interesante! Eso es Neoclasicismo.'">Prefiero
+                    orden</button>
+                <button class="btn btn-orange"
+                    onclick="this.innerText='🌍 ¡Como en el Barroco! Hoy veremos el cambio.'">Prefiero aventura</button>
+            </div>
+            <p style="margin-top: 20px; font-style: italic; font-size: 0.9rem;">En el siglo XVIII, los ilustrados
+                españoles impusieron el orden.</p>
+        </div>
+
+        <!-- Slide 4: Palabras Clave -->
+        <div class="slide" id="slide-4">
+            <div class="slide-icon">📖</div>
+            <h2>Conceptos Clave</h2>
+            <div class="card-grid">
+                <div class="keyword-card">
+                    <h3 style="color: var(--primary-orange);">Neoclasicismo</h3>
+                    <p style="font-size: 0.95rem;">Movimiento que imitaba a los clásicos (Grecia y Roma) buscando
+                        equilibrio y razón.</p>
+                </div>
+                <div class="keyword-card">
+                    <h3 style="color: var(--primary-red);">Tres Unidades</h3>
+                    <p style="font-size: 0.95rem;">Reglas estrictas: Un solo lugar, un solo día y una sola acción
+                        principal.</p>
+                </div>
+                <div class="keyword-card" style="border-bottom-color: var(--primary-blue);">
+                    <h3 style="color: var(--primary-blue);">Sainete</h3>
+                    <p style="font-size: 0.95rem;">Obras cortas y populares que mostraban las costumbres de la gente
+                        común.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Contenido Main 1 -->
+        <div class="slide" id="slide-5">
+            <div class="slide-icon">⚖️</div>
+            <h2>Enseñar Deleitando</h2>
+            <p>Los ilustrados creían que el teatro era una "escuela de costumbres". Su lema era <b>"Enseñar
+                    deleitando"</b>.</p>
+            <div
+                style="background: #fff8e1; border-left: 5px solid var(--primary-yellow); padding: 20px; border-radius: 8px; text-align: left;">
+                <p style="margin-bottom: 0;">✨ <b>Dato Clave:</b> Se prohibieron los autos sacramentales (obras
+                    religiosas) por considerarlos poco racionales y confusos para el pueblo.</p>
+            </div>
+            <p style="margin-top: 15px;">El teatro debía ser útil, verosímil (que parezca real) y moralizante.</p>
+        </div>
+
+        <!-- Slide 6: Contenido Main 2 -->
+        <div class="slide" id="slide-6">
+            <div class="slide-icon">✍️</div>
+            <h2>Moratín: El Maestro</h2>
+            <p>Leandro Fernández de Moratín es el autor más importante. Su obra maestra es <b>"El sí de las niñas"</b>.
+            </p>
+            <div
+                style="display: flex; align-items: center; gap: 20px; background: var(--bg-light-blue); padding: 20px; border-radius: 15px;">
+                <span style="font-size: 3rem;">👧</span>
+                <p style="margin-bottom: 0; text-align: left; font-size: 1rem;">La obra critica los matrimonios
+                    arreglados y defiende el derecho de los jóvenes a elegir por amor, siguiendo la razón.</p>
+            </div>
+            <p style="margin-top: 15px;">Fue un éxito total porque trataba un problema real de la sociedad española de
+                su tiempo.</p>
+        </div>
+
+        <!-- Slide 7: Exploración Visual -->
+        <div class="slide" id="slide-7">
+            <div class="slide-icon">🔍</div>
+            <h2>Explora un Escenario Neoclásico</h2>
+            <p>Haz clic en los puntos para descubrir cómo se aplicaban las <b>3 Unidades</b> en escena.</p>
+            <div class="interactive-container"
+                style="background: linear-gradient(to bottom, #244b5a, #162e38); border: 5px solid var(--primary-orange); position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end; width: 100%; max-width: 600px;">
+                <div
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; pointer-events: none;">
+                    <div style="font-size: 8rem; opacity: 0.2;">🏛️📏</div>
+                </div>
+                <div
+                    style="height: 55%; width: 75%; border: 4px solid var(--primary-yellow); border-bottom: none; border-radius: 20px 20px 0 0; margin: 0 auto -5px auto; z-index: 1; background: rgba(255,255,255,0.1);">
+                </div>
+                <div
+                    style="height: 20%; width: 100%; background: #244b5a; z-index: 2; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; border-top: 5px solid var(--primary-yellow);">
+                    TEATRO DE CIUDAD</div>
+
+                <div class="map-point" id="pt-1" style="top: 25%; left: 15%;"
+                    onclick="showMapInfo('pt-1', 'UNIDAD DE LUGAR: Toda la historia debía ocurrir en un solo decorado (una sala, un patio).', 'exp-info')">
+                </div>
+                <div class="map-point" id="pt-2" style="top: 45%; left: 50%;"
+                    onclick="showMapInfo('pt-2', 'UNIDAD DE TIEMPO: La acción no podía durar más de 24 horas (un día solar).', 'exp-info')">
+                </div>
+                <div class="map-point" id="pt-3" style="top: 75%; left: 85%;"
+                    onclick="showMapInfo('pt-3', 'UNIDAD DE ACCIÓN: Solo una trama principal, sin historias secundarias que distraigan.', 'exp-info')">
+                </div>
+            </div>
+            <div id="exp-info" class="info-display"></div>
+        </div>
+
+        <!-- Slide 8: Actividad de Comprensión -->
+        <div class="slide" id="slide-8">
+            <div class="slide-icon">✅</div>
+            <h2>¿Cuál era el fin del teatro?</h2>
+            <p>Según los ilustrados del siglo XVIII, el teatro debía tener una finalidad principal. ¿Cuál era?</p>
+            <div class="options-container">
+                <button class="option-btn"
+                    onclick="checkMultipleChoice(this, true, 'fb-8', '¡Correcto! Enseñar y mejorar a la sociedad era el objetivo principal.', 'Incorrecto. Los ilustrados rechazaban la confusión. ¡Prueba otra vez!')">Didáctica:
+                    Enseñar lecciones morales útiles.</button>
+                <button class="option-btn"
+                    onclick="checkMultipleChoice(this, false, 'fb-8', '', 'No, eso era propio del siglo anterior. ¡Inténtalo de nuevo!')">Puro
+                    entretenimiento sin ninguna regla.</button>
+                <button class="option-btn"
+                    onclick="checkMultipleChoice(this, false, 'fb-8', '', 'Incorrecto. Al contrario, querían que fuera muy claro.')">Hacer
+                    la historia lo más confusa posible.</button>
+            </div>
+            <div id="fb-8" class="feedback"></div>
+        </div>
+
+        <!-- Slide 9: Juego Educativo -->
+        <div class="slide" id="slide-9">
+            <div class="slide-icon">🎭</div>
+            <h2>Identifica a Moratín</h2>
+            <p>Haz clic en la opción que describe correctamente el estilo de Leandro Fernández de Moratín:</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin-top: 10px;">
+                <button class="btn btn-blue"
+                    onclick="checkMultipleChoice(this, false, 'fb-9', '', '¡No! Él seguía reglas muy estrictas. ¡Prueba otro!')">Escribía
+                    obras locas sin orden ni ley</button>
+                <button class="btn btn-yellow"
+                    onclick="checkMultipleChoice(this, true, 'fb-9', '¡Exacto! Sus obras eran sencillas, claras y realistas.', '¡No! Él buscaba la naturalidad.')"
+                    style="color: var(--primary-blue);">Lenguaje sencillo y situaciones reales</button>
+                <button class="btn btn-orange"
+                    onclick="checkMultipleChoice(this, false, 'fb-9', '', '¡Incorrecto! Él quería que el pueblo entendiera todo.')">Usaba
+                    un lenguaje muy difícil y oscuro</button>
+            </div>
+            <div id="fb-9" class="feedback"></div>
+        </div>
+
+        <!-- Slide 10: Aplicación Práctica -->
+        <div class="slide" id="slide-10">
+            <div class="slide-icon">⚖️</div>
+            <h2>El dilema de Doña Paquita</h2>
+            <p>In "El sí de las niñas", Paquita ama a un joven, pero su madre quiere que se case con un hombre rico y
+                mayor. ¿Qué valor defiende Moratín?</p>
+            <div class="options-container">
+                <button class="option-btn"
+                    onclick="checkMultipleChoice(this, true, 'fb-10', '¡Correcto! Moratín defendía que los hijos deben ser honestos y los padres racionales.', '¡No! Él criticaba precisamente eso.')">La
+                    sinceridad de los hijos y la razón de los padres.</button>
+                <button class="option-btn"
+                    onclick="checkMultipleChoice(this, false, 'fb-10', '', 'Incorrecto. Él creía en la educación basada en el afecto.')">Que
+                    los hijos deben obedecer ciegamente sin hablar.</button>
+            </div>
+            <div id="fb-10" class="feedback"></div>
+        </div>
+
+        <!-- Slide 11: Metacognición -->
+        <div class="slide" id="slide-11">
+            <div class="slide-icon">🧠</div>
+            <h2>Reflexiona sobre lo aprendido</h2>
+            <div
+                style="background: var(--bg-light-blue); padding: 30px; border-radius: 20px; text-align: left; border-top: 5px solid var(--primary-orange);">
+                <p>💭 <b>¿Qué aprendí hoy?</b> Que en el siglo XVIII español, el teatro se convirtió en una herramienta
+                    para educar al pueblo.</p>
+                <p>💭 <b>¿Qué fue lo más importante?</b> La regla de las tres unidades, que buscaba que el teatro fuera
+                    lo más parecido a la realidad posible.</p>
+                <p>💭 <b>¿Cómo se aplica hoy?</b> Muchas películas actuales todavía usan la "unidad de acción" para que
+                    la historia sea clara y potente.</p>
+            </div>
+        </div>
+
+        <!-- Slide 12: Cierre -->
+        <div class="slide" id="slide-12">
+            <div class="slide-icon">🏆</div>
+            <h2>¡Logro Desbloqueado!</h2>
+            <h3 style="color: var(--primary-orange); font-size: 2rem; margin-bottom: 20px;">¡Felicidades, Experto/a en
+                Teatro Español!</h3>
+            <p>Has completado la lección sobre el Teatro del Siglo XVIII en España. ¡Ya conoces a Moratín y las reglas
+                de la Ilustración!</p>
+            <div style="font-size: 5rem; margin: 20px 0;">✨🎩🇪🇸</div>
+            <button class="btn btn-yellow" onclick="currentSlide=0; updateSlide(); resetActivity();"
+                style="color: var(--primary-blue);">Volver a repasar</button>
+        </div>
+
+        <!-- Progreso -->
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

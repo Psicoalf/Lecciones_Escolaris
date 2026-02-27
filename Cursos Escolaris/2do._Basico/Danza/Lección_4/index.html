@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 4: El Fandango - Danza - Colegio Escolaris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="presentation-container">
+        <!-- Navegación -->
+        <button class="nav-arrow prev" onclick="prevSlide()" aria-label="Anterior">
+            <svg viewBox="0 0 24 24">
+                <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z" />
+            </svg>
+        </button>
+        <button class="nav-arrow next" onclick="nextSlide()" aria-label="Siguiente">
+            <svg viewBox="0 0 24 24">
+                <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
+            </svg>
+        </button>
+
+        <!-- Slide 1: Portada -->
+        <div class="slide active" id="slide-1">
+            <div class="slide-icon">💃🎸</div>
+            <h1>El Fandango: Pasión y Ritmo</h1>
+            <h2 style="color: var(--primary-blue);">El alma de la fiesta en el Siglo XVIII</h2>
+            <div
+                style="background: var(--primary-orange); color: white; padding: 10px 20px; border-radius: 20px; font-weight: bold; margin-bottom: 20px;">
+                Danza | Básicos | Lección 4
+            </div>
+            <p>¡Bienvenidos! Tras conocer la elegancia del Minuet, hoy descubriremos el Fandango, un baile lleno de
+                energía, castañuelas y mucha pasión. 🌟</p>
+        </div>
+
+        <!-- Slide 2: Objetivos -->
+        <div class="slide" id="slide-2">
+            <div class="slide-icon">🎯</div>
+            <h2>¿Qué aprenderemos?</h2>
+            <div
+                style="text-align: left; max-width: 650px; margin: 0 auto; background: var(--bg-light-blue); padding: 30px; border-radius: 15px; border-left: 8px solid var(--primary-red);">
+                <p>✅ <b>Identificar</b> el origen y las características del Fandango.</p>
+                <p>✅ <b>Reconocer</b> los instrumentos clave: guitarra y castañuelas.</p>
+                <p>✅ <b>Diferenciar</b> el estilo cortesano del popular en el siglo XVIII.</p>
+            </div>
+        </div>
+
+        <!-- Slide 3: Activación -->
+        <div class="slide" id="slide-3">
+            <div class="slide-icon">🔊</div>
+            <h2>¿Has escuchado el "clac-clac"?</h2>
+            <p>Cierra los ojos e imagina el sonido de dos trozos de madera chocando rítmicamente. Son las castañuelas.
+                ¿Qué emoción te transmiten?</p>
+            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                <button class="btn btn-orange" onclick="this.innerText='🔥 ¡Exacto! Es pura energía.'">¡Mucha
+                    alegría!</button>
+                <button class="btn btn-blue" onclick="this.innerText='✨ ¡Sí! El Fandango es puro fuego.'">¡Ganas de
+                    bailar!</button>
+            </div>
+        </div>
+
+        <!-- Slide 4: Palabras clave -->
+        <div class="slide" id="slide-4">
+            <div class="slide-icon">📖</div>
+            <h2>Conceptos Clave</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; width: 100%;">
+                <div class="keyword-card">
+                    <h3 style="color: var(--primary-orange);">Castañuelas</h3>
+                    <p style="font-size: 0.9rem;">Instrumento de percusión de madera que los bailarines tocan con las
+                        manos.</p>
+                </div>
+                <div class="keyword-card">
+                    <h3 style="color: var(--primary-red);">Zapateado</h3>
+                    <p style="font-size: 0.9rem;">Técnica de golpear el suelo con los tacones siguiendo el ritmo
+                        musical.</p>
+                </div>
+                <div class="keyword-card" style="grid-column: span 2;">
+                    <h3 style="color: var(--primary-blue);">Fandango</h3>
+                    <p style="font-size: 0.9rem;">Baile de pareja andaluz que se hizo famoso en toda Europa por su
+                        carácter "picante" y vivo.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Contenido Principal 1 -->
+        <div class="slide" id="slide-5">
+            <div class="slide-icon">🇪🇸</div>
+            <h2>El Baile Prohibido</h2>
+            <p>En el siglo XVIII, el Fandango era tan apasionado que algunos intentaron prohibirlo. ¡Pero era tan
+                divertido que hasta en los palacios se bailaba!</p>
+            <div class="highlight-box">
+                <p style="margin-bottom: 0;">✨ <b>Dato Curioso:</b> A diferencia del Minuet, en el Fandango los
+                    bailarines se mueven con mucha más libertad y expresividad.</p>
+            </div>
+            <p>Se baila en parejas que se desafían con la mirada y los pasos, sin tocarse pero siempre conectados.</p>
+        </div>
+
+        <!-- Slide 6: Contenido Principal 2 -->
+        <div class="slide" id="slide-6">
+            <div class="slide-icon">🎸</div>
+            <h2>La Música del Fandango</h2>
+            <p>El ritmo es ternario (3/4) pero con un acento muy marcado. Los instrumentos principales crean una
+                atmósfera única:</p>
+            <ul style="text-align: left; max-width: 600px; margin: 10px auto; font-size: 1.1rem;">
+                <li>🎸 <b>La Guitarra:</b> Lleva la armonía y el rasgueo constante.</li>
+                <li>🎵 <b>Canto:</b> A veces se acompaña de coplas cortas.</li>
+                <li>👣 <b>El Cuerpo:</b> Los chasquidos de dedos y el zapateado son instrumentos también.</li>
+            </ul>
+        </div>
+
+        <!-- Slide 7: Exploración Visual -->
+        <div class="slide" id="slide-7">
+            <div class="slide-icon">🔍</div>
+            <h2>Explora el Baile</h2>
+            <p>Haz clic en los puntos para descubrir los elementos del Fandango.</p>
+            <div class="interactive-container">
+                <div style="font-weight: bold; color: var(--primary-red);">PAREJA DE FANDANGO</div>
+                <div class="map-point" id="f-1" style="top: 20%; left: 35%;"
+                    onclick="showPointInfo('f-1', 'info-f', 'LAS MANOS: Siempre en movimiento, sosteniendo y tocando las castañuelas.')">
+                    !</div>
+                <div class="map-point" id="f-2" style="top: 80%; left: 50%;"
+                    onclick="showPointInfo('f-2', 'info-f', 'LOS PIES: Realizan el zapateado, marcando el ritmo con fuerza sobre el suelo.')">
+                    !</div>
+                <div class="map-point" id="f-3" style="top: 40%; left: 65%;"
+                    onclick="showPointInfo('f-3', 'info-f', 'LA MIRADA: Los bailarines mantienen contacto visual para mostrar el desafío y la pasión.')">
+                    !</div>
+            </div>
+            <div id="info-f" class="info-display">Haz clic para descubrir.</div>
+        </div>
+
+        <!-- Slide 8: Actividad de Comprensión -->
+        <div class="slide" id="slide-8">
+            <div class="slide-icon">✅</div>
+            <h2>¿Qué lo diferencia del Minuet?</h2>
+            <p>Si el Minuet era elegante y pausado, ¿cómo describirías el Fandango del siglo XVIII?</p>
+            <div class="options-container">
+                <button class="option-btn"
+                    onclick="checkSimpleOption(this, true, 'fb-8', '¡Excelente! El Fandango es el contrapunto enérgico y popular al Minuet.', '')">Es
+                    un baile vivo, apasionado y popular.</button>
+                <button class="option-btn"
+                    onclick="checkSimpleOption(this, false, 'fb-8', '', 'No, el Fandango es mucho más activo que eso. ¡Prueba otra vez!')">Es
+                    un baile para dormir a los bebés.</button>
+                <button class="option-btn"
+                    onclick="checkSimpleOption(this, false, 'fb-8', '', '¡Al contrario! Es un baile muy dinámico.')">Es
+                    un baile donde nadie se mueve.</button>
+            </div>
+            <div id="fb-8" class="feedback"></div>
+        </div>
+
+        <!-- Slide 9: Juego Educativo -->
+        <div class="slide" id="slide-9">
+            <div class="slide-icon">🎮</div>
+            <h2>¿Qué suena en el Fandango?</h2>
+            <p>Identifica el instrumento que NO pertenece tradicionalmente al Fandango:</p>
+            <div class="options-container">
+                <button class="option-btn"
+                    onclick="checkSimpleOption(this, false, 'fb-9', '', 'Las castañuelas son el alma del Fandango. ¡Busca el que no encaja!')">Castañuelas</button>
+                <button class="option-btn"
+                    onclick="checkSimpleOption(this, true, 'fb-9', '¡Correcto! El piano no era parte del Fandango popular del siglo XVIII.', '')">Piano
+                    de cola</button>
+                <button class="option-btn"
+                    onclick="checkSimpleOption(this, false, 'fb-9', '', 'La guitarra es fundamental para este ritmo. ¡Inténtalo de nuevo!')">Guitarra
+                    española</button>
+            </div>
+            <div id="fb-9" class="feedback"></div>
+        </div>
+
+        <!-- Slide 10: Aplicación Práctica -->
+        <div class="slide" id="slide-10">
+            <div class="slide-icon">🌟</div>
+            <h2>El Fandango hoy</h2>
+            <p>Hoy en día, el Fandango es la base de muchos palos del Flamenco. ¿Por qué crees que ha sobrevivido tantos
+                siglos?</p>
+            <div class="options-container">
+                <button class="option-btn"
+                    onclick="checkSimpleOption(this, true, 'fb-10', '¡Exacto! Su energía y conexión emocional lo hacen eterno.', '')">Porque
+                    transmite emociones fuertes que todos entendemos.</button>
+                <button class="option-btn"
+                    onclick="checkSimpleOption(this, false, 'fb-10', '', 'Aunque es histórico, lo que importa es el sentimiento que transmite.')">Porque
+                    los reyes obligaban a la gente a bailarlo.</button>
+            </div>
+            <div id="fb-10" class="feedback"></div>
+        </div>
+
+        <!-- Slide 11: Metacognición -->
+        <div class="slide" id="slide-11">
+            <div class="slide-icon">🧠</div>
+            <h2>Tu momento de reflexión</h2>
+            <div
+                style="background: var(--bg-light-blue); border-left: 5px solid var(--primary-orange); padding: 25px; text-align: left; width: 100%;">
+                <p><b>¿Qué instrumento te pareció más curioso y por qué?</b></p>
+                <p style="font-style: italic; color: var(--primary-blue);">"He aprendido que el Fandango representa la
+                    libertad y la energía de la cultura popular frente al orden de la corte."</p>
+            </div>
+        </div>
+
+        <!-- Slide 12: Cierre -->
+        <div class="slide" id="slide-12">
+            <div class="slide-icon">🏆</div>
+            <h2>¡Maestro/a del Fandango!</h2>
+            <p>Has completado la lección 4. Ahora conoces los dos grandes mundos del baile del siglo XVIII: la elegancia
+                del Minuet y la pasión del Fandango.</p>
+            <div style="color: var(--primary-orange); font-size: 2rem; font-weight: bold; margin-bottom: 20px;">
+                ¡Excelente trabajo!</div>
+            <button class="btn btn-yellow" onclick="restartPresentation()">Volver a empezar</button>
+        </div>
+
+        <!-- Progreso -->
+        <div class="progress-bar-bg">
+            <div class="progress-bar-fill"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
