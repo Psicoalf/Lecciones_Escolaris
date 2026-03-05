@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 4: Aplicación de las Escuelas Psicológicas - Colegio Escolaris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header-decor"></div>
+
+    <div id="presentation-container">
+        <!-- Navegación -->
+        <button id="prev-btn" class="nav-arrow" onclick="prevSlide()" aria-label="Diapositiva anterior">
+            <svg viewBox="0 0 24 24">
+                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+            </svg>
+        </button>
+        <button id="next-btn" class="nav-arrow" onclick="nextSlide()" aria-label="Diapositiva siguiente">
+            <svg viewBox="0 0 24 24">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+            </svg>
+        </button>
+
+        <div class="slides">
+            <!-- 1. PORTADA -->
+            <section class="slide active">
+                <div class="portada">
+                    <span class="materia">PSICOLOGÍA</span>
+                    <h1 class="lesson-title">Aplicación de las Escuelas Psicológicas</h1>
+                    <div class="lesson-info">Lección 4 • Bachillerato</div>
+                    <div class="illustration">
+                        <div class="main-icon">🔬🚀</div>
+                    </div>
+                    <p class="welcome-msg">¿Cómo se usan las ideas del pasado para resolver problemas del presente?
+                        ¡Vamos a descubrirlo!</p>
+                </div>
+            </section>
+
+            <!-- 2. OBJETIVOS -->
+            <section class="slide">
+                <div class="content">
+                    <h2>Objetivos de Aprendizaje</h2>
+                    <ul class="objectives-list">
+                        <li>🎯 Aplicar el conocimiento de las escuelas en el campo de la investigación actual.</li>
+                        <li>📚 Resumir los aportes vigentes de las escuelas psicológicas hoy en día.</li>
+                        <li>💡 Relacionar estas teorías con tu propia formación y crecimiento personal.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 3. ACTIVACIÓN -->
+            <section class="slide">
+                <div class="content">
+                    <h2>¿Qué recordamos?</h2>
+                    <p>En la lección anterior vimos el origen. Ahora, selecciona qué herramienta usarías hoy:</p>
+                    <div class="reflection-grid">
+                        <div class="reflection-card"
+                            onclick="showFeedback('act-1', '¡Exacto! El Conductismo es clave para crear hábitos de estudio positivos.', 'info')">
+                            <span>📅</span>
+                            <p>¿Cómo puedo organizar mi horario para estudiar mejor?</p>
+                        </div>
+                        <div class="reflection-card"
+                            onclick="showFeedback('act-1', '¡Muy bien! El Humanismo nos ayuda a conectar con nuestras metas y sueños.', 'info')">
+                            <span>🌱</span>
+                            <p>¿Qué es lo que realmente me motiva a ser mejor cada día?</p>
+                        </div>
+                    </div>
+                    <div id="feedback-act-1" class="feedback-box"></div>
+                </div>
+            </section>
+
+            <!-- 4. PALABRAS CLAVE -->
+            <section class="slide">
+                <div class="content">
+                    <h2>Conceptos de Aplicación</h2>
+                    <div class="keywords-container">
+                        <div class="keyword">
+                            <span class="icon">🧪</span>
+                            <h3>Investigación</h3>
+                            <p>Proceso de usar teorías para descubrir nuevas verdades sobre la mente.</p>
+                        </div>
+                        <div class="keyword">
+                            <span class="icon">📈</span>
+                            <h3>Vigencia</h3>
+                            <p>Ideas que, aunque son antiguas, siguen siendo útiles y válidas hoy.</p>
+                        </div>
+                        <div class="keyword">
+                            <span class="icon">👤</span>
+                            <h3>Formación</h3>
+                            <p>Cómo aplicas la psicología para entenderte a ti mismo y a los demás.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. CONTENIDO PRINCIPAL - CONDUCTISMO Y COGNITIVISMO -->
+            <section class="slide">
+                <div class="content">
+                    <h2>Aportes en la Educación</h2>
+                    <div class="content-split">
+                        <div class="text-block">
+                            <p>El <b>Conductismo</b> nos dio los sistemas de recompensas, pero el <b>Cognitivismo</b>
+                                revolucionó cómo aprendemos:</p>
+                            <div class="info-tag orange">Memoria y Procesamiento: ¿Cómo guardas la información?</div>
+                            <p>Hoy usamos estas ideas para crear aplicaciones de estudio y métodos de enseñanza
+                                personalizados.</p>
+                            <div class="info-tag yellow">Aprendizaje Significativo: Conectar lo nuevo con lo que ya
+                                sabes.</div>
+                        </div>
+                        <div class="visual-block">
+                            <div class="atom-mind">🎓</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. CONTENIDO PRINCIPAL - HUMANISMO Y GESTALT -->
+            <section class="slide">
+                <div class="content">
+                    <h2>Vigencia en la Salud Mental</h2>
+                    <div class="comparison-grid">
+                        <div class="school-card behaviorism">
+                            <h3>Gestalt Hoy</h3>
+                            <p>Se aplica en el diseño (UI/UX) y en terapia para entender cómo percibimos nuestra
+                                realidad actual.</p>
+                            <span class="author">"Aquí y ahora"</span>
+                        </div>
+                        <div class="school-card psychoanalysis">
+                            <h3>Humanismo Hoy</h3>
+                            <p>Es la base de la psicología positiva. Se enfoca en el bienestar, la resiliencia y la
+                                felicidad.</p>
+                            <span class="author">Autorealización</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. EXPLORACIÓN VISUAL -->
+            <section class="slide">
+                <div class="content">
+                    <h2>Psicología en el Trabajo</h2>
+                    <p>Haz clic para ver cómo las empresas aplican la psicología hoy:</p>
+                    <div class="explorer-grid">
+                        <div class="explorer-item"
+                            onclick="showExplorer('<b>Recursos Humanos:</b> Usa el conductismo para motivar equipos y el humanismo para cuidar el clima laboral.')">
+                            <span class="emoji">🤝</span>
+                            <span>RR.HH.</span>
+                        </div>
+                        <div class="explorer-item"
+                            onclick="showExplorer('<b>Marketing:</b> Aplica la Gestalt para crear logos memorables y el psicoanálisis para entender deseos profundos.')">
+                            <span class="emoji">📊</span>
+                            <span>Marketing</span>
+                        </div>
+                        <div class="explorer-item"
+                            onclick="showExplorer('<b>Deporte:</b> El cognitivismo ayuda a los atletas a mejorar su concentración y manejo del estrés bajo presión.')">
+                            <span class="emoji">🏆</span>
+                            <span>Deporte</span>
+                        </div>
+                    </div>
+                    <div id="explorer-display" class="explorer-panel">
+                        Selecciona un área para explorar...
+                    </div>
+                </div>
+            </section>
+
+            <!-- 8. ACTIVIDAD DE COMPRENSIÓN -->
+            <section class="slide">
+                <div class="content">
+                    <h2>¿Qué escuela aplicarías?</h2>
+                    <p>Quieres que tus compañeros de clase reciclen más. Decides dar un punto extra a quien traiga su
+                        botella. ¿Qué escuela estás aplicando?</p>
+                    <div class="options">
+                        <button
+                            onclick="checkMultipleChoice('q1', true, '✅ ¡Cabal! Estás usando el refuerzo positivo, un concepto central del Conductismo.', 'feedback-q1')">Conductismo</button>
+                        <button
+                            onclick="checkMultipleChoice('q1', false, '❌ No. El psicoanálisis buscaría traumas ocultos sobre la basura, no daría puntos.', 'feedback-q1')">Psicoanálisis</button>
+                        <button
+                            onclick="checkMultipleChoice('q1', false, '❌ Incorrecto. Aunque es bueno, el refuerzo directo es conductista.', 'feedback-q1')">Humanismo</button>
+                    </div>
+                    <div id="feedback-q1" class="feedback-box"></div>
+                    <button class="retry-btn" style="display:none" id="retry-q1"
+                        onclick="resetMultipleChoice('q1')">Intentar de nuevo</button>
+                </div>
+            </section>
+
+            <!-- 9. JUEGO: EL MAPA DE LA MENTE -->
+            <section class="slide">
+                <div class="content">
+                    <h2>Desafío de Relación</h2>
+                    <p>Relaciona el <b>Aporte Actual</b> con la <b>Escuela</b> que le dio origen.</p>
+                    <div class="game-match">
+                        <div class="match-column" id="authors-col">
+                            <button class="match-btn" data-type="memoria">Apps de Memoria</button>
+                            <button class="match-btn" data-type="percepcion">Diseño de Logos</button>
+                            <button class="match-btn" data-type="bienestar">Autoayuda y Metas</button>
+                        </div>
+                        <div class="match-column" id="schools-col">
+                            <button class="match-btn" data-target="percepcion">Gestalt</button>
+                            <button class="match-btn" data-target="bienestar">Humanismo</button>
+                            <button class="match-btn" data-target="memoria">Cognitivismo</button>
+                        </div>
+                    </div>
+                    <div id="match-feedback" class="feedback-box"></div>
+                    <button class="retry-btn" style="display:none" id="match-retry" onclick="resetMatchGame()">Reiniciar
+                        Juego</button>
+                </div>
+            </section>
+
+            <!-- 10. APLICACIÓN PRÁCTICA -->
+            <section class="slide">
+                <div class="content">
+                    <h2>Situación de Investigación</h2>
+                    <div class="case-study">
+                        <p><b>Caso:</b> Investigas por qué los estudiantes se olvidan de las tareas. Si te enfocas en
+                            cómo el cerebro <b>almacena</b> los recordatorios, ¿en qué escuela te basas?</p>
+                        <div class="options horizontal">
+                            <button
+                                onclick="checkMultipleChoice('case', true, '✅ ¡Correcto! El Cognitivismo investiga la memoria como un proceso de almacenamiento.', 'feedback-case')">Cognitivismo</button>
+                            <button
+                                onclick="checkMultipleChoice('case', false, '❌ No. El conductismo solo miraría si entregó o no la tarea.', 'feedback-case')">Conductismo</button>
+                        </div>
+                        <div id="feedback-case" class="feedback-box"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 11. REPASO FINAL -->
+            <section class="slide">
+                <div class="content">
+                    <h2>Resumen de Vigencia</h2>
+                    <div class="repaso-scroll">
+                        <div class="repaso-item">
+                            <p>1. ¿Qué escuela es fundamental para el diseño visual moderno?</p>
+                            <div class="btn-group">
+                                <button
+                                    onclick="checkRepaso(this, true, '✅ ¡Gestalt! Por las leyes de percepción.')">Gestalt</button>
+                                <button onclick="checkRepaso(this, false, '❌ No.')">Psicoanálisis</button>
+                            </div>
+                        </div>
+                        <div class="repaso-item">
+                            <p>2. ¿Cuál se enfoca en el potencial y crecimiento humano?</p>
+                            <div class="btn-group">
+                                <button onclick="checkRepaso(this, false, '❌ No.')">Conductismo</button>
+                                <button onclick="checkRepaso(this, true, '✅ ¡Humanismo!')">Humanismo</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 12. METACOGNICIÓN -->
+            <section class="slide">
+                <div class="content">
+                    <h2>Mi Propia Formación</h2>
+                    <p>Reflexiona sobre tu aprendizaje:</p>
+                    <div class="meta-box">
+                        <div class="meta-question">
+                            <span>🧠</span>
+                            <p>¿Cuál de estas aplicaciones podrías usar hoy mismo para mejorar tu forma de estudiar?</p>
+                        </div>
+                        <div class="meta-question">
+                            <span>✨</span>
+                            <p>¿Qué importancia tiene para un profesional conocer estas diferentes perspectivas?</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 13. CIERRE -->
+            <section class="slide">
+                <div class="portada">
+                    <div class="badge">🎖️</div>
+                    <h2>¡Lección Completada!</h2>
+                    <p>Ahora sabes que la psicología no es solo teoría, sino una herramienta para transformar la
+                        realidad.</p>
+                    <div class="school-logo">COLEGIO ESCOLARIS</div>
+                    <button class="restart-btn" onclick="goToSlide(0)">Volver al Inicio</button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

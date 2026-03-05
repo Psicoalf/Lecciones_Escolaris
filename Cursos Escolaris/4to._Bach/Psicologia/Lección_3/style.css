@@ -1,0 +1,502 @@
+/* Identidad Visual - Colegio Escolaris */
+:root {
+    --naranja-quemado: #db6015;
+    --amarillo-dorado: #f7be00;
+    --azul-oscuro: #244b5a;
+    --rojo-ladrillo: #993921;
+    --azul-claro: #f0f8ff;
+    --blanco: #ffffff;
+    --sombra: 0 10px 30px rgba(0, 0, 0, 0.15);
+    --transicion: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--azul-claro);
+    color: var(--azul-oscuro);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Decoración Superior */
+.header-decor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(90deg, var(--naranja-quemado), var(--amarillo-dorado), var(--azul-oscuro), var(--rojo-ladrillo));
+    z-index: 1000;
+}
+
+#presentation-container {
+    width: 100%;
+    max-width: 1024px;
+    height: 100%;
+    max-height: 768px;
+    background: var(--blanco);
+    position: relative;
+    box-shadow: var(--sombra);
+    overflow: hidden;
+    border-radius: 0; /* Para que encaje bien en iframe */
+}
+
+/* Navegación - Flechas Grandes */
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 70px;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 3px solid var(--naranja-quemado);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transicion);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.nav-arrow:hover, .nav-arrow:active {
+    background: var(--naranja-quemado);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.nav-arrow:hover svg, .nav-arrow:active svg {
+    fill: var(--blanco);
+}
+
+.nav-arrow svg {
+    width: 45px;
+    height: 45px;
+    fill: var(--naranja-quemado);
+    transition: var(--transicion);
+}
+
+#prev-btn { left: 15px; }
+#next-btn { right: 15px; }
+
+/* Slides */
+.slides {
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    padding: 60px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.content {
+    width: 100%;
+    max-width: 850px;
+}
+
+/* Tipografía */
+h1 {
+    font-size: 3.5rem;
+    color: var(--naranja-quemado);
+    margin-bottom: 5px;
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: var(--azul-oscuro);
+    margin-bottom: 30px;
+    border-left: 10px solid var(--amarillo-dorado);
+    padding-left: 20px;
+}
+
+p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+b { color: var(--naranja-quemado); }
+
+/* Portada Estilo */
+.portada {
+    text-align: center;
+}
+
+.materia {
+    display: block;
+    font-weight: bold;
+    color: var(--azul-oscuro);
+    letter-spacing: 3px;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.lesson-info {
+    font-size: 1.4rem;
+    color: var(--rojo-ladrillo);
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.main-icon {
+    font-size: 8rem;
+    margin: 40px 0;
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.1));
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Objetivos */
+.objectives-list {
+    list-style: none;
+}
+
+.objectives-list li {
+    background: var(--azul-claro);
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    border-left: 8px solid var(--naranja-quemado);
+    display: flex;
+    align-items: center;
+}
+
+/* Activación - Reflection Cards */
+.reflection-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.reflection-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    border: 3px solid var(--amarillo-dorado);
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transicion);
+    box-shadow: var(--sombra);
+}
+
+.reflection-card:hover {
+    transform: translateY(-10px);
+    background: var(--azul-claro);
+}
+
+.reflection-card span {
+    font-size: 4rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* Keywords */
+.keywords-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.keyword {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: var(--sombra);
+    text-align: center;
+    border-top: 6px solid var(--naranja-quemado);
+}
+
+.keyword h3 {
+    color: var(--naranja-quemado);
+    margin: 15px 0 10px;
+}
+
+/* Contenido Especial */
+.content-split {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.info-tag {
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin: 15px 0;
+    font-weight: bold;
+    color: white;
+}
+
+.info-tag.orange { background: var(--naranja-quemado); }
+.info-tag.yellow { background: var(--amarillo-dorado); color: var(--azul-oscuro); }
+
+.atom-mind {
+    font-size: 10rem;
+    text-align: center;
+}
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.school-card {
+    padding: 30px;
+    border-radius: 20px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.school-card.behaviorism { background: var(--azul-oscuro); }
+.school-card.psychoanalysis { background: var(--rojo-ladrillo); }
+
+.school-card h3 { margin-bottom: 20px; font-size: 1.8rem; }
+.author { display: block; margin-top: 20px; font-style: italic; opacity: 0.8; }
+
+/* Exploración Visual */
+.explorer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.explorer-item {
+    background: var(--azul-claro);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    transition: var(--transicion);
+    border: 2px solid transparent;
+}
+
+.explorer-item:hover {
+    border-color: var(--naranja-quemado);
+    background: white;
+}
+
+.explorer-item .emoji { font-size: 2.5rem; display: block; margin-bottom: 5px; }
+
+.explorer-panel {
+    background: #fff8e1;
+    padding: 25px;
+    border-radius: 15px;
+    border: 2px dashed var(--amarillo-dorado);
+    min-height: 100px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+/* Actividades Interactividad */
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.options.horizontal {
+    flex-direction: row;
+}
+
+.options button {
+    background: white;
+    border: 3px solid var(--azul-oscuro);
+    padding: 20px 30px;
+    font-size: 1.2rem;
+    border-radius: 40px;
+    cursor: pointer;
+    font-family: inherit;
+    color: var(--azul-oscuro);
+    transition: var(--transicion);
+    flex: 1;
+}
+
+.options button:focus, .options button:active {
+    outline: none;
+    border-color: var(--naranja-quemado);
+}
+
+.options button:hover {
+    background: var(--azul-claro);
+    transform: scale(1.02);
+}
+
+.feedback-box {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 15px;
+    display: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.feedback-correct { background-color: #d4edda; color: #155724; border: 2px solid #c3e6cb; }
+.feedback-incorrect { background-color: #f8d7da; color: #721c24; border: 2px solid #f5c6cb; }
+
+/* Matching Game */
+.game-match {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.match-column {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.match-btn {
+    background: white;
+    border: 2px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: var(--transicion);
+    font-family: inherit;
+}
+
+.match-btn.selected {
+    border-color: var(--naranja-quemado);
+    background: #fff4ed;
+    transform: scale(1.05);
+}
+
+.match-btn.matched {
+    background: #d4edda;
+    border-color: #28a745;
+    cursor: default;
+    opacity: 0.6;
+}
+
+/* Repaso Scroll */
+.repaso-scroll {
+    max-height: 500px;
+    overflow-y: auto;
+    padding-right: 15px;
+}
+
+.repaso-item {
+    background: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+
+.btn-group {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-group button {
+    flex: 1;
+    padding: 12px;
+    border-radius: 10px;
+    border: 2px solid var(--azul-oscuro);
+    background: white;
+    cursor: pointer;
+}
+
+/* Metacognición */
+.meta-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.meta-question {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: var(--azul-claro);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.meta-question span { font-size: 2.5rem; }
+
+/* Botones Finales */
+.retry-btn {
+    margin-top: 20px;
+    background: var(--naranja-quemado);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.restart-btn {
+    padding: 18px 40px;
+    background: var(--azul-oscuro);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: var(--transicion);
+    margin-top: 20px;
+}
+
+.restart-btn:hover { background: var(--naranja-quemado); transform: scale(1.1); }
+
+/* Responsive para Mobile/iPad */
+@media (max-width: 1024px) {
+    .slide { padding: 40px 80px; }
+}
+
+@media (max-width: 768px) {
+    .slide { padding: 40px 60px; }
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 1.8rem; }
+    .nav-arrow { width: 55px; height: 55px; }
+    .nav-arrow svg { width: 35px; height: 35px; }
+    .keywords-container { grid-template-columns: 1fr; }
+    .content-split { grid-template-columns: 1fr; }
+    .reflection-grid { grid-template-columns: 1fr; }
+}

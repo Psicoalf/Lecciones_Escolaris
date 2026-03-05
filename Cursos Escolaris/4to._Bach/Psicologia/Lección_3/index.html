@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 3: ¿Culpables o Sobrevivientes? - Colegio Escolaris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header-decor"></div>
+
+    <div id="presentation-container">
+        <!-- Navegación -->
+        <button id="prev-btn" class="nav-arrow" onclick="prevSlide()" aria-label="Diapositiva anterior">
+            <svg viewBox="0 0 24 24">
+                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+            </svg>
+        </button>
+        <button id="next-btn" class="nav-arrow" onclick="nextSlide()" aria-label="Diapositiva siguiente">
+            <svg viewBox="0 0 24 24">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+            </svg>
+        </button>
+
+        <div class="slides">
+            <!-- 1. PORTADA -->
+            <section class="slide active">
+                <div class="portada">
+                    <span class="materia">PSICOLOGÍA</span>
+                    <h1 class="lesson-title">¿Culpables o Sobrevivientes?</h1>
+                    <div class="lesson-info">Lección 3 • Bachillerato</div>
+                    <div class="illustration" id="illustration-1">
+                        <!-- SVG o Imagen generada -->
+                        <div class="main-icon">🧠✨</div>
+                    </div>
+                    <p class="welcome-msg">¡Bienvenido! Hoy exploraremos las raíces de nuestra mente y las escuelas que
+                        intentaron descifrarla.</p>
+                </div>
+            </section>
+
+            <!-- 2. OBJETIVOS -->
+            <section class="slide">
+                <div class="content">
+                    <h2>Objetivos de Aprendizaje</h2>
+                    <ul class="objectives-list">
+                        <li>🎯 Identificar las principales escuelas psicológicas y su enfoque científico.</li>
+                        <li>🌍 Relacionar cada escuela con su contexto histórico y social.</li>
+                        <li>💡 Comprender las características que las hacen únicas y valiosas.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 3. ACTIVACIÓN -->
+            <section class="slide">
+                <div class="content">
+                    <h2>Pensemos un momento...</h2>
+                    <p>Si vieras a una persona actuando de forma extraña en la calle, ¿qué pensarías?</p>
+                    <div class="reflection-grid">
+                        <div class="reflection-card"
+                            onclick="showFeedback('act-1', '¿Es por su pasado? (Psicoanálisis)', 'info')">
+                            <span>👶</span>
+                            <p>¿Es por algo que le pasó en su infancia?</p>
+                        </div>
+                        <div class="reflection-card"
+                            onclick="showFeedback('act-1', '¿Es por su entorno? (Conductismo)', 'info')">
+                            <span>🏢</span>
+                            <p>¿Es por la forma en que el mundo la trata hoy?</p>
+                        </div>
+                    </div>
+                    <div id="feedback-act-1" class="feedback-box"></div>
+                </div>
+            </section>
+
+            <!-- 4. PALABRAS CLAVE -->
+            <section class="slide">
+                <div class="content">
+                    <h2>Conceptos Esenciales</h2>
+                    <div class="keywords-container">
+                        <div class="keyword">
+                            <span class="icon">🏛️</span>
+                            <h3>Escuela Psicológica</h3>
+                            <p>Grupo de científicos que comparten una misma forma de entender la mente.</p>
+                        </div>
+                        <div class="keyword">
+                            <span class="icon">⌛</span>
+                            <h3>Contexto Histórico</h3>
+                            <p>El momento y lugar donde nace una idea, influyendo en su visión.</p>
+                        </div>
+                        <div class="keyword">
+                            <span class="icon">🔍</span>
+                            <h3>Paradigma</h3>
+                            <p>Un modelo o patrón que guía cómo se investiga y se explica la realidad.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. CONTENIDO PRINCIPAL - PARTE 1 -->
+            <section class="slide">
+                <div class="content">
+                    <h2>El Nacimiento de la Ciencia</h2>
+                    <div class="content-split">
+                        <div class="text-block">
+                            <p>En <b>1879</b>, Wilhelm Wundt fundó el primer laboratorio de psicología en Alemania. Así
+                                nació el <b>Estructuralismo</b>.</p>
+                            <div class="info-tag orange">Estructuralismo (1879): ¿Cómo está hecha la mente?</div>
+                            <p>Hacia <b>1890</b>, William James propuso el <b>Funcionalismo</b> en EE.UU., enfocándose
+                                en la adaptación.</p>
+                            <div class="info-tag yellow">Funcionalismo (1890): ¿Para qué sirve la mente?</div>
+                        </div>
+                        <div class="visual-block">
+                            <div class="atom-mind">🧩</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. CONTENIDO PRINCIPAL - PARTE 2 -->
+            <section class="slide">
+                <div class="content">
+                    <h2>Fuerzas Opuestas</h2>
+                    <div class="comparison-grid">
+                        <div class="school-card behaviorism">
+                            <h3>Conductismo (1913)</h3>
+                            <p>Nace con el manifiesto de Watson. "Solo importa lo que podemos ver: la <b>conducta</b>".
+                            </p>
+                            <span class="author">John B. Watson / Skinner</span>
+                        </div>
+                        <div class="school-card psychoanalysis">
+                            <h3>Psicoanálisis (1896)</h3>
+                            <p>Fundado por Freud. "Lo que importa es lo oculto en el pasado: el <b>inconsciente</b>".
+                            </p>
+                            <span class="author">Sigmund Freud</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. EXPLORACIÓN VISUAL -->
+            <section class="slide">
+                <div class="content">
+                    <h2>Explora los Nuevos Horizontes</h2>
+                    <p>Haz clic en cada elemento para descubrir otras formas de ver la psicología:</p>
+                    <div class="explorer-grid">
+                        <div class="explorer-item"
+                            onclick="showExplorer('<b>Gestalt (1912):</b> Postula que el todo es más que la suma de sus partes. Se enfoca en la percepción y cómo organizamos el mundo.')">
+                            <span class="emoji">👁️</span>
+                            <span>Gestalt</span>
+                        </div>
+                        <div class="explorer-item"
+                            onclick="showExplorer('<b>Humanismo (~1950):</b> Surge como reacción al conductismo y psicoanálisis. Cree en la libertad y el potencial humano.')">
+                            <span class="emoji">☀️</span>
+                            <span>Humanismo</span>
+                        </div>
+                        <div class="explorer-item"
+                            onclick="showExplorer('<b>Cognitivismo (~1960):</b> Estudia los procesos mentales como la memoria y el lenguaje. Compara la mente con una computadora.')">
+                            <span class="emoji">💻</span>
+                            <span>Cognitivismo</span>
+                        </div>
+                    </div>
+                    <div id="explorer-display" class="explorer-panel">
+                        Selecciona una escuela para explorar...
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. ACTIVIDAD DE COMPRENSIÓN -->
+            <section class="slide">
+                <div class="content">
+                    <h2>¿Quién dijo qué?</h2>
+                    <p>Si un psicólogo dice: <i>"No me importa lo que pienses, solo me importa lo que HACES y cómo
+                            reaccionas"</i>, ¿a qué escuela pertenece?</p>
+                    <div class="options">
+                        <button
+                            onclick="checkMultipleChoice('q1', false, '❌ ¡Cerca! Pero el Psicoanálisis se enfoca en lo oculto, no en la conducta observable.', 'feedback-q1')">Psicoanálisis</button>
+                        <button
+                            onclick="checkMultipleChoice('q1', true, '✅ ¡Excelente! El Conductismo se centra exclusivamente en la conducta observable y su relación con el entorno.', 'feedback-q1')">Conductismo</button>
+                        <button
+                            onclick="checkMultipleChoice('q1', false, '❌ No exactamente. El Humanismo se enfoca más en los sentimientos y el crecimiento personal.', 'feedback-q1')">Humanismo</button>
+                    </div>
+                    <div id="feedback-q1" class="feedback-box"></div>
+                    <button class="retry-btn" style="display:none" id="retry-q1"
+                        onclick="resetMultipleChoice('q1')">Intentar de nuevo</button>
+                </div>
+            </section>
+
+            <!-- 8. JUEGO EDUCATIVO -->
+            <section class="slide">
+                <div class="content">
+                    <h2>Desafío: Relaciona al Maestro</h2>
+                    <p>Selecciona primero el <b>Autor</b> y luego su <b>Escuela</b> correspondiente.</p>
+                    <div class="game-match">
+                        <div class="match-column" id="authors-col">
+                            <button class="match-btn" data-type="freud">Sigmund Freud</button>
+                            <button class="match-btn" data-type="skinner">B.F. Skinner</button>
+                            <button class="match-btn" data-type="maslow">Abraham Maslow</button>
+                        </div>
+                        <div class="match-column" id="schools-col">
+                            <button class="match-btn" data-target="maslow">Humanismo</button>
+                            <button class="match-btn" data-target="freud">Psicoanálisis</button>
+                            <button class="match-btn" data-target="skinner">Conductismo</button>
+                        </div>
+                    </div>
+                    <div id="match-feedback" class="feedback-box"></div>
+                    <button class="retry-btn" style="display:none" id="match-retry" onclick="resetMatchGame()">Reiniciar
+                        Juego</button>
+                </div>
+            </section>
+
+            <!-- 9. APLICACIÓN PRÁCTICA -->
+            <section class="slide">
+                <div class="content">
+                    <h2>Psicología en la Vida Real</h2>
+                    <div class="case-study">
+                        <p><b>Situación:</b> Ana tiene pánico de hablar en público desde que era niña. ¿Cómo la ayudaría
+                            el <b>Cognitivismo</b>?</p>
+                        <div class="options horizontal">
+                            <button
+                                onclick="checkMultipleChoice('case', false, '❌ Incorrecto. Analizar traumas de la infancia es propio del Psicoanálisis.', 'feedback-case')">Analizando
+                                sus traumas infantiles.</button>
+                            <button
+                                onclick="checkMultipleChoice('case', true, '✅ ¡Correcto! El Cognitivismo ayudaría a Ana a identificar y cambiar sus pensamientos negativos sobre hablar en público.', 'feedback-case')">Cambiando
+                                sus pensamientos negativos.</button>
+                        </div>
+                        <div id="feedback-case" class="feedback-box"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 10. REPASO FINAL -->
+            <section class="slide">
+                <div class="content">
+                    <h2>¡Repaso Relámpago!</h2>
+                    <div class="repaso-scroll">
+                        <div class="repaso-item">
+                            <p>1. ¿Quién fundó el primer laboratorio de psicología?</p>
+                            <div class="btn-group">
+                                <button onclick="checkRepaso(this, true, '✅ ¡Sí! Wundt en 1879.')">Wundt</button>
+                                <button
+                                    onclick="checkRepaso(this, false, '❌ No, James fue del Funcionalismo.')">James</button>
+                            </div>
+                        </div>
+                        <div class="repaso-item">
+                            <p>2. ¿Cuál escuela dice "El todo es más que la suma de sus partes"?</p>
+                            <div class="btn-group">
+                                <button onclick="checkRepaso(this, false, '❌ No.')">Conductismo</button>
+                                <button onclick="checkRepaso(this, true, '✅ ¡Exacto! La Gestalt.')">Gestalt</button>
+                            </div>
+                        </div>
+                        <div class="repaso-item">
+                            <p>3. ¿Qué estudia el Psicoanálisis principalmente?</p>
+                            <div class="btn-group">
+                                <button
+                                    onclick="checkRepaso(this, true, '✅ ¡Correcto! El Inconsciente.')">Inconsciente</button>
+                                <button
+                                    onclick="checkRepaso(this, false, '❌ No, eso es el Conductismo.')">Músculos</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 11. METACOGNICIÓN -->
+            <section class="slide">
+                <div class="content">
+                    <h2>Reflexión Final</h2>
+                    <p>Tómate un momento para pensar en lo aprendido hoy:</p>
+                    <div class="meta-box">
+                        <div class="meta-question">
+                            <span>🤔</span>
+                            <p>¿Qué escuela psicológica te pareció más lógica para entender a los humanos hoy en día?
+                            </p>
+                        </div>
+                        <div class="meta-question">
+                            <span>🔑</span>
+                            <p>¿Cómo influye el momento histórico en lo que creemos sobre la mente?</p>
+                        </div>
+                    </div>
+                    <p class="small-text">No hay respuestas correctas, ¡solo tu propia perspectiva científica!</p>
+                </div>
+            </section>
+
+            <!-- 12. CIERRE -->
+            <section class="slide">
+                <div class="portada">
+                    <div class="badge">🏆</div>
+                    <h2>¡Misión Cumplida!</h2>
+                    <p>Has completado el recorrido por las principales escuelas psicológicas.</p>
+                    <div class="school-logo">COLEGIO ESCOLARIS</div>
+                    <button class="restart-btn" onclick="goToSlide(0)">Volver al Inicio</button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
