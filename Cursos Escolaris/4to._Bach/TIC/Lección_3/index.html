@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Didáctica Interactiva - TIC Lección 3</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app-container">
+        <!-- Navigation Arrows Overlay -->
+        <nav class="navigation-controls">
+            <button id="prevBtn" class="nav-arrow" aria-label="Anterior">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+            <button id="nextBtn" class="nav-arrow" aria-label="Siguiente">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+        </nav>
+
+        <div class="slides-wrapper">
+            <!-- 1. Portada -->
+            <section class="slide active" id="slide-1">
+                <div class="content cover-content">
+                    <div class="badge">Lección 3</div>
+                    <h1 class="main-title">MÉTODOS DE INVESTIGACIÓN EN LÍNEA</h1>
+                    <h2 class="subtitle">Validación de Fuentes y Modelo ABP</h2>
+                    <div class="info-block">
+                        <p><strong>Materia:</strong> TIC</p>
+                        <p><strong>Grado:</strong> 4to. Bachillerato</p>
+                    </div>
+                    <div class="illustration-container">
+                        <img src="cover.png" alt="Investigando" class="main-illustration">
+                    </div>
+                    <p class="welcome-text">¡Bienvenido(a) a tu espacio de aprendizaje digital interactivo!</p>
+                </div>
+            </section>
+
+            <!-- 2. Objetivos -->
+            <section class="slide" id="slide-2">
+                <div class="content">
+                    <h2 class="slide-title">🎯 Objetivos de Aprendizaje</h2>
+                    <ul class="objectives-list">
+                        <li>
+                            <div class="icon">🔍</div>
+                            <p>Aplicar métodos efectivos de investigación en línea y uso de motores de búsqueda.</p>
+                        </li>
+                        <li>
+                            <div class="icon">✅</div>
+                            <p>Identificar y validar fuentes de información fiables para tus proyectos académicos.</p>
+                        </li>
+                        <li>
+                            <div class="icon">🎓</div>
+                            <p>Describir el método A.B.P. y cómo aplicarlo en el entorno digital.</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 3. Activación -->
+            <section class="slide" id="slide-3">
+                <div class="content">
+                    <h2 class="slide-title">🧠 Activación de Conocimientos</h2>
+                    <p class="question-text">¿Te has preguntado alguna vez...</p>
+                    <div class="cards-container">
+                        <div class="flip-card">
+                            <div class="card-front">¿Cómo sabemos si una noticia en internet es real o falsa?</div>
+                            <div class="card-back">Necesitamos criterios de validación como el autor y la fecha.</div>
+                        </div>
+                        <div class="flip-card">
+                            <div class="card-front">¿Basta con usar Google para encontrar todo?</div>
+                            <div class="card-back">¡No! Existen buscadores académicos y filtros avanzados.</div>
+                        </div>
+                    </div>
+                    <p class="instruction-hint">Toca las tarjetas para reflexionar.</p>
+                </div>
+            </section>
+
+            <!-- 4. Palabras Clave -->
+            <section class="slide" id="slide-4">
+                <div class="content">
+                    <h2 class="slide-title">🔑 Palabras Clave</h2>
+                    <div class="keywords-grid">
+                        <div class="keyword-item">
+                            <h3>Motor de Búsqueda</h3>
+                            <p>Sistema que indexa archivos en servidores web para encontrarlos rápidamente.</p>
+                        </div>
+                        <div class="keyword-item">
+                            <h3>Curación de Contenido</h3>
+                            <p>Proceso de filtrar, organizar y validar información relevante de diversas fuentes.</p>
+                        </div>
+                        <div class="keyword-item">
+                            <h3>Modelo ABP</h3>
+                            <p>Aprendizaje Basado en Proyectos: aprender haciendo e investigando un problema real.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. Contenido Principal 1 -->
+            <section class="slide" id="slide-5">
+                <div class="content">
+                    <h2 class="slide-title">🔎 Motores de Búsqueda Inteligente</h2>
+                    <div class="two-columns">
+                        <div class="text-block">
+                            <p>Para investigar como un experto, utilizamos <strong>Operadores Booleanos</strong>. Son
+                                palabras o símbolos que conectan tus términos de búsqueda para filtrar resultados:</p>
+                            <ul class="boolean-expl">
+                                <li><strong>AND (Y) o "+":</strong> Une términos. <em>Ej: "Robotica AND Guatemala"</em>
+                                    (Busca ambos).</li>
+                                <li><strong>OR (O) o "|":</strong> Amplía la búsqueda. <em>Ej: "Cáncer OR
+                                        Neoplasia"</em> (Busca cualquiera).</li>
+                                <li><strong>NOT (NO) o "-":</strong> Excluye términos. <em>Ej: "Jaguar NOT Auto"</em>
+                                    (Busca el animal, no la marca).</li>
+                                <li><strong>Comillas (" "):</strong> Buscan la frase exacta. <em>Ej: "Cambio
+                                        climático"</em>.</li>
+                            </ul>
+                        </div>
+                        <div class="image-block">
+                            <img src="search.png" alt="Busqueda Avanzada">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. Contenido Principal 2 -->
+            <section class="slide" id="slide-6">
+                <div class="content">
+                    <h2 class="slide-title">✅ Validación de Fuentes</h2>
+                    <div class="steps-grid">
+                        <div class="step-card">
+                            <span class="step-num">1</span>
+                            <h4>Autoría</h4>
+                            <p>¿Quién lo escribe? ¿Es experto o una organización reconocida?</p>
+                        </div>
+                        <div class="step-card">
+                            <span class="step-num">2</span>
+                            <h4>Actualidad</h4>
+                            <p>¿Cuándo se publicó? La información técnica caduca rápido.</p>
+                        </div>
+                        <div class="step-card">
+                            <span class="step-num">3</span>
+                            <h4>Propósito</h4>
+                            <p>¿Busca informar, vender o convencer? Cuidado con los sesgos.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. Exploración Visual -->
+            <section class="slide" id="slide-7">
+                <div class="content">
+                    <h2 class="slide-title">🌐 Anatomía de una Web Confiable</h2>
+                    <p class="instruction">Haz clic en los puntos interactivos para explorar:</p>
+                    <div class="interactive-image-container">
+                        <div class="mockup-browser">
+                            <div class="browser-header">
+                                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                                <div class="url-bar">https://educacion.gob.gt/investigacion</div>
+                            </div>
+                            <div class="mockup-content">
+                                <button class="hotspot" style="top: 10%; left: 10%;"
+                                    data-info="Protocolo HTTPS: Indica una conexión segura y cifrada.">1</button>
+                                <button class="hotspot" style="top: 30%; left: 50%;"
+                                    data-info="Dominio .gob o .edu: Suelen ser fuentes oficiales e institucionales.">2</button>
+                                <button class="hotspot" style="top: 70%; left: 30%;"
+                                    data-info="Referencias: Un buen artículo siempre cita de dónde sacó la información.">3</button>
+                                <div class="info-bubble" id="info-bubble">Haz clic en un número para ver el detalle.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 8. Actividad Comprender -->
+            <section class="slide" id="slide-8">
+                <div class="content">
+                    <h2 class="slide-title">✍️ Actividad de Comprensión</h2>
+                    <p class="quiz-question">¿Cuál de estas es una fuente <strong>MENOS</strong> fiable para una
+                        investigación académica?</p>
+                    <div class="options-container" id="quiz-1">
+                        <button class="option-btn" data-correct="false">Un artículo de revista científica
+                            (2023).</button>
+                        <button class="option-btn" data-correct="true">Un comentario anónimo en un foro de
+                            opinión.</button>
+                        <button class="option-btn" data-correct="false">Un archivo PDF de una Universidad
+                            Nacional.</button>
+                    </div>
+                    <div class="feedback hidden" id="feedback-1">
+                        <p class="feedback-text"></p>
+                        <button class="retry-btn">Intentar de nuevo</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 9. Juego Educativo -->
+            <section class="slide" id="slide-9">
+                <div class="content">
+                    <h2 class="slide-title">🎮 Juego: Pasos del ABP</h2>
+                    <p class="instruction">Elige el orden correcto de los pasos del Aprendizaje Basado en Proyectos:</p>
+                    <div class="abp-game" id="abp-game">
+                        <div class="game-options">
+                            <button class="step-btn" data-step="1">Idea y Pregunta Guía</button>
+                            <button class="step-btn" data-step="3">Producto Final</button>
+                            <button class="step-btn" data-step="2">Investigación y Acción</button>
+                        </div>
+                        <div class="game-result">
+                            Tus pasos: <span id="chosen-steps">...</span>
+                        </div>
+                        <div class="feedback hidden" id="game-feedback">
+                            <p class="feedback-text"></p>
+                            <button class="retry-btn" onclick="resetGame()">Reiniciar</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 10. Aplicación Práctica -->
+            <section class="slide" id="slide-10">
+                <div class="content">
+                    <h2 class="slide-title">🛠️ Aplicación Práctica</h2>
+                    <div class="case-study">
+                        <p><strong>Situación:</strong> Debes investigar sobre "Ciberseguridad en Guatemala". Encuentras
+                            un blog personal de un estudiante y un informe de la OEA (Organización de Estados
+                            Americanos).</p>
+                        <p class="quiz-question">¿Qué fuente deberías priorizar para tu proyecto profesional?</p>
+                        <div class="options-container" id="quiz-2">
+                            <button class="option-btn" data-correct="true">El informe de la OEA por su respaldo
+                                institucional.</button>
+                            <button class="option-btn" data-correct="false">El blog del estudiante porque es más fácil
+                                de leer.</button>
+                        </div>
+                        <div class="feedback hidden" id="feedback-2">
+                            <p class="feedback-text"></p>
+                            <button class="retry-btn">Revisar respuesta</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 11. Repaso Final -->
+            <section class="slide" id="slide-11">
+                <div class="content">
+                    <h2 class="slide-title">📝 Repaso de Conceptos</h2>
+                    <div class="repaso-quiz">
+                        <div class="quiz-item" data-id="q3">
+                            <p>1. ¿El método ABP se enfoca solo en la teoría?</p>
+                            <div class="btn-group">
+                                <button class="mini-btn" data-answer="false">Sí</button>
+                                <button class="mini-btn" data-answer="true">No, se enfoca en la práctica</button>
+                            </div>
+                        </div>
+                        <div class="quiz-item" data-id="q4" style="margin-top: 20px;">
+                            <p>2. ¿Es importante verificar la fecha de una fuente?</p>
+                            <div class="btn-group">
+                                <button class="mini-btn" data-answer="true">Absolutamente</button>
+                                <button class="mini-btn" data-answer="false">Casi nunca</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feedback hidden" id="feedback-final">
+                        <p class="feedback-text"></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 12. Metacognición -->
+            <section class="slide" id="slide-12">
+                <div class="content">
+                    <h2 class="slide-title">🧘 Metacognición</h2>
+                    <div class="reflection-box">
+                        <p class="sub">Reflexiona unos segundos:</p>
+                        <ul class="reflection-list">
+                            <li>¿Qué descubrí hoy sobre mi forma de buscar información?</li>
+                            <li>¿Cómo puedo mejorar la calidad de mis fuentes en el futuro?</li>
+                            <li>¿Qué parte del método ABP me parece más retadora?</li>
+                        </ul>
+                        <div class="visual-accent">✨</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 13. Cierre -->
+            <section class="slide" id="slide-13">
+                <div class="content closing-content">
+                    <div class="congrats-icon">🏆</div>
+                    <h2 class="slide-title">¡FELICITACIONES!</h2>
+                    <p>Has completado la guía de TIC sobre Investigación y Validación.</p>
+                    <p class="final-msg">Ahora estás listo(a) para aplicar estos métodos en tus proyectos del Colegio
+                        Escolaris.</p>
+                    <div class="school-identity">
+                        <div class="line"></div>
+                        <p>Bachillerato - Colegio Escolaris</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

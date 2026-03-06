@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Didáctica Interactiva - TIC Lección 5</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app-container">
+        <!-- Navigation Arrows Overlay -->
+        <nav class="navigation-controls">
+            <button id="prevBtn" class="nav-arrow" aria-label="Anterior">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+            <button id="nextBtn" class="nav-arrow" aria-label="Siguiente">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+        </nav>
+
+        <div class="slides-wrapper">
+            <!-- 1. Portada -->
+            <section class="slide active" id="slide-1">
+                <div class="content cover-content">
+                    <div class="badge">Lección 5</div>
+                    <h1 class="main-title">TECNOLOGÍA</h1>
+                    <h2 class="subtitle">Desarrollo, Evolución y Herramientas</h2>
+                    <div class="info-block">
+                        <p><strong>Materia:</strong> TIC</p>
+                        <p><strong>Grado:</strong> Bachillerato</p>
+                    </div>
+                    <div class="illustration-container">
+                        <img src="cover.png" alt="Evolución de la Tecnología" class="main-illustration">
+                    </div>
+                    <p class="welcome-text">¡Hola! Hoy exploraremos cómo la tecnología transforma nuestra forma de
+                        aprender y vivir.</p>
+                </div>
+            </section>
+
+            <!-- 2. Objetivos -->
+            <section class="slide" id="slide-2">
+                <div class="content">
+                    <h2 class="slide-title">🎯 Objetivos de Aprendizaje</h2>
+                    <ul class="objectives-list">
+                        <li>
+                            <div class="icon">🌍</div>
+                            <p>Analizar el impacto de la tecnología en el mundo actual y su evolución constante.</p>
+                        </li>
+                        <li>
+                            <div class="icon">🛠️</div>
+                            <p>Manipular herramientas digitales para la recolección y organización de información.</p>
+                        </li>
+                        <li>
+                            <div class="icon">🎓</div>
+                            <p>Utilizar herramientas tecnológicas aplicables directamente al proceso de aprendizaje.</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 3. Activación -->
+            <section class="slide" id="slide-3">
+                <div class="content">
+                    <h2 class="slide-title">🧠 Activación: Tecnología ayer y hoy</h2>
+                    <p class="question-text">¿Cómo ha cambiado nuestra forma de investigar?</p>
+                    <div class="cards-container">
+                        <div class="flip-card">
+                            <div class="card-front">Antes (Hace 30 años)</div>
+                            <div class="card-back">Libros físicos, enciclopedias impresas y visitas a bibliotecas.</div>
+                        </div>
+                        <div class="flip-card">
+                            <div class="card-front">Ahora (Mundo Digital)</div>
+                            <div class="card-back">Motores de búsqueda, bases de datos en la nube e Inteligencia
+                                Artificial.</div>
+                        </div>
+                    </div>
+                    <p class="instruction-hint">Toca las tarjetas para comparar.</p>
+                </div>
+            </section>
+
+            <!-- 4. Palabras Clave -->
+            <section class="slide" id="slide-4">
+                <div class="content">
+                    <h2 class="slide-title">🔑 Conceptos Fundamentales</h2>
+                    <div class="keywords-grid">
+                        <div class="keyword-item">
+                            <h3>Evolución Tecnológica</h3>
+                            <p>Proceso histórico de mejora y creación de nuevas herramientas para resolver problemas
+                                complejos.</p>
+                        </div>
+                        <div class="keyword-item">
+                            <h3>Herramientas TIC</h3>
+                            <p>Recursos digitales que facilitan el procesamiento, almacenamiento y transmisión de
+                                información.</p>
+                        </div>
+                        <div class="keyword-item">
+                            <h3>Ciudadanía Digital</h3>
+                            <p>Uso responsable, ético y crítico de las tecnologías en la sociedad actual.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. Contenido Principal 1: Impacto -->
+            <section class="slide" id="slide-5">
+                <div class="content">
+                    <h2 class="slide-title">🚀 El Impacto en nuestro Mundo</h2>
+                    <div class="two-columns">
+                        <div class="text-block">
+                            <p>La tecnología no es solo aparatos, es transformar procesos:</p>
+                            <ul class="boolean-expl">
+                                <li><strong>Globalización:</strong> Conexión inmediata con cualquier parte del mundo.
+                                </li>
+                                <li><strong>Automatización:</strong> Tareas repetitivas realizadas por sistemas
+                                    inteligentes.</li>
+                                <li><strong>Acceso:</strong> Democracia de la información; aprender cualquier cosa en
+                                    línea.</li>
+                            </ul>
+                        </div>
+                        <div class="image-block">
+                            <img src="tools.png" alt="Herramientas Tecnológicas">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. Contenido Principal 2: Herramientas -->
+            <section class="slide" id="slide-6">
+                <div class="content">
+                    <h2 class="slide-title">🛠️ Herramientas para el Aprendizaje</h2>
+                    <p>Dominar estas herramientas potenciará tu rendimiento académico:</p>
+                    <div class="steps-grid">
+                        <div class="step-card">
+                            <span class="step-num">Organización</span>
+                            <h4 style="margin-top: 10px;">Notion / Trello</h4>
+                            <p>Para gestionar proyectos, tareas y notas de forma colaborativa.</p>
+                        </div>
+                        <div class="step-card">
+                            <span class="step-num">Recolección</span>
+                            <h4 style="margin-top: 10px;">Google Forms</h4>
+                            <p>Para crear encuestas y recopilar datos estructurados rápidamente.</p>
+                        </div>
+                        <div class="step-card">
+                            <span class="step-num">Presentación</span>
+                            <h4 style="margin-top: 10px;">Canva / Genially</h4>
+                            <p>Para comunicar ideas de forma visual, creativa e interactiva.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. Exploración Visual -->
+            <section class="slide" id="slide-7">
+                <div class="content">
+                    <h2 class="slide-title">🔐 Seguridad y Veracidad</h2>
+                    <p class="instruction">Haz clic para descubrir cómo usar la tecnología de forma segura:</p>
+                    <div class="interactive-image-container">
+                        <div class="mockup-browser">
+                            <div class="browser-header">
+                                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                                <div class="url-bar">Navegación Segura</div>
+                            </div>
+                            <div class="mockup-content">
+                                <button class="hotspot" style="top: 15%; left: 30%;"
+                                    data-info="FILTRO: Usa herramientas de búsqueda académica como primer filtro de veracidad.">F</button>
+                                <button class="hotspot" style="top: 45%; left: 60%;"
+                                    data-info="PROTECCIÓN: Mantén tus softwares y aplicaciones actualizadas para evitar vulnerabilidades.">P</button>
+                                <button class="hotspot" style="top: 75%; left: 40%;"
+                                    data-info="ÉTICA: Cita siempre las fuentes de las herramientas y datos que utilices.">É</button>
+                                <div class="info-bubble" id="info-bubble">Explora los principios del buen uso
+                                    tecnológico.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 8. Actividad Comprender -->
+            <section class="slide" id="slide-8">
+                <div class="content">
+                    <h2 class="slide-title">✍️ Desafío Tecnológico</h2>
+                    <p class="quiz-question">¿Cuál es el principal beneficio de las herramientas TIC en la educación?
+                    </p>
+                    <div class="options-container" id="quiz-1">
+                        <button class="option-btn" data-correct="false">Poder jugar videojuegos durante las
+                            clases.</button>
+                        <button class="option-btn" data-correct="true">Acceso a recursos diversos y aprendizaje
+                            personalizado.</button>
+                        <button class="option-btn" data-correct="false">No tener que volver a escribir nunca
+                            más.</button>
+                    </div>
+                    <div class="feedback hidden" id="feedback-1">
+                        <p class="feedback-text"></p>
+                        <button class="retry-btn">Intentar de nuevo</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 9. Juego Educativo -->
+            <section class="slide" id="slide-9">
+                <div class="content">
+                    <h2 class="slide-title">🎮 Ordenar: Ciclo de una Herramienta</h2>
+                    <p class="instruction">¿Cuál es el orden lógico para implementar una nueva herramienta en tu
+                        estudio?</p>
+                    <div class="abp-game" id="abp-game">
+                        <div class="game-options">
+                            <button class="step-btn" data-step="1">Explorar necesidad</button>
+                            <button class="step-btn" data-step="3">Aplicar al proyecto</button>
+                            <button class="step-btn" data-step="2">Aprender su manejo</button>
+                        </div>
+                        <div class="game-result">
+                            Tus pasos: <span id="chosen-steps">...</span>
+                        </div>
+                        <div class="feedback hidden" id="game-feedback">
+                            <p class="feedback-text"></p>
+                            <button class="retry-btn" onclick="resetGame()">Reiniciar</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 10. Aplicación Práctica -->
+            <section class="slide" id="slide-10">
+                <div class="content">
+                    <h2 class="slide-title">🛠️ Caso: Elección de Herramientas</h2>
+                    <div class="case-study">
+                        <p><strong>Situación:</strong> Necesitas organizar un proyecto grupal con 5 compañeros que viven
+                            en diferentes zonas. ¿Qué tecnología es la más adecuada?</p>
+                        <div class="options-container" id="quiz-2">
+                            <button class="option-btn" data-correct="true">Un espacio de trabajo en la nube (Google
+                                Drive o Miro).</button>
+                            <button class="option-btn" data-correct="false">Enviar correos electrónicos individuales
+                                cada hora.</button>
+                        </div>
+                        <div class="feedback hidden" id="feedback-2">
+                            <p class="feedback-text"></p>
+                            <button class="retry-btn">Revisar solución</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 11. Repaso Final -->
+            <section class="slide" id="slide-11">
+                <div class="content">
+                    <h2 class="slide-title">📝 Repaso de la Lección</h2>
+                    <div class="repaso-quiz">
+                        <div class="quiz-item" data-id="q3">
+                            <p>1. ¿La tecnología es un proceso estático?</p>
+                            <div class="btn-group">
+                                <button class="mini-btn" data-answer="false">Sí</button>
+                                <button class="mini-btn" data-answer="true">No, está en constante evolución</button>
+                            </div>
+                        </div>
+                        <div class="quiz-item" data-id="q4" style="margin-top: 20px;">
+                            <p>2. ¿Es importante filtrar las fuentes al usar herramientas digitales?</p>
+                            <div class="btn-group">
+                                <button class="mini-btn" data-answer="true">Es fundamental</button>
+                                <button class="mini-btn" data-answer="false">No es necesario</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feedback hidden" id="feedback-final">
+                        <p class="feedback-text"></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 12. Metacognición -->
+            <section class="slide" id="slide-12">
+                <div class="content">
+                    <h2 class="slide-title">🧘 Metacognición</h2>
+                    <div class="reflection-box">
+                        <p class="sub">Reflexión Final:</p>
+                        <ul class="reflection-list">
+                            <li>¿Cómo impacta la tecnología en mi manera de ver el mundo?</li>
+                            <li>¿Qué herramienta nueva me gustaría dominar este ciclo escolar?</li>
+                            <li>¿Soy un ciudadano digital responsable?</li>
+                        </ul>
+                        <div class="visual-accent">💻</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 13. Cierre -->
+            <section class="slide" id="slide-13">
+                <div class="content closing-content">
+                    <div class="congrats-icon">🚀</div>
+                    <h2 class="slide-title">¡FELICITACIONES!</h2>
+                    <p>Has completado el módulo de Tecnología y Herramientas.</p>
+                    <p class="final-msg">El futuro tecnológico está en tus manos. ¡Sigue explorando!</p>
+                    <div class="school-identity">
+                        <div class="line"></div>
+                        <p>Bachillerato - Colegio Escolaris</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
