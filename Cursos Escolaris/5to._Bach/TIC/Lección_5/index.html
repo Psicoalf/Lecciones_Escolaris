@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIC 5to Bach - Lección 5: Relación entre Tecnología y Comunicación</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="app-container">
+        
+        <div class="navigation-controls">
+            <button class="nav-arrow" id="prev" title="Anterior">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button class="nav-arrow" id="next" title="Siguiente">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+        </div>
+
+        <div class="slides-wrapper">
+            
+            <!-- 1. PORTADA -->
+            <section class="slide">
+                <div class="content-card fade-in">
+                    <div class="badge">LECCIÓN 5</div>
+                    <h1 class="main-title">TECNOLOGÍA Y COMUNICACIÓN</h1>
+                    <p class="subtitle">TIC - 5to Bachillerato</p>
+                    
+                    <div class="main-illustration">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="100" cy="100" r="80" fill="#e0f2f1" />
+                            <!-- Pantalla de Monitor/Chat -->
+                            <rect x="40" y="50" width="120" height="90" rx="10" fill="#244b5a" />
+                            <rect x="50" y="60" width="100" height="70" rx="5" fill="#ffffff" />
+                            <!-- Burbujas de Chat -->
+                            <circle cx="70" cy="80" r="10" fill="#db6015" />
+                            <circle cx="130" cy="105" r="10" fill="#f7be00" />
+                            <!-- Representación de Email -->
+                            <rect x="85" y="115" width="30" height="20" rx="2" fill="#244b5a" />
+                            <path d="M85 115 L100 125 L115 115" stroke="white" stroke-width="2" fill="none" />
+                        </svg>
+                    </div>
+                    
+                    <div class="cover-info">
+                        <p>📢 Conecta tus ideas con el mundo.</p>
+                        <p>Domina las herramientas del mañana, hoy.</p>
+                    </div>
+                    <p style="margin-top: 20px; font-weight: 700; color: var(--naranja)">Colegio Escolaris</p>
+                </div>
+            </section>
+
+            <!-- 2. OBJETIVOS -->
+            <section class="slide">
+                <div class="content-card">
+                    <h2 class="section-head">METAS DE HOY</h2>
+                    <br>
+                    <div class="objectives-box">
+                        <div class="objective-item">
+                            <span>📧</span>
+                            <p>Utilizar el <b>correo electrónico</b> de forma profesional y educativa.</p>
+                        </div>
+                        <div class="objective-item" style="border-color: var(--naranja);">
+                            <span>👥</span>
+                            <p>Manejar herramientas de <b>comunicación grupal</b> y trabajo colaborativo.</p>
+                        </div>
+                        <div class="objective-item" style="border-color: var(--rojo);">
+                            <span>🎥</span>
+                            <p>Identificar herramientas <b>audiovisuales</b> para comunicar ideas con impacto.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. ACTIVACIÓN -->
+            <section class="slide">
+                <div class="content-card">
+                    <h2 class="section-head">¿CÓMO CONECTAS?</h2>
+                    <br>
+                    <p class="text-body">Piensa en tu rutina diaria...</p>
+                    <br>
+                    <div class="question-bubble">
+                        <p>¿Qué herramienta usarías para pedirle una prórroga de tarea a tu profesor? ¿WhatsApp o Correo?</p>
+                    </div>
+                    <div class="question-bubble">
+                        <p>¿Sabías que un video de 30 segundos puede comunicar más que 5 páginas de texto?</p>
+                    </div>
+                    <p class="text-body" style="font-style: italic; color: #777;">Descubre cómo elegir la mejor herramienta...</p>
+                </div>
+            </section>
+
+            <!-- 4. PALABRAS CLAVE -->
+            <section class="slide">
+                <div class="content-card">
+                    <h2 class="section-head">DICCIONARIO DIGITAL</h2>
+                    <br>
+                    <div class="keywords-container">
+                        <div class="k-word">
+                            <h4>NETIQUETA</h4>
+                            <p>Normas de comportamiento y cortesía en Internet.</p>
+                        </div>
+                        <div class="k-word" style="background: var(--naranja);">
+                            <h4>NUBE (Cloud)</h4>
+                            <p>Espacio virtual para trabajar en equipo y guardar archivos.</p>
+                        </div>
+                        <div class="k-word" style="background: var(--rojo);">
+                            <h4>NARRATIVA</h4>
+                            <p>La forma en que cuentas una historia usando medios visuales.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. CONTENIDO 1: EL CORREO ELECTRÓNICO -->
+            <section class="slide">
+                <div class="content-card">
+                    <h2 class="section-head">EL CORREO PRO</h2>
+                    <br>
+                    <p class="text-body">El correo electrónico no es un chat. Sigue la estructura educativa:</p>
+                    <div class="content-grid">
+                        <div style="text-align: left;">
+                            <ul>
+                                <li><b>Asunto:</b> Claro y conciso (Ej: Tarea 5 - TIC - Juan Pérez).</li>
+                                <li><b>Saludo:</b> Formal y respetuoso.</li>
+                                <li><b>Cuerpo:</b> Explica el motivo brevemente.</li>
+                                <li><b>Cierre:</b> Una despedida cordial.</li>
+                            </ul>
+                        </div>
+                        <div style="background: #f0f8ff; padding: 15px; border-radius: 15px; border: 2px dashed var(--azul-oscuro);">
+                            <p>💡 <b>Regla de Oro:</b> Nunca envíes un correo sin asunto.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. CONTENIDO 2: COMUNICACIÓN GRUPAL -->
+            <section class="slide">
+                <div class="content-card">
+                    <h2 class="section-head">TRABAJO EN EQUIPO</h2>
+                    <br>
+                    <p class="text-body">La tecnología permite que estemos en el mismo lugar, virtualmente:</p>
+                    <div class="objectives-box">
+                        <div class="objective-item">
+                            <p><b>Herramientas de sincronización:</b> Teams, Zoom o Meet para reuniones.</p>
+                        </div>
+                        <div class="objective-item" style="border-color: var(--amarillo);">
+                            <p><b>Espacios de intercambio:</b> Drive, Slack o Discord para organizar archivos y debates.</p>
+                        </div>
+                        <div class="objective-item" style="border-color: var(--naranja);">
+                            <p><b>Edición conjunta:</b> Documentos compartidos donde todos escriben a la vez.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. CONTENIDO 3: HERRAMIENTAS AUDIOVISUALES -->
+            <section class="slide">
+                <div class="content-card">
+                    <h2 class="section-head">COMUNICA CON IMPACTO</h2>
+                    <br>
+                    <p class="text-body">En el trabajo diario, las ideas entran por los ojos:</p>
+                    <br>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;">
+                        <div style="background: #eef; padding: 15px; border-radius: 10px;">
+                            <h5>🎨 Visual</h5>
+                            <small>Canva / Genially (Infografías)</small>
+                        </div>
+                        <div style="background: #fee; padding: 15px; border-radius: 10px;">
+                            <h5>🎬 Video</h5>
+                            <small>Loom / TikTok (Explicaciones)</small>
+                        </div>
+                        <div style="background: #efe; padding: 15px; border-radius: 10px;">
+                            <h5>📊 Datos</h5>
+                            <small>Excel / PowerBI (Gráficos)</small>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 8. EXPLORACIÓN VISUAL -->
+            <section class="slide">
+                <div class="content-card">
+                    <h2 class="section-head">UN CORREO PERFECTO</h2>
+                    <p class="text-body" style="font-size: 0.9rem;">Toca los números para ver qué NO debe faltar al enviar este trabajo.</p>
+                    
+                    <div class="explorer-container">
+                        <div style="background: #fff; width: 85%; margin: 5px auto; border: 1px solid #ccc; text-align: left; padding: 10px; font-size: 0.8rem;">
+                            <div style="border-bottom: 1px solid #ddd; padding: 5px;">Para: profesor@escolaris.com</div>
+                            <div style="border-bottom: 1px solid #ddd; padding: 5px;">Asunto: [Asunto aquí]</div>
+                            <div style="padding: 10px; min-height: 100px;">Estimado profesor... adjunto mi tarea...</div>
+                            <div style="background: #f0f0f0; padding: 5px; border-radius: 5px; width: 120px;">📎 tarea_v1.pdf</div>
+                        </div>
+
+                        <div class="hot-point" style="top: 35px; left: 80%;" onclick="exploreEmail(1)">1</div>
+                        <div class="hot-point" style="top: 100px; left: 15%;" onclick="exploreEmail(2)">2</div>
+                        <div class="hot-point" style="top: 155px; left: 20%;" onclick="exploreEmail(3)">3</div>
+                        
+                        <div id="explorer-info-email" style="position: absolute; bottom: 0; width: 100%; background: var(--azul-oscuro); color: white; padding: 15px; min-height: 80px; display: flex; align-items: center; justify-content: center;">¡Toca los números para analizar!</div>
+                    </div>
+                </div>
+                <script>
+                    function exploreEmail(p) {
+                        const info = document.getElementById('explorer-info-email');
+                        const data = {
+                            1: "❗ <b>Asunto:</b> Debe ser descriptivo. Nunca dejes que el profesor adivine de qué trata el correo.",
+                            2: "🤝 <b>Cuerpo:</b> Sé amable. Un 'espero se encuentre bien' abre muchas puertas.",
+                            3: "📎 <b>Adjuntos:</b> ¡Revisa que el archivo esté ahí! Y nómbralo correctamente."
+                        };
+                        info.innerHTML = data[p];
+                    }
+                </script>
+            </section>
+
+            <!-- 9. ACTIVIDAD COMPRENSIÓN -->
+            <section class="slide">
+                <div class="content-card">
+                    <h2 class="section-head">RETO DE COMUNICACIÓN</h2>
+                    <p class="text-body">¿Cuál de estos comportamientos rompe la "Netiqueta" educativa?</p>
+                    
+                    <div class="activity-box" id="activity-5-1">
+                        <div class="options-grid">
+                            <button class="opt-btn" onclick="checkMultipleChoice(this, false, 'fb-5-1', 'retry-5-1')">Responder un correo en menos de 24 horas.</button>
+                            <button class="opt-btn" onclick="checkMultipleChoice(this, true, 'fb-5-1', 'retry-5-1')">Escribir TODO EL CORREO EN MAYÚSCULAS porque tengo prisa.</button>
+                            <button class="opt-btn" onclick="checkMultipleChoice(this, false, 'fb-5-1', 'retry-5-1')">Adjuntar archivos en formato PDF para mayor compatibilidad.</button>
+                        </div>
+                        <div id="fb-5-1" class="hidden"></div>
+                        <button id="retry-5-1" class="retry-btn hidden" onclick="retryActivity('activity-5-1', 'fb-5-1', 'retry-5-1')">Intentar de nuevo 🔄</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 10. JUEGO EDUCATIVO -->
+            <section class="slide">
+                <div class="content-card">
+                    <h2 class="section-head">CENTRO DE HERRAMIENTAS</h2>
+                    <p class="text-body">Tu equipo debe presentar un proyecto. Clasifica el flujo correcto (Toca los pasos):</p>
+                    
+                    <div class="activity-box" id="game-5">
+                        <div class="order-list">
+                            <button class="step-order" onclick="checkStep(this, 1, 'game-fb-5')">Debate de ideas en Slack 💬</button>
+                            <button class="step-order" onclick="checkStep(this, 2, 'game-fb-5')">Redacción conjunta en Google Docs 📄</button>
+                            <button class="step-order" onclick="checkStep(this, 3, 'game-fb-5')">Diseño visual de ideas en Canva 🎨</button>
+                            <button class="step-order" onclick="checkStep(this, 4, 'game-fb-5')">Envío del link final al maestro por Email 📤</button>
+                        </div>
+                        <div id="game-fb-5" class="hidden"></div>
+                        <button class="retry-btn" onclick="resetGame('game-5', 'game-fb-5')">Reiniciar Flujo 🔄</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 11. APLICACIÓN PRÁCTICA -->
+            <section class="slide">
+                <div class="content-card">
+                    <h2 class="section-head">MISION PROFESIONAL</h2>
+                    <br>
+                    <p class="text-body">Tienes que explicar cómo usar una nueva plataforma a tus compañeros de forma remota.</p>
+                    <p><b>¿Cuál es la herramienta audiovisual más pertinente para una guía rápida paso a paso?</b></p>
+                    <div class="activity-box" id="activity-5-p">
+                        <div class="options-grid">
+                            <button class="opt-btn" onclick="checkMultipleChoice(this, true, 'fb-5-p', 'retry-5-p')">Grabar un micro-tutorial de pantalla con Loom.</button>
+                            <button class="opt-btn" onclick="checkMultipleChoice(this, false, 'fb-5-p', 'retry-5-p')">Enviar una lista de 50 pasos por correo.</button>
+                            <button class="opt-btn" onclick="checkMultipleChoice(this, false, 'fb-5-p', 'retry-5-p')">Llamar a cada uno por separado por teléfono.</button>
+                        </div>
+                        <div id="fb-5-p" class="hidden"></div>
+                        <button id="retry-5-p" class="retry-btn hidden" onclick="retryActivity('activity-5-p', 'fb-5-p', 'retry-5-p')">Intentar de nuevo 🔄</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 12. REPASO FINAL -->
+            <section class="slide">
+                <div class="content-card">
+                    <h2 class="section-head">LO APRENDIDO</h2>
+                    <p class="text-body">En un entorno de trabajo colaborativo, ¿dónde se suelen guardar los archivos para que todos editen?</p>
+                    <div class="activity-box" id="activity-5-r">
+                        <div class="options-grid">
+                            <button class="opt-btn" onclick="checkMultipleChoice(this, false, 'fb-5-r', 'retry-5-r')">En mi memoria USB personal.</button>
+                            <button class="opt-btn" onclick="checkMultipleChoice(this, true, 'fb-5-r', 'retry-5-r')">En la Nube (Google Drive / OneDrive).</button>
+                            <button class="opt-btn" onclick="checkMultipleChoice(this, false, 'fb-5-r', 'retry-5-r')">En la carpeta de descargas de mi PC.</button>
+                        </div>
+                        <div id="fb-5-r" class="hidden"></div>
+                        <button id="retry-5-r" class="retry-btn hidden" onclick="retryActivity('activity-5-r', 'fb-5-r', 'retry-5-r')">Intentar de nuevo 🔄</button>
+                    </div>
+                </div>
+                <script>
+                    // Pequeño fix para el error de sintaxis en el onclick del r anterior (doble parentesis)
+                </script>
+            </section>
+
+            <!-- 13. METACOGNICIÓN -->
+            <section class="slide">
+                <div class="content-card">
+                    <h2 class="section-head">BITÁCORA PERSONAL</h2>
+                    <p class="text-body">Hazte estas dos preguntas:</p>
+                    <div class="reflect-cards">
+                        <div class="r-card">
+                            <p>🧐 ¿He usado el correo de forma profesional hasta hoy?</p>
+                        </div>
+                        <div class="r-card">
+                            <p>✨ ¿Qué nueva herramienta audiovisual quiero aprender para mi próximo proyecto?</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 14. CIERRE -->
+            <section class="slide">
+                <div class="content-card">
+                    <div class="seal">📱</div>
+                    <h2 class="main-title">¡COMUNICACIÓN MAESTRA!</h2>
+                    <p class="final-msg">Has completado el módulo sobre tecnología y comunicación humana.</p>
+                    <p class="text-body">Recuerda: Las herramientas cambian, pero la claridad y el respeto en el mensaje son eternos.</p>
+                    <br>
+                    <div class="line"></div>
+                    <p style="font-weight: 700;">TIC 5to Bachillerato - Colegio Escolaris</p>
+                    <p style="font-size: 0.8rem; margin-top: 10px;">¡Gracias por aprender con nosotros!</p>
+                </div>
+            </section>
+
+        </div> <!-- End slides wrapper -->
+
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+
+    </div> <!-- End App Container -->
+
+    <script src="script.js"></script>
+</body>
+</html>

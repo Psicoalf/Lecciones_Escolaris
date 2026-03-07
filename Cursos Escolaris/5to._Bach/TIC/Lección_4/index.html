@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIC 5to Bach - Lección 4: Técnicas y Estrategias de Búsqueda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="app-container">
+        
+        <div class="navigation-controls">
+            <button class="nav-arrow" id="prev" title="Anterior">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button class="nav-arrow" id="next" title="Siguiente">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+        </div>
+
+        <div class="slides-wrapper">
+            
+            <!-- 1. PORTADA -->
+            <section class="slide">
+                <div class="content-card fade-in">
+                    <div class="badge">LECCIÓN 4</div>
+                    <h1 class="main-title">TÉCNICAS Y ESTRATEGIAS DE BÚSQUEDA</h1>
+                    <p class="subtitle">TIC - 5to Bachillerato</p>
+                    
+                    <div class="main-illustration">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="100" cy="100" r="85" fill="#fefae0" opacity="0.5" />
+                            <rect x="50" y="60" width="100" height="80" rx="10" fill="#244b5a" />
+                            <circle cx="100" cy="100" r="30" stroke="#f7be00" stroke-width="8" fill="none" />
+                            <line x1="120" y1="120" x2="150" y2="150" stroke="#f7be00" stroke-width="8" stroke-linecap="round" />
+                            <circle cx="100" cy="100" r="10" fill="#db6015" />
+                        </svg>
+                    </div>
+                    
+                    <div class="cover-info">
+                        <p>🕵️‍♂️ Conviértete en un detective de la información.</p>
+                        <p>Aprende a encontrar lo que buscas en segundos.</p>
+                    </div>
+                    <p style="margin-top: 20px; font-weight: 700; color: var(--naranja)">Colegio Escolaris</p>
+                </div>
+            </section>
+
+            <!-- 2. OBJETIVOS -->
+            <section class="slide">
+                <div class="content-card">
+                    <h2 class="section-head">METAS DE HOY</h2>
+                    <br>
+                    <div class="objectives-box">
+                        <div class="objective-item">
+                            <span>📍</span>
+                            <p>Dominar la <b>localización específica</b> de información ignorando el "ruido digital".</p>
+                        </div>
+                        <div class="objective-item" style="border-color: var(--rojo);">
+                            <span>⚙️</span>
+                            <p>Aplicar <b>operadores lógicos avanzados</b> en búsquedas de múltiples palabras.</p>
+                        </div>
+                        <div class="objective-item" style="border-color: var(--azul-oscuro);">
+                            <span>🔗</span>
+                            <p>Identificar el <b>manejo de enlaces pertinentes</b> para validar fuentes confiables.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. ACTIVACIÓN -->
+            <section class="slide">
+                <div class="content-card">
+                    <h2 class="section-head">NUESTRO RETO</h2>
+                    <br>
+                    <p class="text-body">Internet tiene 1.9 mil millones de sitios web...</p>
+                    <br>
+                    <div class="question-bubble">
+                        <p>¿Qué haces cuando buscas un dato y Google te devuelve 50 millones de resultados que no son lo que quieres?</p>
+                    </div>
+                    <div class="question-bubble">
+                        <p>¿Crees que existe una "llave maestra" para abrir solo las puertas de la información correcta?</p>
+                    </div>
+                    <p class="text-body" style="font-style: italic; color: #777;">Sigue adelante para descubrir las llaves...</p>
+                </div>
+            </section>
+
+            <!-- 4. PALABRAS CLAVE -->
+            <section class="slide">
+                <div class="content-card">
+                    <h2 class="section-head">HERRAMIENTAS DE HOY</h2>
+                    <br>
+                    <div class="keywords-container">
+                        <div class="k-word">
+                            <h4>QUERY</h4>
+                            <p>La frase o conjunto de palabras que escribes en el buscador.</p>
+                        </div>
+                        <div class="k-word" style="background: var(--naranja);">
+                            <h4>BOOLEANO</h4>
+                            <p>Lógica de unión (AND), opción (OR) o exclusión (NOT).</p>
+                        </div>
+                        <div class="k-word" style="background: var(--rojo);">
+                            <h4>PERTINENCIA</h4>
+                            <p>Qué tan valioso y relacionado es un enlace para tu búsqueda.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. CONTENIDO 1: LOCALIZACIÓN ESPECÍFICA -->
+            <section class="slide">
+                <div class="content-card">
+                    <h2 class="section-head">LOCALIZACIÓN ESPECÍFICA</h2>
+                    <br>
+                    <p class="text-body">Para ser específico, usa las <b>comillas (" ")</b>. Es la técnica más poderosa para búsquedas exactas:</p>
+                    <div class="content-grid">
+                        <div style="background: #fff8f0; padding: 15px; border-radius: 15px; border-left: 5px solid var(--naranja);">
+                            <p><b>Sin comillas:</b><br><small>Receta pastel chocolate</small><br>(Busca páginas con esas palabras sueltas).</p>
+                        </div>
+                        <div style="background: var(--azul-oscuro); color: white; padding: 15px; border-radius: 15px;">
+                            <p><b>Con comillas:</b><br><i>"Receta de chocolate amargo"</i><br>(Busca la frase EXACTA, en ese orden).</p>
+                        </div>
+                    </div>
+                    <p class="text-body" style="font-size: 0.9rem; margin-top: 15px;">🔍 Tip: Busca por tipo de archivo usando <b>filetype:pdf</b></p>
+                </div>
+            </section>
+
+            <!-- 6. CONTENIDO 2: OPERADORES AVANZADOS -->
+            <section class="slide">
+                <div class="content-card">
+                    <h2 class="section-head">LOGICA PARA BUSCAR</h2>
+                    <br>
+                    <p class="text-body">Combina términos como un profesional usando estos símbolos:</p>
+                    <div class="objectives-box">
+                        <div class="objective-item">
+                            <p><b>(+) AND:</b> Suma temas (ej: <i>IA +Medicina</i>).</p>
+                        </div>
+                        <div class="objective-item" style="border-color: var(--rojo);">
+                            <p><b>(-) NOT:</b> Resta temas (ej: <i>Virus -biología</i> para buscar virus informáticos).</p>
+                        </div>
+                        <div class="objective-item" style="border-color: var(--naranja);">
+                            <p><b>(*) COMODÍN:</b> Para palabras que no recuerdas (ej: <i>"lo esencial es * a los ojos"</i>).</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. CONTENIDO 3: ENLACES PERTINENTES -->
+            <section class="slide">
+                <div class="content-card">
+                    <h2 class="section-head">EL VALOR DEL ENLACE</h2>
+                    <br>
+                    <p class="text-body">No todos los clics valen lo mismo. Debes valorar los enlaces por su <b>Extensión de Dominio:</b></p>
+                    <br>
+                    <div style="display: flex; gap: 15px; justify-content: center;">
+                        <div style="padding: 10px; border: 2px solid #28a745; border-radius: 10px; font-weight: 700; color: #28a745;">.edu / .gov</div>
+                        <div style="padding: 10px; border: 2px solid #f7be00; border-radius: 10px; font-weight: 700; color: #f7be00;">.org</div>
+                        <div style="padding: 10px; border: 2px solid #dc3545; border-radius: 10px; font-weight: 700; color: #dc3545;">.com / .net</div>
+                    </div>
+                    <br>
+                    <p class="text-body">Prioriza siempre sitios institucionales para trabajos académicos.</p>
+                </div>
+            </section>
+
+            <!-- 8. EXPLORACIÓN VISUAL -->
+            <section class="slide">
+                <div class="content-card">
+                    <h2 class="section-head">ANATOMÍA DE UNA SEARCH</h2>
+                    <p class="text-body" style="font-size: 0.9rem;">Haz clic en los puntos para ver qué buscar en los resultados.</p>
+                    
+                    <div class="explorer-container">
+                        <div style="background: white; border: 1px solid #ddd; width: 90%; margin: 10px auto; padding: 15px; border-radius: 8px; text-align: left;">
+                            <div style="color: blue; font-size: 1.1rem; text-decoration: underline;">Universidades en Guatemala - Carreras 2024</div>
+                            <div style="color: green; font-size: 0.8rem;">https://www.universidad.edu.gt > programas</div>
+                            <div style="color: #444; font-size: 0.9rem; margin-top: 5px;">Encuentra el listado completo de facultades, requisitos de inscripción...</div>
+                        </div>
+
+                        <div class="hot-point" style="top: 20px; left: 45%;" onclick="exploreLink(1)">1</div>
+                        <div class="hot-point" style="top: 55px; left: 60%;" onclick="exploreLink(2)">2</div>
+                        <div class="hot-point" style="top: 100px; left: 30%;" onclick="exploreLink(3)">3</div>
+                        
+                        <div id="explorer-info-link" style="position: absolute; bottom: 0; width: 100%; background: var(--azul-oscuro); color: white; padding: 15px; min-height: 80px; display: flex; align-items: center; justify-content: center;">Toca un número para analizar...</div>
+                    </div>
+                </div>
+                <script>
+                    function exploreLink(p) {
+                        const info = document.getElementById('explorer-info-link');
+                        const data = {
+                            1: "💙 <b>Título:</b> Debe coincidir con lo que buscas. Si tiene palabras exactas en negrita, mejor.",
+                            2: "💚 <b>Dominio:</b> Fíjate si es .edu o .gov. ¡Eso te da mucha confianza!",
+                            3: "🖤 <b>Snippet (Resumen):</b> Lee estas dos líneas antes de entrar para ver si realmente tiene el dato."
+                        };
+                        info.innerHTML = data[p];
+                    }
+                </script>
+            </section>
+
+            <!-- 9. ACTIVIDAD COMPRENSIÓN -->
+            <section class="slide">
+                <div class="content-card">
+                    <h2 class="section-head">TRIVIA DE ESTRATEGIA</h2>
+                    <p class="text-body">¿Qué truco usarías si quieres buscar un PDF sobre "Cambio Climático" evitando sitios comerciales (.com)?</p>
+                    
+                    <div class="activity-box" id="activity-4-1">
+                        <div class="options-grid">
+                            <button class="opt-btn" onclick="checkMultipleChoice(this, true, 'fb-4-1', 'retry-4-1')">"Cambio Climático" filetype:pdf -site:.com</button>
+                            <button class="opt-btn" onclick="checkMultipleChoice(this, false, 'fb-4-1', 'retry-4-1')">Cambio Climático +pdf +enlace</button>
+                            <button class="opt-btn" onclick="checkMultipleChoice(this, false, 'fb-4-1', 'retry-4-1')">Buscar en Wikipedia solamente</button>
+                        </div>
+                        <div id="fb-4-1" class="hidden"></div>
+                        <button id="retry-4-1" class="retry-btn hidden" onclick="retryActivity('activity-4-1', 'fb-4-1', 'retry-4-1')">Intentar de nuevo 🔄</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 10. JUEGO EDUCATIVO -->
+            <section class="slide">
+                <div class="content-card">
+                    <h2 class="section-head">ORDEN DE RELEVANCIA</h2>
+                    <p class="text-body">Estás haciendo una tesis. Ordena estas fuentes de la más confiable a la menos confiable:</p>
+                    
+                    <div class="activity-box" id="game-4">
+                        <div class="order-list">
+                            <button class="step-order" onclick="checkStep(this, 1, 'game-fb-4')">Fuentes Institucionales (.gov / .edu) 🏛️</button>
+                            <button class="step-order" onclick="checkStep(this, 3, 'game-fb-4')">Blogs personales o redes sociales 📱</button>
+                            <button class="step-order" onclick="checkStep(this, 4, 'game-fb-4')">Comentarios de foros anónimos 👥</button>
+                            <button class="step-order" onclick="checkStep(this, 2, 'game-fb-4')">Sitios de noticias reconocidos (.com) 📰</button>
+                        </div>
+                        <div id="game-fb-4" class="hidden"></div>
+                        <button class="retry-btn" onclick="resetGame('game-4', 'game-fb-4')">Reiniciar Reto 🔄</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 11. APLICACIÓN PRÁCTICA -->
+            <section class="slide">
+                <div class="content-card">
+                    <h2 class="section-head">MISION CUMPLIDA</h2>
+                    <br>
+                    <p class="text-body">Tu maestro de Ciencias Sociales te pide investigar sobre la <b>Constitución de Guatemala</b> pero solo quieres ver el texto legal original, sin opiniones de periódicos.</p>
+                    <p><b>¿Cuál es la búsqueda más pertinente?</b></p>
+                    <div class="activity-box" id="activity-4-p">
+                        <div class="options-grid">
+                            <button class="opt-btn" onclick="checkMultipleChoice(this, true, 'fb-4-p', 'retry-4-p')">Constitución Guatemala site:gob.gt</button>
+                            <button class="opt-btn" onclick="checkMultipleChoice(this, false, 'fb-4-p', 'retry-4-p')">Constitución de Guatemala opiniones</button>
+                            <button class="opt-btn" onclick="checkMultipleChoice(this, false, 'fb-4-p', 'retry-4-p')">Wikipedia Constitución Guatemala</button>
+                        </div>
+                        <div id="fb-4-p" class="hidden"></div>
+                        <button id="retry-4-p" class="retry-btn hidden" onclick="retryActivity('activity-4-p', 'fb-4-p', 'retry-4-p')">Intentar de nuevo 🔄</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 12. REPASO FINAL -->
+            <section class="slide">
+                <div class="content-card">
+                    <h2 class="section-head">CHECKLIST FINAL</h2>
+                    <p class="text-body">¿Qué operador usamos para buscar una frase exacta?</p>
+                    <div class="activity-box" id="activity-4-r">
+                        <div class="options-grid">
+                            <button class="opt-btn" onclick="checkMultipleChoice(this, false, 'fb-4-r', 'retry-4-r')">El signo asterisco (*)</button>
+                            <button class="opt-btn" onclick="checkMultipleChoice(this, true, 'fb-4-r', 'retry-4-r')">Las comillas (" ")</button>
+                            <button class="opt-btn" onclick="checkMultipleChoice(this, false, 'fb-4-r', 'retry-4-r')">El punto y coma (;)</button>
+                        </div>
+                        <div id="fb-4-r" class="hidden"></div>
+                        <button id="retry-4-r" class="retry-btn hidden" onclick="retryActivity('activity-4-r', 'fb-4-r', 'retry-4-r')">Intentar de nuevo 🔄</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 13. METACOGNICIÓN -->
+            <section class="slide">
+                <div class="content-card">
+                    <h2 class="section-head">AUTOCIENCIA</h2>
+                    <p class="text-body">Reflexiona unos segundos:</p>
+                    <div class="reflect-cards">
+                        <div class="r-card">
+                            <p>🤔 ¿Cuántas veces he entrado al primer enlace sin fijarme en el dominio?</p>
+                        </div>
+                        <div class="r-card">
+                            <p>🚀 ¿Cómo puedo mejorar mis trabajos académicos con estas técnicas?</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 14. CIERRE -->
+            <section class="slide">
+                <div class="content-card">
+                    <div class="seal">🎓</div>
+                    <h2 class="main-title">¡ERES UN EXPERTO!</h2>
+                    <p class="final-msg">Has dominado las estrategias de búsqueda en el mundo digital.</p>
+                    <p class="text-body">Ahora sabes que en Internet no se trata de quién tiene más datos, sino de quién sabe <b>localizar lo pertinente</b>.</p>
+                    <br>
+                    <div class="line"></div>
+                    <p style="font-weight: 700;">TIC 5to Bachillerato - Colegio Escolaris</p>
+                    <p style="font-size: 0.8rem; margin-top: 10px;">¡Sigue explorando con inteligencia!</p>
+                </div>
+            </section>
+
+        </div> <!-- End slides wrapper -->
+
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+
+    </div> <!-- End App Container -->
+
+    <script src="script.js"></script>
+</body>
+</html>

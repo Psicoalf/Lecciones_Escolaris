@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIC 5to Bach - Lección 3: El Superpoder de la Información</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="app-container">
+        
+        <div class="navigation-controls">
+            <button class="nav-arrow" id="prev" title="Anterior">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button class="nav-arrow" id="next" title="Siguiente">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+        </div>
+
+        <div class="slides-wrapper">
+            
+            <!-- 1. PORTADA -->
+            <section class="slide">
+                <div class="content-card fade-in">
+                    <div class="badge">LECCIÓN 3</div>
+                    <h1 class="main-title">EL SUPERPODER DE LA INFORMACIÓN</h1>
+                    <p class="subtitle">TIC - 5to Bachillerato</p>
+                    
+                    <div class="main-illustration">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="100" cy="100" r="80" fill="#f0f8ff" />
+                            <path d="M60 140 L140 140 L140 80 C140 57.9086 122.091 40 100 40 C77.9086 40 60 57.9086 60 80 Z" fill="#244b5a" />
+                            <circle cx="100" cy="80" r="20" fill="#db6015" />
+                            <rect x="80" y="110" width="40" height="10" rx="5" fill="#f7be00" />
+                            <circle cx="100" cy="100" r="120" fill="none" stroke="#db6015" stroke-width="2" stroke-dasharray="10 5" opacity="0.3" />
+                        </svg>
+                    </div>
+                    
+                    <div class="cover-info">
+                        <p>🚀 ¡Bienvenido al viaje por el corazón de Internet!</p>
+                        <p>Descubre cómo la lógica domina el mundo digital.</p>
+                    </div>
+                    <p style="margin-top: 20px; font-weight: 700; color: var(--naranja)">Colegio Escolaris</p>
+                </div>
+            </section>
+
+            <!-- 2. OBJETIVOS -->
+            <section class="slide">
+                <div class="content-card">
+                    <h2 class="section-head">METAS DE HOY</h2>
+                    <br>
+                    <div class="objectives-box">
+                        <div class="objective-item">
+                            <span>🧠</span>
+                            <p>Comprender qué es un <b>algoritmo</b> y por qué es la base de la informática moderna.</p>
+                        </div>
+                        <div class="objective-item">
+                            <span>⭐</span>
+                            <p>Analizar cómo funciona el sistema <b>PageRank</b> para valorar la información.</p>
+                        </div>
+                        <div class="objective-item">
+                            <span>🔍</span>
+                            <p>Aprender técnicas avanzadas de <b>optimización de búsquedas</b> con operadores lógicos.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. ACTIVACIÓN -->
+            <section class="slide">
+                <div class="content-card">
+                    <h2 class="section-head">PARA REFLEXIONAR</h2>
+                    <br>
+                    <p class="text-body">Antes de empezar, piensa en lo siguiente:</p>
+                    <br>
+                    <div class="question-bubble">
+                        <p>¿Alguna vez te has preguntado por qué Google sabe exactamente qué resultado mostrarte en el primer lugar entre millones de páginas?</p>
+                    </div>
+                    <div class="question-bubble">
+                        <p>¿Cómo crees que Netflix sabe qué película te gustará antes que tú mismo lo sepas?</p>
+                    </div>
+                    <p class="text-body" style="font-style: italic; color: #777;">Haz clic en la flecha de la derecha para encontrar las respuestas...</p>
+                </div>
+            </section>
+
+            <!-- 4. PALABRAS CLAVE -->
+            <section class="slide">
+                <div class="content-card">
+                    <h2 class="section-head">CONCEPTOS CLAVE</h2>
+                    <br>
+                    <div class="keywords-container">
+                        <div class="k-word">
+                            <h4>ALGORITMO</h4>
+                            <p>Serie ordenada de pasos lógicos para resolver un problema.</p>
+                        </div>
+                        <div class="k-word">
+                            <h4>AUTORIDAD</h4>
+                            <p>Nivel de confianza o relevancia que Internet le da a un sitio web.</p>
+                        </div>
+                        <div class="k-word">
+                            <h4>OPERADOR</h4>
+                            <p>Palabra o símbolo que ayuda a filtrar y precisar una búsqueda.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. CONTENIDO 1: ALGORITMOS -->
+            <section class="slide">
+                <div class="content-card">
+                    <h2 class="section-head">EL MOTOR: ALGORITMOS</h2>
+                    <br>
+                    <div class="content-grid">
+                        <div>
+                            <p class="text-body">Un <b>algoritmo</b> en informática no es más que una receta perfecta. Las computadoras no "adivinan"; siguen instrucciones precisas.</p>
+                            <div class="step-box">1. Entrada de datos</div>
+                            <div class="step-box">2. Procesamiento lógico</div>
+                            <div class="step-box">3. Salida de información</div>
+                        </div>
+                        <div style="text-align: center;">
+                            <img src="https://cdn-icons-png.flaticon.com/512/2103/2103930.png" alt="Algorithm" style="width: 150px; opacity: 0.8;">
+                            <p style="font-size: 0.9rem; margin-top: 10px;">¡Todo lo digital corre sobre algoritmos!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. CONTENIDO 2: PAGERANK -->
+            <section class="slide">
+                <div class="content-card">
+                    <h2 class="section-head">PAGERANK: EL VOTO DIGITAL</h2>
+                    <br>
+                    <p class="text-body">PageRank fue el sistema con el que nació Google. Su lógica es simple pero poderosa:</p>
+                    <br>
+                    <div style="background: #f0f8ff; padding: 20px; border-radius: 20px; border: 2px solid var(--azul-oscuro);">
+                        <p><b>"Una página es importante si otras páginas importantes la recomiendan (la enlazan)."</b></p>
+                    </div>
+                    <br>
+                    <p class="text-body">Es como un concurso de popularidad donde no todos los votos valen lo mismo.</p>
+                </div>
+            </section>
+
+            <!-- 7. CONTENIDO 3: OPTIMIZACIÓN -->
+            <section class="slide">
+                <div class="content-card">
+                    <h2 class="section-head">MAGIA EN LA BÚSQUEDA</h2>
+                    <br>
+                    <p class="text-body">No busques más, busca mejor. Los <b>operadores booleanos</b> son tus mejores amigos:</p>
+                    <div class="objectives-box">
+                        <div class="objective-item" style="border-color: var(--naranja);">
+                            <p><b>AND (+):</b> Une términos (ej: <i>gatos AND comida</i> buscará ambas).</p>
+                        </div>
+                        <div class="objective-item" style="border-color: var(--amarillo);">
+                            <p><b>OR (|):</b> Opciones (ej: <i>perros OR gatos</i> buscará cualquiera).</p>
+                        </div>
+                        <div class="objective-item" style="border-color: var(--rojo);">
+                            <p><b>NOT (-):</b> Excluye (ej: <i>jaguar -auto</i> buscará el animal, no el coche).</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 8. EXPLORACIÓN VISUAL -->
+            <section class="slide">
+                <div class="content-card">
+                    <h2 class="section-head">EXPLORA EL SISTEMA</h2>
+                    <p class="text-body" style="font-size: 0.9rem;">Toca los puntos naranja para aprender más sobre cómo Google organiza el mundo.</p>
+                    
+                    <div class="explorer-container">
+                        <!-- BG Simulando buscador -->
+                        <div style="background: white; border: 1px solid #ddd; width: 80%; margin: 20px auto; padding: 10px; border-radius: 5px;">
+                            <div style="height: 10px; width: 100px; background: #eee; margin-bottom: 10px;"></div>
+                            <div style="height: 30px; width: 100%; border: 1px solid #ccc; border-radius: 20px;"></div>
+                            <div style="display: flex; gap: 10px; margin-top: 20px;">
+                                <div style="flex: 1; height: 100px; background: #f9f9f9; border-radius: 10px;"></div>
+                                <div style="flex: 1; height: 100px; background: #f9f9f9; border-radius: 10px;"></div>
+                            </div>
+                        </div>
+
+                        <div class="hot-point" style="top: 85px; left: 50%; transform: translateX(-50%);" onclick="explore(1)">1</div>
+                        <div class="hot-point" style="top: 150px; left: 30%;" onclick="explore(2)">2</div>
+                        <div class="hot-point" style="top: 150px; left: 70%;" onclick="explore(3)">3</div>
+                        
+                        <div id="explorer-info">Toca un número para ver la explicación...</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 9. ACTIVIDAD COMPRENSIÓN -->
+            <section class="slide">
+                <div class="content-card">
+                    <h2 class="section-head">¿CUÁNTO SABES?</h2>
+                    <p class="text-body">¿Cuál es la definición más exacta de un algoritmo informático?</p>
+                    
+                    <div class="activity-box" id="activity-1">
+                        <div class="options-grid">
+                            <button class="opt-btn" onclick="checkMultipleChoice(this, false, 'fb-1', 'retry-1')">Una computadora potente con mucha RAM.</button>
+                            <button class="opt-btn" onclick="checkMultipleChoice(this, true, 'fb-1', 'retry-1')">Un conjunto ordenado de pasos para resolver un problema.</button>
+                            <button class="opt-btn" onclick="checkMultipleChoice(this, false, 'fb-1', 'retry-1')">Un programa que solo sirve para buscar en Google.</button>
+                        </div>
+                        <div id="fb-1" class="hidden"></div>
+                        <button id="retry-1" class="retry-btn hidden" onclick="retryActivity('activity-1', 'fb-1', 'retry-1')">Intentar de nuevo 🔄</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 10. JUEGO EDUCATIVO -->
+            <section class="slide">
+                <div class="content-card">
+                    <h2 class="section-head">EL ORDEN ES EL PODER</h2>
+                    <p class="text-body">Ordena este algoritmo para preparar un sándwich de conocimiento:</p>
+                    
+                    <div class="activity-box" id="game-container">
+                        <div class="order-list">
+                            <button class="step-order" onclick="checkStep(this, 3, 'game-fb')">Paso: Juntar las dos rebanadas 🍔</button>
+                            <button class="step-order" onclick="checkStep(this, 1, 'game-fb')">Paso: Conseguir rebanadas de pan 🍞</button>
+                            <button class="step-order" onclick="checkStep(this, 4, 'game-fb')">Paso: ¡A disfrutar! 😋</button>
+                            <button class="step-order" onclick="checkStep(this, 2, 'game-fb')">Paso: Untar los ingredientes 🍯</button>
+                        </div>
+                        <div id="game-fb" class="hidden"></div>
+                        <button class="retry-btn" onclick="resetGame('game-container', 'game-fb')">Reiniciar Juego 🔄</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 11. APLICACIÓN PRÁCTICA -->
+            <section class="slide">
+                <div class="content-card">
+                    <h2 class="section-head">CASO DE LA VIDA REAL</h2>
+                    <p class="text-body">Estás investigando sobre "Energía Solar", pero te salen demasiados resultados sobre "Calculadoras Solares".</p>
+                    <br>
+                    <div class="activity-box" id="activity-p">
+                        <div class="options-grid">
+                            <button class="opt-btn" onclick="checkMultipleChoice(this, true, 'fb-p', 'retry-p')">Energía Solar -Calculadoras</button>
+                            <button class="opt-btn" onclick="checkMultipleChoice(this, false, 'fb-p', 'retry-p')">Energía Solar +Calculadoras</button>
+                            <button class="opt-btn" onclick="checkMultipleChoice(this, false, 'fb-p', 'retry-p')">Energía Solar OR Calculadoras</button>
+                        </div>
+                        <div id="fb-p" class="hidden"></div>
+                        <button id="retry-p" class="retry-btn hidden" onclick="retryActivity('activity-p', 'fb-p', 'retry-p')">Intentar de nuevo 🔄</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 12. REPASO FINAL -->
+            <section class="slide">
+                <div class="content-card">
+                    <h2 class="section-head">REPASO RELÁMPAGO</h2>
+                    <p class="text-body">El sistema que valora páginas por su popularidad se llama...</p>
+                    <div class="activity-box" id="activity-f">
+                        <div class="options-grid">
+                            <button class="opt-btn" onclick="checkMultipleChoice(this, false, 'fb-f', 'retry-f')">InfoRank</button>
+                            <button class="opt-btn" onclick="checkMultipleChoice(this, true, 'fb-f', 'retry-f')">PageRank</button>
+                            <button class="opt-btn" onclick="checkMultipleChoice(this, false, 'fb-f', 'retry-f')">WikiScore</button>
+                        </div>
+                        <div id="fb-f" class="hidden"></div>
+                        <button id="retry-f" class="retry-btn hidden" onclick="retryActivity('activity-f', 'fb-f', 'retry-f')">Intentar de nuevo 🔄</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 13. METACOGNICIÓN -->
+            <section class="slide">
+                <div class="content-card">
+                    <h2 class="section-head">MI APRENDIZAJE</h2>
+                    <p class="text-body">Tómate un momento para pensar:</p>
+                    <div class="reflect-cards">
+                        <div class="r-card">
+                            <p>💡 ¿Cómo ha cambiado mi idea sobre cómo funciona Google?</p>
+                        </div>
+                        <div class="r-card">
+                            <p>🛠️ ¿Dónde puedo aplicar estas búsquedas precisas en mis tareas?</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 14. CIERRE -->
+            <section class="slide">
+                <div class="content-card">
+                    <div class="seal">🎓</div>
+                    <h2 class="main-title">¡META ALCANZADA!</h2>
+                    <p class="final-msg">Has completado la lección sobre el superpoder de la información.</p>
+                    <p class="text-body">Ahora dominas los <b>Algoritmos</b>, entiendes el <b>PageRank</b> y eres un experto <b>Optimizador</b>.</p>
+                    <br>
+                    <div class="line"></div>
+                    <p style="font-weight: 700;">TIC 5to Bachillerato - Colegio Escolaris</p>
+                    <p style="font-size: 0.8rem; margin-top: 10px;">¡Nos vemos en la siguiente lección!</p>
+                </div>
+            </section>
+
+        </div> <!-- End slides wrapper -->
+
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+
+    </div> <!-- End App Container -->
+
+    <script src="script.js"></script>
+</body>
+</html>
