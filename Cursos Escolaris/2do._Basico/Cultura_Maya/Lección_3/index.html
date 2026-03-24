@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 3: Ley de Idiomas Nacionales - Cultura Maya</title>
+    <style>
+        /* Paleta de colores:
+           Naranja quemado vibrante: #db6015
+           Amarillo dorado cálido: #f7be00
+           Azul oscuro: #244b5a
+           Rojo ladrillo: #993921
+           Azul claro (fondo): #f0f8ff
+           Blanco: #ffffff
+        */
+        :root {
+            --orange: #db6015;
+            --yellow: #f7be00;
+            --dark-blue: #244b5a;
+            --red: #993921;
+            --light-blue: #f0f8ff;
+            --white: #ffffff;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light-blue);
+            color: var(--dark-blue);
+            overflow: hidden; /* Prevent scrolling, behave like presentation */
+        }
+
+        /* Container for slides */
+        #presentation {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Slide layout */
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            pointer-events: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 5rem;
+            box-sizing: border-box;
+            background-color: var(--light-blue);
+        }
+
+        .slide.active {
+            opacity: 1;
+            pointer-events: auto;
+            z-index: 10;
+        }
+
+        /* Content container inside slide */
+        .content-box {
+            background-color: var(--white);
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(36, 75, 90, 0.1);
+            max-width: 900px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            border-top: 8px solid var(--orange);
+        }
+        
+        .content-box.alt { border-top-color: var(--yellow); }
+        .content-box.alt2 { border-top-color: var(--red); }
+
+        h1, h2, h3 {
+            margin-top: 0;
+            color: var(--dark-blue);
+            font-weight: bold;
+        }
+
+        h1 { font-size: 2.8rem; margin-bottom: 0.5rem; color: var(--orange); }
+        h2 { font-size: 2rem; margin-bottom: 1.5rem; color: var(--dark-blue); }
+        h3 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--red); }
+        p { font-size: 1.25rem; line-height: 1.6; color: #333; }
+        
+        /* Navigation Arrows */
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            font-size: 4rem;
+            color: var(--orange);
+            cursor: pointer;
+            z-index: 100;
+            transition: transform 0.2s, color 0.2s;
+            padding: 20px;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .nav-btn:hover { color: var(--dark-blue); transform: translateY(-50%) scale(1.1); }
+        .nav-btn:active { transform: translateY(-50%) scale(0.95); }
+        
+        #prev-btn { left: 10px; }
+        #next-btn { right: 10px; }
+        
+        /* Disable nav button if at bounds */
+        .nav-btn.disabled {
+            opacity: 0.3;
+            pointer-events: none;
+            cursor: default;
+        }
+
+        /* Interactions */
+        .btn {
+            background-color: var(--orange);
+            color: var(--white);
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            margin: 10px;
+            transition: background 0.3s;
+            font-weight: bold;
+        }
+        .btn:hover { background-color: var(--dark-blue); }
+        .btn-yellow { background-color: var(--yellow); color: var(--dark-blue); }
+        .btn-yellow:hover { background-color: var(--dark-blue); color: var(--white); }
+        .btn-red { background-color: var(--red); }
+        .btn-red:hover { background-color: var(--dark-blue); }
+
+        /* Grids & Layouts */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+            text-align: left;
+        }
+        
+        .box {
+            background: rgba(240, 248, 255, 0.5);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 5px solid var(--orange);
+        }
+
+        .icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        /* Feedback modal */
+        #feedback-modal {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(36, 75, 90, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 200;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+        #feedback-modal.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .feedback-content {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 12px;
+            max-width: 500px;
+            text-align: center;
+            border-top: 8px solid var(--orange);
+        }
+
+        .correct { border-top-color: #4CAF50; color: #4CAF50; }
+        .incorrect { border-top-color: var(--red); color: var(--red); }
+        
+        .interactive-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .option-btn {
+            background-color: #f1f1f1;
+            border: 2px solid #ccc;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: left;
+            color: var(--dark-blue);
+        }
+        .option-btn:hover {
+            border-color: var(--orange);
+            background-color: #fffaf5;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.5rem; }
+            p { font-size: 1rem; }
+            .content-box { padding: 1.5rem; }
+            .nav-btn { font-size: 3rem; padding: 10px; }
+            .grid-2 { grid-template-columns: 1fr; }
+            .slide { padding: 1rem 3.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <button id="prev-btn" class="nav-btn" onclick="prevSlide()">⬅️</button>
+    <button id="next-btn" class="nav-btn" onclick="nextSlide()">➡️</button>
+
+    <div id="presentation">
+
+        <!-- 1. Portada motivadora -->
+        <div class="slide active">
+            <div class="content-box">
+                <div class="icon">🇬🇹</div>
+                <h3 style="color: var(--dark-blue);">Cultura Maya | Básicos | Lección 3</h3>
+                <h1>Ley de Idiomas Nacionales</h1>
+                <p>Decreto 19-2003 de Guatemala</p>
+                <br>
+                <div style="background: var(--light-blue); padding: 15px; border-radius: 8px; border: 2px dashed var(--yellow);">
+                    <p style="margin:0; font-weight: bold; color: var(--dark-blue);">"Nuestros idiomas son la voz de nuestra historia y la fuerza de nuestra identidad."</p>
+                </div>
+                <br>
+                <p style="font-size:0.9rem; color:#777;">Usa las flechas laterales para aprender a tu propio ritmo.</p>
+            </div>
+        </div>
+
+        <!-- 2. Objetivos de aprendizaje -->
+        <div class="slide">
+            <div class="content-box alt">
+                <div class="icon">🎯</div>
+                <h2>¿Qué vamos a lograr hoy?</h2>
+                <div style="text-align: left; max-width: 600px; margin: 0 auto;">
+                    <p>Al finalizar esta lección, podrás:</p>
+                    <div class="box" style="margin-bottom: 10px;">
+                        ✔️ <b>Explicar la importancia</b> del Decreto 19-2003 (Ley de Idiomas Nacionales).
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Activación de conocimientos previos -->
+        <div class="slide">
+            <div class="content-box alt2">
+                <div class="icon">🤔</div>
+                <h2>Antes de empezar...</h2>
+                <p>¿Qué piensas cuando escuchas hablar sobre los idiomas de Guatemala?</p>
+                
+                <div class="interactive-options">
+                    <button class="option-btn" onclick="showFeedback('¡Excelente reflexión! Es una parte fundamental de lo que nos hace únicos. ¡Continuemos!', 'correct')">A) Son parte de nuestra identidad nacional.</button>
+                    <button class="option-btn" onclick="showFeedback('¡Así es! Muchos se hablan desde antes de la llegada de los españoles. ¡Continuemos!', 'correct')">B) Son idiomas antiguos que todavía viven.</button>
+                    <button class="option-btn" onclick="showFeedback('¡Exacto! Tenemos la riqueza de contar con 22 idiomas mayas, el xinka, el garífuna y el español. ¡Continuemos!', 'correct')">C) Que en nuestro país se hablan muchos idiomas.</button>
+                </div>
+                <!-- All answers are valid reflections -->
+            </div>
+        </div>
+
+        <!-- 4. Palabras clave -->
+        <div class="slide">
+            <div class="content-box">
+                <div class="icon">🗝️</div>
+                <h2>Palabras Clave</h2>
+                <div class="grid-2">
+                    <div class="box">
+                        <h3 style="margin-bottom: 5px;">🗣️ Idioma Oficial</h3>
+                        <p style="font-size: 1rem; margin-top:0;">El idioma establecido para los actos oficiales del Estado (Español).</p>
+                    </div>
+                    <div class="box">
+                        <h3 style="margin-bottom: 5px;">🌍 Identidad</h3>
+                        <p style="font-size: 1rem; margin-top:0;">Conjunto de rasgos propios de un individuo o de una colectividad que los caracterizan frente a los demás.</p>
+                    </div>
+                    <div class="box" style="grid-column: 1 / -1;">
+                        <h3 style="margin-bottom: 5px;">📜 Decreto</h3>
+                        <p style="font-size: 1rem; margin-top:0;">Resolución escrita o decisión legal aprobada por el Congreso para regular un tema importante.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. Contenido principal 1: Capítulos -->
+        <div class="slide">
+            <div class="content-box alt">
+                <div class="icon">📖</div>
+                <h2>Estructura de la Ley (Decreto 19-2003)</h2>
+                <p>El propósito de esta ley es regular el reconocimiento, respeto, promoción, y uso de los idiomas Mayas, Garífuna y Xinka.</p>
+                
+                <div style="text-align: left; background: #fff; padding: 20px; border-radius: 8px; border: 2px solid var(--yellow); margin-top: 15px;">
+                    <p style="margin-top:0;">La ley se divide en Capítulos importantes:</p>
+                    <ul style="font-size: 1.1rem; line-height: 1.8;">
+                        <li><b>Capítulo I:</b> Principios Generales.</li>
+                        <li><b>Capítulo II:</b> Del Idioma e Identidad.</li>
+                        <li><b>Capítulo III:</b> Promoción, Utilización y Desarrollo.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. Contenido principal 2: Artículos clave -->
+        <div class="slide">
+            <div class="content-box alt2">
+                <div class="icon">⚖️</div>
+                <h2>Artículos Clave</h2>
+                <div class="grid-2">
+                    <div class="box" style="border-left-color: var(--red);">
+                        <h4>Artículo 1: Idiomas Nacionales</h4>
+                        <p style="font-size:0.9rem;">El idioma oficial es el español, pero se reconocen y promueven los idiomas Mayas, Garífuna y Xinka.</p>
+                    </div>
+                    <div class="box" style="border-left-color: var(--red);">
+                        <h4>Artículo 2: Identidad</h4>
+                        <p style="font-size:0.9rem;">Los idiomas indígenas son elementos esenciales de la identidad nacional de Guatemala.</p>
+                    </div>
+                    <div class="box" style="border-left-color: var(--red);">
+                        <h4>Artículo 8: Utilización</h4>
+                        <p style="font-size:0.9rem;">Permite el uso de estos idiomas tanto en el ámbito público como en el privado.</p>
+                    </div>
+                    <div class="box" style="border-left-color: var(--red);">
+                        <h4>Artículo 12: Dignificación</h4>
+                        <p style="font-size:0.9rem;">Prohíbe estrictamente usar los idiomas indígenas de forma discriminatoria o peyorativa.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6. Exploración visual -->
+        <div class="slide">
+            <div class="content-box">
+                <h2>Explora la Ley en Acción</h2>
+                <p>Haz clic en los botones para descubrir cómo nos protege la ley:</p>
+                
+                <div style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
+                    <button class="btn btn-yellow" onclick="showInfo('Educación (Art. 13)', 'El sistema educativo debe promover y desarrollar el uso de los idiomas indígenas en las escuelas.')">🏫 En la Escuela</button>
+                    <button class="btn btn-yellow" onclick="showInfo('Justicia (Art. 15)', 'La población tiene derecho a ser informada y atendida en su propio idioma en los juzgados.')">⚖️ En la Justicia</button>
+                    <button class="btn btn-yellow" onclick="showInfo('Servicios Públicos (Art. 14)', 'Los servicios del gobierno deben darse, idealmente, en el idioma propio de la comunidad.')">🏥 En Hospitales y Oficinas</button>
+                </div>
+                
+                <div id="info-display" style="margin-top: 20px; padding: 15px; background: rgba(36, 75, 90, 0.1); border-radius: 8px; min-height: 80px; display: none;">
+                    <h4 id="info-title" style="margin:0 0 10px 0; color: var(--dark-blue);"></h4>
+                    <p id="info-desc" style="margin:0;"></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 7. Actividad de comprensión (Selección múltiple) -->
+        <div class="slide">
+            <div class="content-box alt">
+                <div class="icon">📝</div>
+                <h2>Aplica lo aprendido</h2>
+                <p>Según el <b>Artículo 12 (Dignificación)</b>, ¿qué actitud prohíbe la ley hacia los idiomas indígenas?</p>
+                
+                <div class="interactive-options">
+                    <button class="option-btn" onclick="showFeedback('¡Incorrecto! La ley al contrario, promueve que se enseñen. Inténtalo de nuevo.', 'incorrect')">A) Prohíbe que se enseñen en las escuelas.</button>
+                    <button class="option-btn" onclick="showFeedback('¡Correcto! La ley prohíbe tajantemente la burla o el uso discriminatorio de los idiomas (Artículo 12).', 'correct')">B) Prohíbe su uso peyorativo, burla o discriminatorio.</button>
+                    <button class="option-btn" onclick="showFeedback('¡Incorrecto! La ley permite y promueve su uso oral. ¡Inténtalo de nuevo!', 'incorrect')">C) Prohíbe que se hablen en público.</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 8. Juego educativo (Verdadero o Falso) -->
+        <div class="slide">
+            <div class="content-box alt2">
+                <div class="icon">🎮</div>
+                <h2>Reto Rápido: ¿Verdadero o Falso?</h2>
+                <p id="game-q" style="font-weight: bold; font-size: 1.3rem;">"El idioma oficial de Guatemala sigue siendo el español (Art. 1)."</p>
+                
+                <div style="display: flex; justify-content: center; gap: 20px; margin-top: 30px;">
+                    <button class="btn" onclick="checkGame(true)" style="width: 150px;">✅ Verdadero</button>
+                    <button class="btn btn-red" onclick="checkGame(false)" style="width: 150px;">❌ Falso</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 9. Aplicación práctica -->
+        <div class="slide">
+            <div class="content-box">
+                <div class="icon">💡</div>
+                <h2>Situación Cotidiana</h2>
+                <div style="background: var(--light-blue); padding: 15px; border-radius: 8px; text-align: left; margin-bottom: 20px;">
+                    <p>Marta habla idioma K'iche' y necesita hacer un trámite legal municipal. Sin embargo, nadie le quiere atender porque no habla bien español.</p>
+                </div>
+                <p>¿Qué artículo de la ley respalda a Marta para exigir atención en su idioma?</p>
+                
+                <div class="interactive-options">
+                    <button class="option-btn" onclick="showFeedback('¡Así es! El Artículo 15 (Acceso a la justicia / atención legal) y el Art. 14 respaldan su derecho a ser atendida e informada.', 'correct')">A) Artículos 14 y 15 (Prestación de servicios y justicia).</button>
+                    <button class="option-btn" onclick="showFeedback('No es del todo exacto. El Art. 1 habla sobre el idioma oficial, pero no específicamente sobre servicios. Intenta de nuevo.', 'incorrect')">B) Artículo 1 (Idioma Oficial).</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 10. Repaso final -->
+        <div class="slide">
+            <div class="content-box alt">
+                <div class="icon">🔄</div>
+                <h2>Repaso Final</h2>
+                <p>Ordena los conceptos de forma correcta haciendo clic.</p>
+                <div class="quiz-container" style="text-align: left;">
+                    <p><b>Completa la frase:</b> Los idiomas de los pueblos Mayas, Garífuna y Xinka son elementos esenciales de la __________ nacional.</p>
+                    <div style="display: flex; gap: 10px;">
+                        <button class="btn btn-yellow" onclick="showFeedback('¡Correcto! Son esenciales para la identidad nacional (Art. 2).', 'correct')">Identidad</button>
+                        <button class="btn btn-yellow" onclick="showFeedback('¡Incorrecto! Piénsalo bien. Son esenciales para saber quiénes somos. Intenta de nuevo.', 'incorrect')">Economía</button>
+                        <button class="btn btn-yellow" onclick="showFeedback('¡Incorrecto! Geografía trata sobre territorio. Intenta de nuevo.', 'incorrect')">Geografía</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 11. Metacognición -->
+        <div class="slide">
+            <div class="content-box alt2">
+                <div class="icon">🧠</div>
+                <h2>Reflexiona sobre lo aprendido</h2>
+                <div class="box" style="margin-bottom: 20px; border-left-color: var(--yellow);">
+                    <h3 style="color: var(--dark-blue);">Hazte estas preguntas:</h3>
+                    <ul style="text-align: left; font-size: 1.2rem; line-height: 1.8;">
+                        <li>¿Qué fue lo más importante que descubrí hoy sobre nuestros idiomas?</li>
+                        <li>¿Por qué creo que es necesario que exista una ley para protegerlos?</li>
+                    </ul>
+                </div>
+                <p style="font-style: italic; color: #666;">Tómate un momento para responderlas mentalmente o en tu cuaderno.</p>
+            </div>
+        </div>
+
+        <!-- 12. Cierre y reconocimiento -->
+        <div class="slide">
+            <div class="content-box">
+                <div class="icon" style="font-size: 5rem;">🏆</div>
+                <h1 style="color: var(--orange);">¡Felicidades!</h1>
+                <h2>Has completado la Lección 3</h2>
+                <p>Ahora conoces tus derechos y la importancia del Decreto 19-2003, la Ley de Idiomas Nacionales de Guatemala.</p>
+                <br>
+                <button class="btn" onclick="goToSlide(0)">Volver al inicio</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Feedback Modal -->
+    <div id="feedback-modal">
+        <div class="feedback-content" id="feedback-content">
+            <h2 id="feedback-title">Title</h2>
+            <p id="feedback-message">Message</p>
+            <button class="btn" onclick="closeFeedback()">Entendido</button>
+        </div>
+    </div>
+
+    <script>
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        let totalSlides = slides.length;
+
+        function updateNavigation() {
+            slides.forEach((slide, index) => {
+                slide.classList.remove('active');
+                if (index === currentSlideIndex) {
+                    slide.classList.add('active');
+                }
+            });
+
+            if (currentSlideIndex === 0) {
+                prevBtn.classList.add('disabled');
+            } else {
+                prevBtn.classList.remove('disabled');
+            }
+
+            if (currentSlideIndex === totalSlides - 1) {
+                nextBtn.classList.add('disabled');
+            } else {
+                nextBtn.classList.remove('disabled');
+            }
+        }
+
+        function nextSlide() {
+            if (currentSlideIndex < totalSlides - 1) {
+                currentSlideIndex++;
+                updateNavigation();
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlideIndex > 0) {
+                currentSlideIndex--;
+                updateNavigation();
+            }
+        }
+
+        function goToSlide(index) {
+            currentSlideIndex = index;
+            updateNavigation();
+        }
+
+        // Initialize
+        updateNavigation();
+
+        // Feedback Modal
+        function showFeedback(message, type) {
+            const modal = document.getElementById('feedback-modal');
+            const content = document.getElementById('feedback-content');
+            const title = document.getElementById('feedback-title');
+            const msg = document.getElementById('feedback-message');
+
+            msg.innerText = message;
+            
+            content.classList.remove('correct', 'incorrect');
+            
+            if (type === 'correct') {
+                title.innerText = '¡Muy bien!';
+                title.style.color = '#4CAF50';
+                content.classList.add('correct');
+            } else {
+                title.innerText = '¡Casi lo logras!';
+                title.style.color = 'var(--red)';
+                content.classList.add('incorrect');
+            }
+
+            modal.classList.add('show');
+        }
+
+        function closeFeedback() {
+            document.getElementById('feedback-modal').classList.remove('show');
+        }
+
+        // Exploration Info Display
+        function showInfo(title, desc) {
+            const display = document.getElementById('info-display');
+            document.getElementById('info-title').innerText = title;
+            document.getElementById('info-desc').innerText = desc;
+            display.style.display = 'block';
+        }
+
+        // Game Logic Setup
+        const gameQuestions = [
+            { q: '"El idioma oficial de Guatemala sigue siendo el español (Art. 1)."', ans: true, trueMsg: '¡Correcto! El español es el idioma oficial, pero los otros se reconocen y promueven.', falseMsg: '¡Error! Aunque hay muchos idiomas, el español es el oficial a nivel del Estado.' },
+            { q: '"La ley permite discriminar a alguien por usar un idioma Maya."', ans: false, trueMsg: '¡Falso! El Artículo 12 prohíbe tajantemente la discriminación o burla.', falseMsg: '¡Excelente! En efecto, eso es FALSO. La ley prohíbe la discriminación (Art. 12).' }
+        ];
+        let currentGameStage = 0;
+
+        function checkGame(guess) {
+            let current = gameQuestions[currentGameStage];
+            if (guess === current.ans) {
+                if(guess === true) showFeedback(current.trueMsg, 'correct');
+                else showFeedback(current.falseMsg, 'correct');
+                
+                // switch to next question if exists
+                if(currentGameStage < gameQuestions.length - 1) {
+                    setTimeout(() => {
+                        currentGameStage++;
+                        document.getElementById('game-q').innerText = gameQuestions[currentGameStage].q;
+                        closeFeedback();
+                    }, 2500);
+                } else {
+                    // done
+                    setTimeout(() => {
+                        document.getElementById('game-q').innerText = "¡Has completado el reto! ¡Avanza a la siguiente página!";
+                        closeFeedback();
+                    }, 2500);
+                }
+            } else {
+                if(guess === true) showFeedback(current.trueMsg, 'incorrect');
+                else showFeedback(current.falseMsg, 'incorrect');
+            }
+        }
+    </script>
+</body>
+</html>
